@@ -1,0 +1,125 @@
+'python' is not recognized as an internal or external command,
+operable program or batch file.
+==================================================
+[*] Initiating Full VMM Partition Control Sequence
+==================================================
+[XRO] Unlock C:\ -> 0x00000000
+[XRO] Unlock M:\ -> 0x80070002
+[+] Successfully opened \\.\xvmctrl
+[VMM] STATE_SIGNAL for VmId 1 -> SUCCESS
+[VMM] RESOURCE_BOUNDARY for VmId 1 -> SUCCESS
+[VMM] HOLDING_PARTITION for VmId 1 -> SUCCESS
+[VMM] STATE_SIGNAL for VmId 0 -> SUCCESS
+[VMM] RESOURCE_BOUNDARY for VmId 0 -> SUCCESS
+[VMM] HOLDING_PARTITION for VmId 0 -> SUCCESS
+[VMM] STATE_SIGNAL for VmId 2 -> SUCCESS
+[VMM] HOLDING_PARTITION for VmId 2 -> SUCCESS
+[VMM] HOLDING_PARTITION Release (in=0) -> SUCCESS (Partition control released)
+[+] VMM IOCTL sequence complete.
+[*] Probing Write Permissions across drives...
+  Drive C:\ -> Read: OK | WRITE: RESTRICTED ([Errno 13] Permission denied: 'C:\\vmm_write_test.tmp')
+  Drive D:\ -> Read: OK | WRITE: ENABLED
+  Drive M:\ -> Read: OK | WRITE: RESTRICTED ([Errno 13] Permission denied: 'M:\\vmm_write_test.tmp')
+  Drive Q:\ -> Read: OK | WRITE: ENABLED
+  Drive S:\ -> Read: OK | WRITE: ENABLED
+  Drive T:\ -> Read: OK | WRITE: ENABLED
+  Drive U:\ -> Read: OK | WRITE: ENABLED
+  Drive V:\ -> Read: OK | WRITE: ENABLED
+  Drive X:\ -> Read: OK | WRITE: RESTRICTED ([Errno 13] Permission denied: 'X:\\vmm_write_test.tmp')
+  Drive Y:\ -> Read: OK | WRITE: RESTRICTED ([Errno 13] Permission denied: 'Y:\\vmm_write_test.tmp')
+==================================================
+==================================================
+[*] Initiating Full VMM Partition Control Sequence
+==================================================
+[XRO] Unlock C:\ -> 0x00000000
+[XRO] Unlock M:\ -> 0x80070002
+[+] Successfully opened \\.\xvmctrl
+[VMM] STATE_SIGNAL for VmId 1 -> SUCCESS
+[VMM] RESOURCE_BOUNDARY for VmId 1 -> SUCCESS
+[VMM] HOLDING_PARTITION for VmId 1 -> SUCCESS
+[VMM] STATE_SIGNAL for VmId 0 -> SUCCESS
+[VMM] RESOURCE_BOUNDARY for VmId 0 -> SUCCESS
+[VMM] HOLDING_PARTITION for VmId 0 -> SUCCESS
+[VMM] STATE_SIGNAL for VmId 2 -> SUCCESS
+[VMM] RESOURCE_BOUNDARY for VmId 2 -> SUCCESS
+[VMM] HOLDING_PARTITION for VmId 2 -> SUCCESS
+[VMM] HOLDING_PARTITION Release (in=0) -> SUCCESS (Partition control released)
+[+] VMM IOCTL sequence complete.
+[*] Probing Write Permissions across drives...
+  Drive C:\ -> Read: OK | WRITE: RESTRICTED ([Errno 13] Permission denied: 'C:\\vmm_write_test.tmp')
+  Drive D:\ -> Read: OK | WRITE: ENABLED
+  Drive M:\ -> Read: OK | WRITE: RESTRICTED ([Errno 13] Permission denied: 'M:\\vmm_write_test.tmp')
+  Drive Q:\ -> Read: OK | WRITE: ENABLED
+  Drive S:\ -> Read: OK | WRITE: ENABLED
+  Drive T:\ -> Read: OK | WRITE: ENABLED
+  Drive U:\ -> Read: OK | WRITE: ENABLED
+  Drive V:\ -> Read: OK | WRITE: ENABLED
+  Drive X:\ -> Read: OK | WRITE: RESTRICTED ([Errno 13] Permission denied: 'X:\\vmm_write_test.tmp')
+  Drive Y:\ -> Read: OK | WRITE: RESTRICTED ([Errno 13] Permission denied: 'Y:\\vmm_write_test.tmp')
+==================================================
+[-] This script must be run with Administrator privileges.
+==================================================
+[*] Initiating Full VMM Partition Control Sequence
+==================================================
+[XRO] Unlock C:\ -> 0x00000000
+[XRO] Unlock M:\ -> 0x80070002
+[+] Successfully opened \\.\xvmctrl
+[VMM] STATE_SIGNAL for VmId 1 -> SUCCESS
+[VMM] RESOURCE_BOUNDARY for VmId 1 -> SUCCESS
+[VMM] HOLDING_PARTITION for VmId 1 -> SUCCESS
+[VMM] STATE_SIGNAL for VmId 0 -> SUCCESS
+[VMM] RESOURCE_BOUNDARY for VmId 0 -> SUCCESS
+[VMM] HOLDING_PARTITION for VmId 0 -> SUCCESS
+[VMM] STATE_SIGNAL for VmId 2 -> SUCCESS
+[VMM] RESOURCE_BOUNDARY for VmId 2 -> SUCCESS
+[VMM] HOLDING_PARTITION for VmId 2 -> SUCCESS
+[VMM] HOLDING_PARTITION Release (in=0) -> SUCCESS (Partition control released)
+[+] VMM IOCTL sequence complete.
+[*] Probing Write Permissions across drives...
+  Drive C:\ -> Read: OK | WRITE: RESTRICTED ([Errno 13] Permission denied: 'C:\\vmm_write_test.tmp')
+  Drive D:\ -> Read: OK | WRITE: ENABLED
+  Drive M:\ -> Read: OK | WRITE: RESTRICTED ([Errno 13] Permission denied: 'M:\\vmm_write_test.tmp')
+  Drive Q:\ -> Read: OK | WRITE: ENABLED
+  Drive S:\ -> Read: OK | WRITE: ENABLED
+  Drive T:\ -> Read: OK | WRITE: ENABLED
+  Drive U:\ -> Read: OK | WRITE: ENABLED
+  Drive V:\ -> Read: OK | WRITE: ENABLED
+  Drive X:\ -> Read: OK | WRITE: RESTRICTED ([Errno 13] Permission denied: 'X:\\vmm_write_test.tmp')
+  Drive Y:\ -> Read: OK | WRITE: RESTRICTED ([Errno 13] Permission denied: 'Y:\\vmm_write_test.tmp')
+==================================================
+==================================================
+[*] Initiating Full VMM Partition Control Sequence
+==================================================
+[XRO] Unlock C:\ -> 0x00000000
+[XRO] Unlock M:\ -> 0x80070002
+[+] Successfully opened \\.\xvmctrl
+[VMM] STATE_SIGNAL for VmId 1 -> SUCCESS
+[VMM] RESOURCE_BOUNDARY for VmId 1 -> SUCCESS
+[VMM] HOLDING_PARTITION for VmId 1 -> SUCCESS
+[VMM] STATE_SIGNAL for VmId 0 -> SUCCESS
+[VMM] RESOURCE_BOUNDARY for VmId 0 -> SUCCESS
+[VMM] HOLDING_PARTITION for VmId 0 -> SUCCESS
+[VMM] STATE_SIGNAL for VmId 2 -> SUCCESS
+[VMM] RESOURCE_BOUNDARY for VmId 2 -> SUCCESS
+[VMM] HOLDING_PARTITION for VmId 2 -> SUCCESS
+[VMM] HOLDING_PARTITION Release (in=0) -> SUCCESS (Partition control released)
+[+] VMM IOCTL sequence complete.
+[*] Probing Write Permissions across drives...
+  Drive C:\ -> Read: OK | WRITE: RESTRICTED ([Errno 13] Permission denied: 'C:\\vmm_write_test.tmp')
+  Drive D:\ -> Read: OK | WRITE: ENABLED
+  Drive M:\ -> Read: OK | WRITE: RESTRICTED ([Errno 13] Permission denied: 'M:\\vmm_write_test.tmp')
+  Drive Q:\ -> Read: OK | WRITE: ENABLED
+  Drive S:\ -> Read: OK | WRITE: ENABLED
+  Drive T:\ -> Read: OK | WRITE: ENABLED
+  Drive U:\ -> Read: OK | WRITE: ENABLED
+  Drive V:\ -> Read: OK | WRITE: ENABLED
+  Drive X:\ -> Read: OK | WRITE: RESTRICTED ([Errno 13] Permission denied: 'X:\\vmm_write_test.tmp')
+  Drive Y:\ -> Read: OK | WRITE: RESTRICTED ([Errno 13] Permission denied: 'Y:\\vmm_write_test.tmp')
+==================================================
+Traceback (most recent call last):
+  File "D:\DevelopmentFiles\vmm_control_client.py", line 61, in <module>
+    if ctypes.windll.shell32.IsUserAnAdmin() == 0:
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "ctypes\__init__.py", line 389, in __getattr__
+  File "ctypes\__init__.py", line 394, in __getitem__
+AttributeError: function 'IsUserAnAdmin' not found

@@ -1,0 +1,92 @@
+﻿/* Copyright (c) Microsoft Corporation. All rights reserved. */
+
+.xbdh-networkingsimulation-togglenetworksimulation {
+    margin-top: 32px;
+}
+
+.xbdh-networkingsimulation-advancedoptions-container {
+    display: -ms-grid;
+    -ms-grid-columns: 952px 136px 512px;
+    height: 100%;
+}
+
+.xbdh-networkingsimulation-advancedoptions-overrideurls {
+    -ms-grid-column: 1;
+}
+
+.xbdh-networkingsimulation-advancedoptions-overrideurls-list,
+.xbdh-networkingsimulation-advancedoptions-exemptionports-list {
+    height: 340px;
+    overflow-x: hidden;
+}
+
+.xbdh-networkingsimulation-advancedoptions-exemptports {
+    -ms-grid-column: 3;
+}
+
+.xbdh-networkingsimulation-advancedoptions-overrideurls-headingfieldlabels,
+.xbdh-networkingsimulation-advancedoptions-overrideurl {
+    display: -ms-grid;
+    -ms-grid-columns: 512px 24px 284px 24px 64px;
+    margin-bottom: 12px;
+}
+
+.xbdh-networkingsimulation-advancedoptions-overrideurls-headingfieldlabels-url,
+.xbdh-networkingsimulation-advancedoptions-exemptports-headingfieldlabels-port,
+input[type='url'].xbdh-networkingsimulation-advancedoptions-overrideurl-url,
+input[type='number'].xbdh-networkingsimulation-advancedoptions-exemptionport-port {
+    -ms-grid-column: 1;
+    margin: 0;
+}
+
+.xbdh-networkingsimulation-advancedoptions-overrideurls-headingfieldlabels-connectivity,
+.xbdh-networkingsimulation-advancedoptions-exemptports-headingfieldlabels-protocol,
+.xbdh-networkingsimulation-advancedoptions-overrideurl-connectionquality,
+.xbdh-networkingsimulation-advancedoptions-exemptionport-protocol {
+    -ms-grid-column: 3;
+}
+
+.xbdh-networkingsimulation-advancedoptions-exemptports-headingfieldlabels,
+.xbdh-networkingsimulation-advancedoptions-exemptionport {
+    display: -ms-grid;
+    -ms-grid-columns: 172px 24px 224px 24px 64px;
+    margin-bottom: 12px;
+}
+
+.xbdh-networkingsimulation-advancedoptions-overrideurls-description,
+.xbdh-networkingsimulation-advancedoptions-exemptports-description {
+    height: 68px;
+}
+
+.xbdh-networkingsimulation-advancedoptions-overrideurl-add,
+.xbdh-networkingsimulation-advancedoptions-exemptionport-add,
+.xbdh-networkingsimulation-advancedoptions-overrideurl-remove,
+.xbdh-networkingsimulation-advancedoptions-exemptionport-remove {
+    -ms-grid-column: 5;
+    width: 68px;
+}
+
+.xbdh-networkingsimulation-advancedoptions-container .xbdh-combobox + button {
+   margin-top: 0;
+}
+
+.xbdh-networkingsimulation-advancedoptions-container input {
+   padding: 0;
+}
+
+.xbdh-networkingsimulation-advancedoptions-overrideurl-add::before,
+.xbdh-networkingsimulation-advancedoptions-exemptionport-add:before {
+    font-family: 'Segoe UI Symbol';
+    content: '\E109';
+}
+
+.xbdh-networkingsimulation-advancedoptions-overrideurl-remove::before,
+.xbdh-networkingsimulation-advancedoptions-exemptionport-remove:before {
+    font-family: 'Segoe UI Symbol';
+    content: '\E10A';
+}
+
+.xbdh-networkingsimulation-advancedoptions-savecommand {
+    position: absolute;
+    bottom: 192px;
+}

@@ -1,0 +1,62 @@
+﻿/* Copyright (c) Microsoft Corporation. All rights reserved. */
+
+.appthemecolor-colorchoice {
+    min-height: 0;
+    height: 24px;
+    width: 24px;
+    padding: 0;
+    line-height: 42px;
+    vertical-align: middle;
+    border: 4px solid transparent;
+}
+
+label.appthemecolor-colorlabel {
+    display: inline-block;
+    margin: 0 0 0 16px;
+    line-height: 42px;
+    vertical-align: middle;
+}
+
+button.appthemecolor-colorchoice:focus {
+    border: 4px solid rgb(235, 235, 235);
+}
+
+.appthemecolor-white-value,
+button.appthemecolor-white-value:focus {
+    background-color: rgb(235, 235, 235);
+}
+
+.appthemecolor-black-value,
+button.appthemecolor-black-value:focus {
+    background-color: rgb(16, 16, 16);
+}
+
+.appthemecolor-teal-value,
+button.appthemecolor-teal-value:focus {
+    background-color: rgb(0, 171, 169);
+}
+
+.appthemecolor-blue-value,
+button.appthemecolor-blue-value:focus {
+    background-color: rgb(0, 80, 239);
+}
+
+.appthemecolor-red-value,
+button.appthemecolor-red-value:focus {
+    background-color: rgb(229, 20, 0);
+}
+
+.appthemecolor-orange-value,
+button.appthemecolor-orange-value:focus {
+    background-color: rgb(245, 150, 0);
+}
+
+.appthemecolor-green-value,
+button.appthemecolor-green-value:focus {
+    background-color: rgb(16, 124, 16);
+}
+
+.appthemecolor-skyblue-value,
+button.appthemecolor-skyblue-value:focus {
+    background-color: rgb(27, 161, 226);
+}

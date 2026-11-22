@@ -1,0 +1,27 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <link href="userManagement.css" rel="stylesheet" />
+    <script src="userManagementVM.js"></script>
+    <script src="userManagement.js"></script>
+</head>
+<body>
+    <div class="xbdh-usermanagement-adduserbuttons">
+        <button id="xbdh-usermanagement-adduser" type="button" data-win-xyfocus="{ right: '#xbdh-usermanagement-addguest' }" data-win-res='{ "textContent": "userManagementAddUser" }'></button>
+        <button id="xbdh-usermanagement-addguest" disabled type="button" data-win-xyfocus="{ left: '#xbdh-usermanagement-adduser' }" data-win-res='{ "textContent": "userManagementAddGuest" }'></button>
+    </div>
+    <div id="xbdh-usermanagement-users" class="xbdh-usermanagement-users">
+        <div id="xbdh-usermanagement-users-list" class="xbdh-list xbdh-usermanagement-users-list"></div>
+    </div>
+    <div id="xbdh-usermanagement-contextmenu-user" class="xbdh-hidden">
+        <button id="xbdh-usermanagement-contextmenu-user-accountsettings" data-win-res='{ "textContent": "userManagementAccountSettings" }' type="button"></button>
+        <button id="xbdh-usermanagement-contextmenu-user-removeuser" data-win-res='{ "textContent": "userManagementRemoveUser" }' type="button"></button>
+        <button id="xbdh-usermanagement-contextmenu-user-addguest" data-win-res='{ "textContent": "userManagementAddGuest" }' type="button"></button>
+    </div>
+    <div id="xbdh-usermanagement-contextmenu-guest" class="xbdh-hidden">
+        <button id="xbdh-usermanagement-contextmenu-removeguest" data-win-res='{ "textContent": "userManagementRemoveUser" }' type="button"></button>
+    </div>
+</body>
+</html>

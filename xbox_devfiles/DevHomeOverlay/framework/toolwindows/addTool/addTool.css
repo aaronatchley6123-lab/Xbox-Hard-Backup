@@ -1,0 +1,13 @@
+﻿/* Copyright (c) Microsoft Corporation. All rights reserved. */
+
+
+.xbdh-div-list {
+    display: flex;
+    flex-direction: column;
+    overflow: auto;
+    max-height: 600px;
+}
+
+.xbdh-addtool-builtintool {
+    margin-top: 15px;
+}

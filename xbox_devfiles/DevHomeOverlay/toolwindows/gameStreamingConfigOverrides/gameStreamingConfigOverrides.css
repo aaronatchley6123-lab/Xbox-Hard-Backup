@@ -1,0 +1,42 @@
+﻿/* Copyright (c) Microsoft Corporation. All rights reserved. */
+
+.xbdh-gamestreamingconfigoverrides-actionbar {
+    display: flex;
+    flex-direction: row;
+    width: calc(100% - 64px);
+    margin: 16px 32px;
+    overflow: hidden;
+}
+
+#xbdh-gamestreamingconfigoverrides-edit,
+#xbdh-gamestreamingconfigoverrides-clear,
+#xbdh-gamestreamingconfigoverrides-clearall {
+    margin-left: 10px;
+}
+
+.xbdh-gamestreamingconfigoverrides-overrides {
+}
+
+.xbdh-gamestreamingconfigoverrides-override {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+/* Add override overlay */
+.xbdh-gamestreamingconfigoverrides-add-form {
+    width: 680px;
+}
+
+    .xbdh-gamestreamingconfigoverrides-add-form input {
+        margin: 8px 0 16px 0;
+    }
+
+/* Edit override overlay */
+.xbdh-gamestreamingconfigoverrides-edit-form {
+    width: 680px;
+}
+
+    .xbdh-gamestreamingconfigoverrides-edit-form input {
+        margin: 8px 0 16px 0;
+    }

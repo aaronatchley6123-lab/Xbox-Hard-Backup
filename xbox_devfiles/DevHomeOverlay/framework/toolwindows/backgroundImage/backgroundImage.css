@@ -1,0 +1,32 @@
+﻿/* Copyright (c) Microsoft Corporation. All rights reserved. */
+
+.xbdh-backgrounds {
+    max-height: 480px;
+    overflow: auto;
+}
+
+.xbdh-backgrounds-background-thumbnail {
+    display: inline-block;
+    height: 141px;
+    width: 250px;
+    position: relative;
+    border: 4px solid transparent;
+    background-size: cover;
+}
+
+.xbdh-backgrounds-background-thumbnail.xbdh-active::after {
+    font-family: 'Segoe UI Symbol';
+    content: '\E0E7';
+    font-size: 24px;
+    position: absolute;
+    top: 16px;
+    right: 16px;
+}
+
+.xbdh-theme-light .xbdh-backgrounds-background-thumbnail:focus {
+    border: 4px solid rgb(16, 16, 16);
+}
+
+.xbdh-theme-dark .xbdh-backgrounds-background-thumbnail:focus {
+    border: 4px solid rgb(235, 235, 235);
+}

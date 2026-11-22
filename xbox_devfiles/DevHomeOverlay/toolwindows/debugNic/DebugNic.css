@@ -1,0 +1,9 @@
+﻿/* Copyright (c) Microsoft Corporation. All rights reserved. */
+.xbdh-debugnic-addresses-container {
+    width: 100%;
+}
+
+.xbdh-debugnic-addresses-container .xbdh-debugnic-field {
+    display: inline-block;
+    width: 50%;
+}

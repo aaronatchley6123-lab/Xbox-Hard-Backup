@@ -1,0 +1,91 @@
+﻿/* Copyright (c) Microsoft Corporation. All rights reserved. */
+
+@media screen and (-ms-high-contrast: active) {
+    .xbdh-commonactions {
+        margin: 18px 32px 0px 32px !important;
+    }
+}
+
+.xbdh-commonactions {
+    display: flex;
+    flex-direction: column;
+    height: calc(100% - 95px);
+    flex-wrap: wrap;
+    margin: 24px 32px 0px 32px;
+}
+
+.xbdh-commonactions .xbdh-commonactions-item {
+    width: 368px;
+    margin-right: 32px;
+}
+/* Visual Studio Pin Pairing */
+.xbdh-vsdevsettings-vspinpairing-pin {
+    font-size: 96px;
+    font-weight: 400;
+    margin-left: 48px;
+    margin-right: 48px;
+    margin-top: 64px;
+    margin-bottom: 64px;
+}
+
+/* Xbox Live service status */
+.xbdh-commonactions-overallstatus {
+    margin-left: 32px;
+}
+
+.xbdh-commonactions-xboxliveservicestatus-status {
+    position: relative;
+    margin-top: 16px;
+}
+
+.xbdh-commonactions-xboxliveservicestatus-status .xbdh-commonactions-overallstatus-icon,
+.xbdh-commonactions-xboxliveservicestatus-status .xbdh-commonactions-overallstatus-status {
+    display: inline-block;
+}
+
+.xbdh-commonactions-xboxliveservicestatus-status .xbdh-commonactions-overallstatus-icon {
+    height: 24px;
+    width: 24px;
+    border-radius: 50%;
+    color: rgb(235, 235, 235);
+    margin-right: 16px;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.xbdh-commonactions-xboxliveservicestatus-status .xbdh-commonactions-overallstatus-good .xbdh-commonactions-overallstatus-icon {
+    background-color: rgb(16, 124, 16);
+}
+
+.xbdh-commonactions-xboxliveservicestatus-status .xbdh-commonactions-overallstatus-limited .xbdh-commonactions-overallstatus-icon {
+    background-color: rgb(210, 27, 0);
+}
+
+.xbdh-commonactions-overallstatus-good .xbdh-commonactions-overallstatus-icon::before,
+.xbdh-commonactions-overallstatus-limited .xbdh-commonactions-overallstatus-icon::before {
+    font-family: 'Segoe UI Symbol';
+    font-size: 15px;
+    position: absolute;
+    top: 2px;
+    left: 32px;
+}
+
+.xbdh-commonactions-overallstatus-good .xbdh-commonactions-overallstatus-icon::before {
+    content: '\E0E7';
+    margin-left: 4px;
+}
+
+.xbdh-commonactions-overallstatus-limited .xbdh-commonactions-overallstatus-icon::before {
+    content: '\2757';
+    margin-left: 10px;
+}
+
+.xbdh-commonactions-overallstatus-good .xbdh-commonactions-overallstatus-status {
+    color: var(--lime-green);
+    font-weight: 600;
+}
+
+.xbdh-commonactions-overallstatus-limited .xbdh-commonactions-overallstatus-status,
+.xbdh-commonactions-subservicestatus {
+    color: rgb(210, 27, 0);
+}

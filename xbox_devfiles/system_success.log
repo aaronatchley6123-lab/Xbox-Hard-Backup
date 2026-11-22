@@ -1,0 +1,59 @@
+==================================================== 
+[!] UNATTENDED SYSTEM EXECUTION AT Sat 11/14/2026 10:21:46.88 
+DevToolsUser
+==================================================== 
+[*] Securing SSH in Manufacturing Mode Whitelist... 
+ERROR: Access is denied.
+ERROR: Access is denied.
+ERROR: Access is denied.
+[*] Enabling Manufacturing Mode Current=Default... 
+ERROR: Access is denied.
+[*] Verification Query: 
+
+HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\ManufacturingMode\Default
+
+HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\ManufacturingMode\Default\Services
+
+HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\ManufacturingMode\Default\Services\*
+    Start    REG_DWORD    0x3
+
+HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\ManufacturingMode\Default\Services\AudioSrv
+    Start    REG_DWORD    0x2
+
+HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\ManufacturingMode\Default\Services\BFE
+    Start    REG_DWORD    0x2
+
+HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\ManufacturingMode\Default\Services\BrokerInfrastructure
+    Start    REG_DWORD    0x2
+
+HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\ManufacturingMode\Default\Services\DcomLaunch
+    Start    REG_DWORD    0x2
+
+HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\ManufacturingMode\Default\Services\DHCP
+    Start    REG_DWORD    0x2
+
+HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\ManufacturingMode\Default\Services\MPSSvc
+    Start    REG_DWORD    0x2
+
+HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\ManufacturingMode\Default\Services\nsi
+    Start    REG_DWORD    0x2
+
+HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\ManufacturingMode\Default\Services\Power
+    Start    REG_DWORD    0x2
+
+HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\ManufacturingMode\Default\Services\ProfSvc
+    Start    REG_DWORD    0x2
+
+HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\ManufacturingMode\Default\Services\RpcEptMapper
+    Start    REG_DWORD    0x2
+
+HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\ManufacturingMode\Default\Services\RpcSs
+    Start    REG_DWORD    0x2
+
+HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\ManufacturingMode\Default\Services\SamSs
+    Start    REG_DWORD    0x2
+
+HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\ManufacturingMode\Default\Services\SystemEventsBroker
+    Start    REG_DWORD    0x2
+
+[!] UNATTENDED EXECUTION COMPLETED 

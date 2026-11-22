@@ -1,0 +1,58 @@
+﻿/* Copyright (c) Microsoft Corporation. All rights reserved. */
+
+.xbdh-xboxliveservicestatus-status {
+    margin: 0 32px;
+}
+
+.xbdh-xboxliveservicestatus-overallstatus {
+    position: relative;
+    font-size: 32px;
+    line-height: 46px;
+    font-weight: normal;
+    margin: 16px 0;
+}
+
+.xbdh-xboxliveservicestatus-overallstatus-icon {
+    height: 32px;
+    width: 32px;
+    border-radius: 50%;
+    color: rgb(235, 235, 235);
+    margin-right: 8px;
+    display: inline-block;
+}
+
+.xbdh-xboxliveservicestatus-overallstatus-good .xbdh-xboxliveservicestatus-overallstatus-icon {
+    background-color: rgb(16, 124, 16);
+}
+
+.xbdh-xboxliveservicestatus-overallstatus-limited .xbdh-xboxliveservicestatus-overallstatus-icon {
+    background-color: rgb(210, 27, 0);
+}
+
+.xbdh-xboxliveservicestatus-overallstatus-good .xbdh-xboxliveservicestatus-overallstatus-icon::before,
+.xbdh-xboxliveservicestatus-overallstatus-limited .xbdh-xboxliveservicestatus-overallstatus-icon::before {
+    font-family: 'Segoe UI Symbol';
+    font-size: 24px;
+    position: absolute;
+    top: -6px;
+    left: 0;
+}
+
+.xbdh-xboxliveservicestatus-overallstatus-good .xbdh-xboxliveservicestatus-overallstatus-icon::before {
+    content: '\E0E7';
+    margin-left: 4px;
+}
+
+.xbdh-xboxliveservicestatus-overallstatus-limited .xbdh-xboxliveservicestatus-overallstatus-icon::before {
+    content: '\2757';
+    margin-left: 10px;
+}
+
+.xbdh-xboxliveservicestatus-overallstatus-good .xbdh-xboxliveservicestatus-overallstatus-status {
+    color: var(--lime-green);
+}
+
+.xbdh-xboxliveservicestatus-overallstatus-limited .xbdh-xboxliveservicestatus-overallstatus-status,
+.xbdh-xboxliveservicestatus-subservicestatus {
+    color: rgb(210, 27, 0);
+}

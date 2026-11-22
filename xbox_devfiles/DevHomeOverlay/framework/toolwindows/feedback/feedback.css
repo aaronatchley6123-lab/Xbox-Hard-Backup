@@ -1,0 +1,16 @@
+﻿/* Copyright (c) Microsoft Corporation. All rights reserved. */
+
+.xbdh-feedback-description {
+    max-width: 1120px;
+}
+
+.xbdh-feedback-option {
+    width: 952px;
+    padding: 7px 0 16px 8px;
+}
+
+.xbdh-uwp #xbdh-feedback-requestfeatures,
+.xbdh-uwp #xbdh-feedback-stayuptodate,
+.xbdh-uwp #xbdh-feedback-supportandbugs {
+    display: none;
+}

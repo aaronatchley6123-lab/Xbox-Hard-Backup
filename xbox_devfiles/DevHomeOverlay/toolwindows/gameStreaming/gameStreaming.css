@@ -1,0 +1,198 @@
+﻿/* Copyright (c) Microsoft Corporation. All rights reserved. */
+
+.xbdh-gameStreaming-container {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    overflow: auto;
+    align-items: stretch;
+    height: calc(100% - 96px);
+}
+
+.xbdh-gameStreaming-directConnect-header {
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 28px;
+    flex: 1;
+}
+
+.xbdh-gameStreaming-remoteConnect-header {
+    font-size: 17px;
+    font-weight: normal;
+    line-height: 28px;
+    flex: 1;
+}
+
+.xbdh-gameStreaming-directConnect-label {
+    display: flex;
+    align-items: center;
+    margin: 16px -16px;
+    padding: 16px;
+}
+
+
+.xbdh-gameStreaming-directConnect-status {
+    flex: 1;
+    margin-left: 16px;
+}
+
+.xbdh-gameStreaming-directConnect-toggle-button {
+    position: absolute;
+    overflow: hidden;
+    padding: 0;
+    border: 0;
+    margin: -1px;
+    clip: rect(0, 0, 0, 0);
+    visibility: inherit;
+    white-space: nowrap;
+    width:0;
+    height: 0;
+}
+
+.xbdh-gameStreaming-directConnect-toggle {
+    display: flex;
+    align-items: center;
+    color: inherit;
+}
+
+.xbdh-gameStreaming-directConnect-toggle.xbdh-gameStreaming-directConnect-toggle--active {
+    color: rgb(16, 124, 16);
+}
+
+.win-focusable:focus .xbdh-gameStreaming-directConnect-toggle.xbdh-gameStreaming-directConnect-toggle--active {
+    color: rgb(235, 235, 235);
+}
+
+.xbdh-gameStreaming-directConnect-toggle-visualHandle {
+    position: relative;
+    width: 48px;
+    height: 24px;
+    border: solid 1px currentColor;
+    border-radius: 12px;
+    box-sizing: border-box;
+    transition: background-color 125ms ease-in-out;
+    -ms-high-contrast-adjust: none;
+    forced-color-adjust: none;
+}
+
+.xbdh-gameStreaming-directConnect-toggle.xbdh-gameStreaming-directConnect-toggle--active .xbdh-gameStreaming-directConnect-toggle-visualHandle {
+    background-color: rgb(16, 124, 16);
+}
+
+.xbdh-gameStreaming-directConnect-toggle-visualHandle::before {
+    content: '';
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background-color: currentColor;
+    position: absolute;
+    left: 3px;
+    top: 3px;
+    transition: left 125ms ease-in-out;
+}
+
+.xbdh-gameStreaming-directConnect-toggle--active .xbdh-gameStreaming-directConnect-toggle-visualHandle::before {
+    left: 27px;
+}
+
+.xbdh-gameStreaming-remoteConnect {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: stretch;
+    overflow: hidden;
+}
+
+.xbdh-gameStreaming-remoteConnect-header {
+    display: flex;
+    align-items: center;
+    margin: 16px 0;
+}
+
+.xbdh-gameStreaming-status {
+    margin: 0 16px;
+}
+
+.xbdh-gameStreaming-overallstatus {
+    position: relative;
+}
+
+.xbdh-gameStreaming-users-label {
+    margin: 0 0 8px 0;
+}
+
+.xbdh-gameStreaming-overallstatus-icon {
+    height: 32px;
+    width: 32px;
+    xbdh-gameStreaming-directConnect-status border-radius: 50%;
+    color: rgb(235, 235, 235);
+    margin-right: 8px;
+    display: inline-flex;
+    vertical-align: text-bottom;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    margin-bottom: 4px;
+}
+
+.xbdh-gameStreaming-overallstatus-good .xbdh-gameStreaming-overallstatus-icon {
+    background-color: rgb(16, 124, 16);
+}
+
+.xbdh-gameStreaming-overallstatus-limited .xbdh-gameStreaming-overallstatus-icon {
+    background-color: rgb(210, 27, 0);
+}
+
+.xbdh-gameStreaming-overallstatus-good .xbdh-gameStreaming-overallstatus-icon::before,
+.xbdh-gameStreaming-overallstatus-limited .xbdh-gameStreaming-overallstatus-icon::before {
+    font-family: 'Segoe UI Symbol';
+    font-size: 24px;
+}
+
+.xbdh-gameStreaming-overallstatus-good .xbdh-gameStreaming-overallstatus-icon::before {
+    content: '\E0E7';
+}
+
+.xbdh-gameStreaming-overallstatus-limited .xbdh-gameStreaming-overallstatus-icon::before {
+    content: '\2757';
+}
+
+.xbdh-gameStreaming-overallstatus-good .xbdh-gameStreaming-overallstatus-status {
+    color: rgb(16, 124, 16);
+}
+
+.xbdh-gameStreaming-overallstatus-limited .xbdh-gameStreaming-overallstatus-status,
+.xbdh-gameStreaming-subservicestatus {
+    color: rgb(210, 27, 0);
+    margin-left: 4px;
+}
+
+.xbdh-gameStreaming-user.win-focusable {
+    padding: 8px 32px;
+    color: rgb(235, 235, 235);
+}
+.xbdh-gameStreaming-user:focus input {
+    border: solid 2px rgb(235, 235, 235);
+}
+
+.xbdh-gameStreaming-user-label {
+    display: inline-flex;
+    align-items: center;
+}
+
+.xbdh-gameStreaming-user-label input {
+    margin-right: 16px;
+}
+
+.xbdh-gameStreaming-users {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    overflow: hidden;
+}
+
+.xbdh-gameStreaming-users-list {
+    height: unset;
+    margin: 0;
+    padding: 0;
+}

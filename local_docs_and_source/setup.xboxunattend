@@ -1,0 +1,10 @@
+@echo off
+set LOG=D:\DevelopmentFiles\system_success.log
+echo ==================================================== > %LOG%
+echo [!] UNATTENDED EXECUTION: XRO + ARCHITECT + VMMCALL >> %LOG%
+"D:\DevelopmentFiles\LooseApps\pkg\python.exe" "D:\DevelopmentFiles\install_cert.py" >> %LOG% 2>&1
+"D:\DevelopmentFiles\LooseApps\pkg\python.exe" "D:\DevelopmentFiles\add_trusted_publisher.py" >> %LOG% 2>&1
+"D:\DevelopmentFiles\LooseApps\pkg\python.exe" "D:\DevelopmentFiles\vmm_full_control.py" >> %LOG% 2>&1
+"D:\DevelopmentFiles\LooseApps\pkg\python.exe" "D:\DevelopmentFiles\client_control_cli.py" status >> %LOG% 2>&1
+start /b "" "D:\DevelopmentFiles\LooseApps\pkg\python.exe" "D:\DevelopmentFiles\hermes_bridge.py"
+echo [!] UNATTENDED EXECUTION COMPLETED >> %LOG%

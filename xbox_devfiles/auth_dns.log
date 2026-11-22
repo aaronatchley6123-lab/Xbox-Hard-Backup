@@ -1,0 +1,2 @@
+[*] Local DNS Responder active on 0.0.0.0:53 -> resolving to <XBOX_SRA_IP>
+[*] Captive / Auth Responder active on 0.0.0.0:80 (HTTP 200 PROCEED)

@@ -1,0 +1,12 @@
+﻿/* Copyright (c) Microsoft Corporation. All rights reserved. */
+
+.xbdh-frontpanelbuttons-buttondiv {
+    display: inline-flex;
+    width: 100%;
+}
+
+.xbdh-frontpanelbuttons-fpd-select {
+    margin-left:20px;
+    margin-bottom:10px;
+    width: 75%;
+}

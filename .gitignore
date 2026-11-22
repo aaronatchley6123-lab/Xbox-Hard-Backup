@@ -1,0 +1,10 @@
+# Redacted sensitive artifacts
+*.cer
+*.pfx
+*.p12
+*.pem
+*.key
+*.xpal
+MDSX.*
+Certs/
+exported_certs/

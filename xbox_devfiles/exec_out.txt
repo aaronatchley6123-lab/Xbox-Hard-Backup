@@ -1,0 +1,2 @@
+[+] Synced D:\setup.xboxunattend
+[+] RunUnattendedScript returned: 0x80004004, exit_hr: 0x0

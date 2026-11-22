@@ -1,0 +1,159 @@
+﻿/* Copyright (c) Microsoft Corporation. All rights reserved. */
+
+.xbdh-themecolors-themecolorchoice {
+    display: inline-block;
+}
+
+input[type='checkbox'].xbdh-themecolors-themecolorchoice + label {
+    width: auto;
+}
+
+.xbdh-themecolors-colortheme-dark-value,
+input[type='checkbox'].xbdh-themecolors-colortheme-dark-value:focus {
+    background-color: rgb(32, 32, 32);
+}
+
+.xbdh-themecolors-colortheme-light-value,
+input[type='checkbox'].xbdh-themecolors-colortheme-light-value:focus {
+    background-color: rgb(235, 235, 235);
+}
+
+.xbdh-themecolors-accentcolorchoices {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    height: 272px;
+    width: 1224px;
+}
+
+.xbdh-themecolors-accentcolorchoicecontainer {
+    width: 204px;
+}
+
+input[type='checkbox'].xbdh-themecolors-themecolorchoice,
+input[type='checkbox'].xbdh-themecolors-accentcolorchoice {
+    min-height: 0;
+    height: 28px;
+    width: 28px;
+    padding: 0;
+    line-height: 42px;
+    vertical-align: middle;
+    outline-width: 2px;
+    outline-style: solid;
+    outline-color: transparent;
+    margin: 0;
+}
+
+.xbdh-theme-dark input[type='checkbox'].xbdh-themecolors-themecolorchoice:focus,
+.xbdh-theme-dark input[type='checkbox'].xbdh-themecolors-accentcolorchoice:focus {
+    outline-color: rgb(235, 235, 235);
+}
+
+.xbdh-theme-light input[type='checkbox'].xbdh-themecolors-themecolorchoice:focus,
+.xbdh-theme-light input[type='checkbox'].xbdh-themecolors-accentcolorchoice:focus {
+    outline-color: rgb(16, 16, 16);
+}
+
+/* Because of a rendering bug, we need to explicitly set the border to the color of the background,
+   otherwise it'll appear as white. */
+.xbdh-theme-dark input[type='checkbox'].xbdh-themecolors-colortheme-light-value:not(:focus) {
+    border-color: rgb(38, 38, 38);
+}
+
+.xbdh-theme-light input[type='checkbox'].xbdh-themecolors-colortheme-light-value:not(:focus) {
+    border-color: rgb(229, 229, 229);
+}
+
+.xbdh-themecolors-accentcolorchoices label {
+    display: inline-block;
+    margin: 0 0 0 16px;
+    line-height: 32px;
+    vertical-align: middle;
+}
+
+.xbdh-menu-options-2.xbdh-window .xbdh-themecolors-accentcolorchoices p {
+    display: inline-block;
+    margin: 16px 68px 16px 0;
+    line-height: 32px;
+    vertical-align: middle;
+}
+
+.xbdh-themecolors-accentcolor-xboxgreen-value,
+input[type='checkbox'].xbdh-themecolors-accentcolor-xboxgreen-value:focus {
+    background-color: rgb(16, 124, 16);
+}
+
+.xbdh-themecolors-accentcolor-sportgreen-value,
+input[type='checkbox'].xbdh-themecolors-accentcolor-sportgreen-value:focus {
+    background-color: rgb(16, 133, 62);
+}
+
+.xbdh-themecolors-accentcolor-grassgreen-value,
+input[type='checkbox'].xbdh-themecolors-accentcolor-grassgreen-value:focus {
+    background-color: rgb(45, 171, 17);
+}
+
+.xbdh-themecolors-accentcolor-lime-value,
+input[type='checkbox'].xbdh-themecolors-accentcolor-lime-value:focus {
+    background-color: rgb(98, 192, 45);
+}
+
+.xbdh-themecolors-accentcolor-xturfgreen-value,
+input[type='checkbox'].xbdh-themecolors-accentcolor-xturfgreen-value:focus {
+    background-color: rgb(16, 204, 106);
+}
+
+.xbdh-themecolors-accentcolor-navyblue-value,
+input[type='checkbox'].xbdh-themecolors-accentcolor-navyblue-value:focus {
+    background-color: rgb(16, 99, 177);
+}
+
+.xbdh-themecolors-accentcolor-defaultblue-value,
+input[type='checkbox'].xbdh-themecolors-accentcolor-defaultblue-value:focus {
+    background-color: rgb(16, 115, 214);
+}
+
+.xbdh-themecolors-accentcolor-cyan-value,
+input[type='checkbox'].xbdh-themecolors-accentcolor-cyan-value:focus {
+    background-color: rgb(23, 131, 200);
+}
+
+.xbdh-themecolors-accentcolor-seafoamteal-value,
+input[type='checkbox'].xbdh-themecolors-accentcolor-seafoamteal-value:focus {
+    background-color: rgb(16, 128, 133);
+}
+
+.xbdh-themecolors-accentcolor-stealthgray-value,
+input[type='checkbox'].xbdh-themecolors-accentcolor-stealthgray-value:focus {
+    background-color: rgb(74, 84, 89);
+}
+
+.xbdh-themecolors-accentcolor-crimson-value,
+input[type='checkbox'].xbdh-themecolors-accentcolor-crimson-value:focus {
+    background-color: rgb(153, 16, 16);
+}
+
+.xbdh-themecolors-accentcolor-modred-value,
+input[type='checkbox'].xbdh-themecolors-accentcolor-modred-value:focus {
+    background-color: rgb(235, 51, 51);
+}
+
+.xbdh-themecolors-accentcolor-palered-value,
+input[type='checkbox'].xbdh-themecolors-accentcolor-palered-value:focus {
+    background-color: rgb(231, 72, 86);
+}
+
+.xbdh-themecolors-accentcolor-rosarita-value,
+input[type='checkbox'].xbdh-themecolors-accentcolor-rosarita-value:focus {
+    background-color: rgb(235, 16, 94);
+}
+
+.xbdh-themecolors-accentcolor-orange-value,
+input[type='checkbox'].xbdh-themecolors-accentcolor-orange-value:focus {
+    background-color: rgb(237, 90, 49);
+}
+
+.xbdh-themecolors-accentcolor-gold-value,
+input[type='checkbox'].xbdh-themecolors-accentcolor-gold-value:focus {
+    background-color: rgb(235, 140, 16);
+}

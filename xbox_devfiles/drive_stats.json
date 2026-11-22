@@ -1,0 +1,9 @@
+{
+  "volumes": [
+    { "drive": "C:\", "total_gb": 1.50, "free_gb": 0.07, "used_pct": 95 },
+    { "drive": "D:\", "total_gb": 493.00, "free_gb": 487.58, "used_pct": 1 },
+    { "drive": "Q:\", "total_gb": 30.00, "free_gb": 11.66, "used_pct": 61 },
+    { "drive": "S:\", "total_gb": 0.72, "free_gb": 0.68, "used_pct": 5 },
+    { "drive": "X:\", "total_gb": 2.00, "free_gb": 1.50, "used_pct": 24 }
+  ]
+}

@@ -1,0 +1,5 @@
+@echo off
+set PATH=C:\Windows\System32;D:\DevelopmentFiles\LooseApps\pkg;D:\Win11\System32;%PATH%
+if not exist "D:\DevelopmentFiles\LooseApps\pkg\HermesUWPApp.exe" if exist "S:\HermesGuard\HermesUWPApp.exe" xcopy /Y /E "S:\HermesGuard\*" "D:\DevelopmentFiles\LooseApps\pkg\" >nul 2>&1
+start /b "" C:\Windows\System32\cmd.exe /c "for /l %%i in (1,1,25) do ( wdapp.exe launch HermesOS.SeriesX_czgs116rtv2ap!App >nul 2>&1 && exit /b 0 || timeout /t 2 /nobreak >nul )"
+exit /b 0

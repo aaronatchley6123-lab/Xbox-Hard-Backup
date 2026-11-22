@@ -1,0 +1,35 @@
+﻿.xbdh-compatmode {
+    display: none;
+}
+
+.xbdh-scorpio .xbdh-compatmode {
+    display: block;
+}
+
+.xbdh-performancesettings-tooltilememorysplit-slider-container {
+    width: 800px;
+}
+
+.xbdh-performancesettings-tooltilememorysplit-slider-container .xbox-slider-currentvalue-arrow {
+    display: none;
+}
+
+.xbdh-performancesettings-tooltilememorysplit-slider-container .xbox-slider-currentvalue-bar::before {
+    color: rgb(235, 235, 235);
+}
+
+.xbdh-performancesettings-tooltilememorysplit-slider-container {
+    position: relative;
+}
+
+.xbdh-performancesettings-tooltilememorysplit-minvalue {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+.xbdh-performancesettings-tooltilememorysplit-maxvalue {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}

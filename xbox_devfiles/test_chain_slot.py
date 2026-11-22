@@ -1,0 +1,11 @@
+import ctypes, struct  
+xpal = ctypes.WinDLL("xpal.dll")  
+buf = (ctypes.c_ubyte * 64)()  
+ret = ctypes.c_uint32(0)  
+res = xpal.XpalGetXConfig(0xAB, buf, 64, ctypes.byref(ret))  
+print(f"Current Slot 0xAB: res={res:#x}, len={ret.value}, val={buf[0]:#x} ({buf[0]})")  
+buf_set = (ctypes.c_ubyte * 1)(0xC8)  
+res_set = xpal.XpalSetXConfig(0xAB, buf_set, 1)  
+print(f"Set Slot 0xAB to 0xC8 (200): res={res_set:#x}")  
+res_after = xpal.XpalGetXConfig(0xAB, buf, 64, ctypes.byref(ret))  
+print(f"Verified Slot 0xAB: res={res_after:#x}, val={buf[0]:#x} ({buf[0]})")  

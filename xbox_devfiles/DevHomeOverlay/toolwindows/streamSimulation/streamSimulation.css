@@ -1,0 +1,9 @@
+﻿/* Copyright (c) Microsoft Corporation. All rights reserved. */
+
+@media screen and (-ms-high-contrast: active) {
+
+    #xbdh-streamSimulation-gs-serverLocation-description {
+        margin-top: 10px;
+    }
+
+}

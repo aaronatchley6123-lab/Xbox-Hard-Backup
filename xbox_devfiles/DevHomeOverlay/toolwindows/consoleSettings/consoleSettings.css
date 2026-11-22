@@ -1,0 +1,33 @@
+﻿/* Copyright (c) Microsoft Corporation. All rights reserved. */
+.xbdh-consolesettings-setting {
+    margin-bottom: 32px;
+}
+
+.xbdh-consolesettings-restartdialog p {
+    margin-bottom: 160px;
+}
+
+.xbdh-consolesettings-switchtoretail {
+    margin-top: 16px;
+    display: none;
+}
+
+.xbdh-consolesettings-launchsettings {
+    margin-top: 16px;
+    margin-bottom: 16px;
+}
+
+/* UWP developer overrides */
+.xbdh-uwp .xbdh-consolesettings-accesskey-label,
+.xbdh-uwp .xbdh-consolesettings-accesskey {
+    display: none;
+}
+
+.xbdh-uwp .xbdh-consolesettings-switchtoretail {
+    display: block;
+}
+
+.xbdh-uwp .xbdh-consolesettings-devkitcertexpiration {
+    display: none;
+    white-space: pre;
+}

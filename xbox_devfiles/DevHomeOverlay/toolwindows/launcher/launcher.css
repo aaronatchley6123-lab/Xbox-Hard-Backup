@@ -1,0 +1,155 @@
+﻿/* Copyright (c) Microsoft Corporation. All rights reserved. */
+
+.xbdh-list > .xbdh-launcher-app {
+    display: -ms-grid;
+    -ms-grid-columns: 1fr 108px 16px;
+    -ms-grid-rows: auto 1fr;
+    padding-top: 28px;
+    padding-bottom: 28px;
+    font-size: 18px;
+    position: relative;
+}
+
+.xbdh-launcher-app.xbdh-expanded {
+    background-color: rgb(42, 42, 42);
+}
+
+.xbdh-launcher-app-names {
+    -ms-grid-column: 1;
+    -ms-grid-row: 1;
+}
+
+.xbdh-launcher-app-pfn {
+    padding-right: 120px;
+}
+
+.xbdh-launcher-app-displayname
+.xbdh-launcher-app-pfn,
+.xbdh-launcher-app-aumid {
+    width: 100%;
+    overflow-x: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    line-height: 24px;
+}
+
+.xbdh-launcher-app-plmstate {
+    -ms-grid-row: 1;
+    -ms-grid-column: 2;
+}
+
+.xbdh-launcher-app-expandcollapsevisual {
+    -ms-grid-row: 1;
+    -ms-grid-column: 3;
+    font-size: 24pt;
+}
+
+.xbdh-launcher-multieras {
+    -ms-grid-column: 1;
+    -ms-grid-row: 2;
+    -ms-grid-column-span: 3;
+    font-size: 14pt;
+}
+
+.xbdh-theme-dark .xbdh-launcher-multieras {
+    background-color: rgb(42, 42, 42);
+}
+
+.xbdh-theme-light .xbdh-launcher-multieras {
+    background-color: rgb(209, 209, 209);
+}
+
+.xbdh-launcher-app-subpackage {
+    padding: 16px 32px;
+    color: rgb(235, 235, 235);
+}
+
+.xbdh-launcher-app-subpackage.xbdh-active {
+   background-color: rgb(54, 54, 54);
+}
+
+.xbdh-launcher-app-defaultappvisual {
+    margin-left: 8px;
+}
+
+button.xbdh-launcher-addremotepackage {
+    margin: 16px 32px;
+    width: calc(100% - 64px);
+}
+
+button.xbdh-launcher-addremotepackage:focus {
+    color: rgba(235, 235, 235, 1);
+}
+
+#xbdh-launcher-registerremotepackage-filepath label,
+#xbdh-launcher-registerremotepackage-filepath input,
+#xbdh-launcher-registerremotepackage-filepath button
+#xbdh-launcher-registerremotepackage-credentials label,
+#xbdh-launcher-registerremotepackage-credentials input,
+#xbdh-launcher-registerremotepackage-credentials button {
+    display: block;
+}
+
+#xbdh-launcher-registerremotepackage-filepath label,
+#xbdh-launcher-registerremotepackage-credentials label {
+    margin-bottom: 16px;
+}
+
+#xbdh-launcher-registerremotepackage-filepath input,
+#xbdh-launcher-registerremotepackage-credentials input {
+    margin-bottom: 16px;
+}
+
+.xbdh-launcher-appdetails-heading {
+    margin-bottom: 32px;
+}
+
+.xbdh-launcher-appdetails {
+    display: -ms-grid;
+    -ms-grid-columns: 1fr;
+    -ms-grid-rows: 1fr;
+}
+
+.xbdh-launcher-appdetails form {
+    -ms-grid-column-align: center;
+    -ms-grid-row-align: center;
+    height: 600px;
+    width: 1200px;
+}
+
+/* Launch with parameters */
+.xbdh-launcher-launchwithparameters .xbdh-field {
+    -ms-grid-columns: auto auto;
+}
+
+#xbdh-launcher-launchwithparameters-parameters-label {
+    margin-right: 16px;
+}
+
+input[type='text'].xbdh-launcher-launchwithparameters-parameters-value {
+    margin-left: 0;
+    width: 680px;
+}
+
+#xbdh-launcher-protocolstring {
+    margin-bottom: 16px;
+}
+
+/* Drop the PLM state if we're too thin */
+.xbdh-layout-colspan1 .xbdh-launcher-app-plmstate,
+.xbdh-layout-colspan2 .xbdh-launcher-app-plmstate,
+.xbdh-layout-colspan3 .xbdh-launcher-app-plmstate {
+    display: none;
+}
+
+/* Styles for snap */
+@media (width: 480px) {
+    .xbdh-launcher-appdetails form {
+        width: 344px;
+    }
+}
+
+/* Hide the add remote package button. We may add it back later. */
+.xbdh-launcher-addremotepackage {
+    display: none;
+}

@@ -1,0 +1,799 @@
+
+HKEY_LOCAL_MACHINE\SYSTEM\XConfig\AccessibilityMonoMixState
+    Version1    REG_BINARY    00
+
+HKEY_LOCAL_MACHINE\SYSTEM\XConfig\AccessoryFlags
+    Version1    REG_DWORD    0x0
+
+HKEY_LOCAL_MACHINE\SYSTEM\XConfig\ActivityState
+    Version1    REG_BINARY    01
+
+HKEY_LOCAL_MACHINE\SYSTEM\XConfig\AllowCrashDump
+    Version1    REG_BINARY    00
+
+HKEY_LOCAL_MACHINE\SYSTEM\XConfig\AllowHostChkdsk
+    Version1    REG_BINARY    00
+
+HKEY_LOCAL_MACHINE\SYSTEM\XConfig\AllowHostTracing
+    Version1    REG_BINARY    00
+
+HKEY_LOCAL_MACHINE\SYSTEM\XConfig\AllowIoDispatcherOverride
+    Version1    REG_BINARY    00
+
+HKEY_LOCAL_MACHINE\SYSTEM\XConfig\AllowPlsTrimCorruptionCleanup
+    Version1    REG_BINARY    01
+
+HKEY_LOCAL_MACHINE\SYSTEM\XConfig\AllowXvcSpotfixing
+    Version1    REG_BINARY    01
+
+HKEY_LOCAL_MACHINE\SYSTEM\XConfig\AlwaysOn
+    Version1    REG_BINARY    01
+
+HKEY_LOCAL_MACHINE\SYSTEM\XConfig\AudioAtmosEnabled
+    Version1    REG_BINARY    00
+
+HKEY_LOCAL_MACHINE\SYSTEM\XConfig\AudioBackgroundMediaBalance
+    Version1    REG_DWORD    0x3f000000
+
+HKEY_LOCAL_MACHINE\SYSTEM\XConfig\AudioBatVolume
+    Version1    REG_DWORD    0x3f000000
+
+HKEY_LOCAL_MACHINE\SYSTEM\XConfig\AudioBlurayPassthrough
+    Version1    REG_BINARY    00
+
+HKEY_LOCAL_MACHINE\SYSTEM\XConfig\AudioCommAttenuation
+    Version1    REG_DWORD    0x3f000000
+
+HKEY_LOCAL_MACHINE\SYSTEM\XConfig\AudioFillVolume
+    Version1    REG_DWORD    0x3f800000
+
+HKEY_LOCAL_MACHINE\SYSTEM\XConfig\AudioFlags
+    Version1    REG_BINARY    FF
+
+HKEY_LOCAL_MACHINE\SYSTEM\XConfig\AudioGlobalPassthrough
+    Version1    REG_BINARY    00
+
+HKEY_LOCAL_MACHINE\SYSTEM\XConfig\AudioHdmiSetting
+    Version1    REG_BINARY    FF
+
+HKEY_LOCAL_MACHINE\SYSTEM\XConfig\AudioHdmiSettingPrevious
+    Version1    REG_BINARY    FF
+
+HKEY_LOCAL_MACHINE\SYSTEM\XConfig\AudioHeadsetFormat
+    Version1    REG_BINARY    FF
+
+HKEY_LOCAL_MACHINE\SYSTEM\XConfig\AudioHeadsetHDMIOptical
+    Version1    REG_BINARY    00
+
+HKEY_LOCAL_MACHINE\SYSTEM\XConfig\AudioHeadsetSpatial
+    Version1    REG_BINARY    81
+
+HKEY_LOCAL_MACHINE\SYSTEM\XConfig\AudioMasterVolume
+    Version1    REG_DWORD    0x3f800000
+
+HKEY_LOCAL_MACHINE\SYSTEM\XConfig\AudioOpticalSetting
+    Version1    REG_BINARY    FF
+
+HKEY_LOCAL_MACHINE\SYSTEM\XConfig\AudioOpticalSettingPrevious
+    Version1    REG_BINARY    FF
+
+HKEY_LOCAL_MACHINE\SYSTEM\XConfig\AudioSettingsVersion
+    Version1    REG_BINARY    02
+
+HKEY_LOCAL_MACHINE\SYSTEM\XConfig\AudioSnapVolume
+    Version1    REG_DWORD    0x3f800000
+
+HKEY_LOCAL_MACHINE\SYSTEM\XConfig\AudioToastHistory
+    Version1    REG_BINARY    00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+
+HKEY_LOCAL_MACHINE\SYSTEM\XConfig\AudioVSSAllGamesApps
+    Version1    REG_BINARY    00
+
+HKEY_LOCAL_MACHINE\SYSTEM\XConfig\AutoBootGameOs
+    Version1    REG_BINARY    00
+
+HKEY_LOCAL_MACHINE\SYSTEM\XConfig\AutoInstallMode
+    Version1    REG_BINARY    00
+
+HKEY_LOCAL_MACHINE\SYSTEM\XConfig\AutoLaunchDevHome
+    Version1    REG_BINARY    01
+
+HKEY_LOCAL_MACHINE\SYSTEM\XConfig\BootAnimationFlags
+    Version1    REG_DWORD    0x0
+
+HKEY_LOCAL_MACHINE\SYSTEM\XConfig\BootAttempts
+    Version1    REG_DWORD    0x0
+
+HKEY_LOCAL_MACHINE\SYSTEM\XConfig\BootId
+    Version1    REG_DWORD    0x6f
+
+HKEY_LOCAL_MACHINE\SYSTEM\XConfig\BootSlot
+    Version1    REG_BINARY    41
+
+HKEY_LOCAL_MACHINE\SYSTEM\XConfig\Bugcheck3000BEnabled
+    Version1    REG_BINARY    00
+
+HKEY_LOCAL_MACHINE\SYSTEM\XConfig\CloudConsoleRegionOverride
+    Version1    REG_BINARY    01
+
+HKEY_LOCAL_MACHINE\SYSTEM\XConfig\ConsoleLanguage
+    Version1    REG_SZ    en-US
+
+HKEY_LOCAL_MACHINE\SYSTEM\XConfig\ConsoleLanguageNotAvailable
+    Version1    REG_SZ    
+
+HKEY_LOCAL_MACHINE\SYSTEM\XConfig\ConsoleLocale
+    Version1    REG_SZ    
+
+HKEY_LOCAL_MACHINE\SYSTEM\XConfig\ConsoleMode
+    Version1    REG_BINARY    00
+
+HKEY_LOCAL_MACHINE\SYSTEM\XConfig\ConsoleRegionOverride
+    Version1    REG_BINARY    00
+
+HKEY_LOCAL_MACHINE\SYSTEM\XConfig\ConsoleTimeZoneId
+    Version1    REG_SZ    
+
+HKEY_LOCAL_MACHINE\SYSTEM\XConfig\CrashControl
+    Version1    REG_DWORD    0x1010101
+
+HKEY_LOCAL_MACHINE\SYSTEM\XConfig\CSPlusEndTime
+    Version1    REG_QWORD    0x0
+
+HKEY_LOCAL_MACHINE\SYSTEM\XConfig\CSPlusStartTime
+    Version1    REG_QWORD    0x0
+
+HKEY_LOCAL_MACHINE\SYSTEM\XConfig\CSState
+    Version1    REG_BINARY    00
+
+HKEY_LOCAL_MACHINE\SYSTEM\XConfig\DAWNFlightingFlags
+    Version1    REG_DWORD    0x0
+
+HKEY_LOCAL_MACHINE\SYSTEM\XConfig\DebugNicDisable
+    Version1    REG_BINARY    01
+
+HKEY_LOCAL_MACHINE\SYSTEM\XConfig\DefaultApp
+    Version1    REG_BINARY    00
+
+HKEY_LOCAL_MACHINE\SYSTEM\XConfig\DevkitAllowACG
+    Version1    REG_BINARY    01
+
+HKEY_LOCAL_MACHINE\SYSTEM\XConfig\DevkitFeatureFlags
+    Version1    REG_DWORD    0xa
+
+HKEY_LOCAL_MACHINE\SYSTEM\XConfig\DevKitHardware
+    Version1    REG_BINARY    0000
+
+HKEY_LOCAL_MACHINE\SYSTEM\XConfig\DevModeRebootInProgress
+    Version1    REG_BINARY    00
+
+HKEY_LOCAL_MACHINE\SYSTEM\XConfig\DisableAdvancedNtfsShuffle
+    Version1    REG_BINARY    00
+
+HKEY_LOCAL_MACHINE\SYSTEM\XConfig\DisableClockGateFix
+    Version1    REG_BINARY    00
+
+HKEY_LOCAL_MACHINE\SYSTEM\XConfig\DisableRfpcDataCache
+    Version1    REG_BINARY    01
+
+HKEY_LOCAL_MACHINE\SYSTEM\XConfig\DisableUSBStorageSelectiveSuspend
+    Version1    REG_BINARY    00
+
+HKEY_LOCAL_MACHINE\SYSTEM\XConfig\DisplaySetupTime
+    Version1    REG_DWORD    0x0
+
+HKEY_LOCAL_MACHINE\SYSTEM\XConfig\EnableAlternateCFPU2Firmware
+    Version1    REG_BINARY    00
+
+HKEY_LOCAL_MACHINE\SYSTEM\XConfig\EnableHostPoolAllocFailureBugcheck
+    Version1    REG_BINARY    00
+
+HKEY_LOCAL_MACHINE\SYSTEM\XConfig\EnableInternalSSD
+    Version1    REG_BINARY    01
+
+HKEY_LOCAL_MACHINE\SYSTEM\XConfig\EnableKernelDebugging
+    Version1    REG_DWORD    0x1
+
+HKEY_LOCAL_MACHINE\SYSTEM\XConfig\EnableNandDefragTimeoutReset
+    Version1    REG_DWORD    0x2
+
+HKEY_LOCAL_MACHINE\SYSTEM\XConfig\EnableNoBalanceCs
+    Version1    REG_BINARY    01
+
+HKEY_LOCAL_MACHINE\SYSTEM\XConfig\EnableOpusOffloadForGip
+    Version1    REG_BINARY    00
+
+HKEY_LOCAL_MACHINE\SYSTEM\XConfig\EnableRGfx
+    Version1    REG_BINARY    01
+
+HKEY_LOCAL_MACHINE\SYSTEM\XConfig\EnableUnifiedScratch
+    Version1    REG_BINARY    00
+
+HKEY_LOCAL_MACHINE\SYSTEM\XConfig\EraGraphicsDriverMode
+    Version1    REG_BINARY    00
+
+HKEY_LOCAL_MACHINE\SYSTEM\XConfig\ExtraTitleMemory
+    Version1    REG_DWORD    0x0
+
+HKEY_LOCAL_MACHINE\SYSTEM\XConfig\FactoryResetCompleted
+    Version1    REG_DWORD    0x0
+
+HKEY_LOCAL_MACHINE\SYSTEM\XConfig\FactoryResetLastCompletedActions
+    Version1    REG_DWORD    0x3ed
+
+HKEY_LOCAL_MACHINE\SYSTEM\XConfig\FactoryResetLastSource
+    Version1    REG_BINARY    05
+
+HKEY_LOCAL_MACHINE\SYSTEM\XConfig\FactoryResetRequested
+    Version1    REG_DWORD    0x0
+
+HKEY_LOCAL_MACHINE\SYSTEM\XConfig\FactoryResetTelemetryFlags
+    Version1    REG_BINARY    00
+
+HKEY_LOCAL_MACHINE\SYSTEM\XConfig\ForcedReboot
+    Version1    REG_DWORD    0x0
+
+HKEY_LOCAL_MACHINE\SYSTEM\XConfig\GameInputDLIConfiguration
+    Version1    REG_BINARY    00000000000000000000000000000000000000000000000000000000
+
+HKEY_LOCAL_MACHINE\SYSTEM\XConfig\GsFeatureSettings
+    Version1    REG_DWORD    0x34
+
+HKEY_LOCAL_MACHINE\SYSTEM\XConfig\HdAudioChannelPreferences
+    Version1    REG_DWORD    0xffffffff
+
+HKEY_LOCAL_MACHINE\SYSTEM\XConfig\HdAudioMutePreference
+    Version1    REG_BINARY    00
+
+HKEY_LOCAL_MACHINE\SYSTEM\XConfig\HDMIAllmDisable
+    Version1    REG_DWORD    0x1
+
+HKEY_LOCAL_MACHINE\SYSTEM\XConfig\HDMIAudio
+    Version1    REG_DWORD    0x0
+
+HKEY_LOCAL_MACHINE\SYSTEM\XConfig\HDMIBPP
+    Version1    REG_DWORD    0x3
+
+HKEY_LOCAL_MACHINE\SYSTEM\XConfig\HDMICalibrationMaxFFTML
+    Version1    REG_DWORD    0x0
+
+HKEY_LOCAL_MACHINE\SYSTEM\XConfig\HDMICalibrationMaxTML
+    Version1    REG_DWORD    0x0
+
+HKEY_LOCAL_MACHINE\SYSTEM\XConfig\HDMICalibrationMinTML
+    Version1    REG_DWORD    0x0
+
+HKEY_LOCAL_MACHINE\SYSTEM\XConfig\HDMICecFeatures
+    Version1    REG_BINARY    00
+
+HKEY_LOCAL_MACHINE\SYSTEM\XConfig\HDMICinema4KDisable
+    Version1    REG_DWORD    0x0
+
+HKEY_LOCAL_MACHINE\SYSTEM\XConfig\HDMIColorspace
+    Version1    REG_DWORD    0x6
+
+HKEY_LOCAL_MACHINE\SYSTEM\XConfig\HDMIContentTypeDisable
+    Version1    REG_DWORD    0x0
+
+HKEY_LOCAL_MACHINE\SYSTEM\XConfig\HDMIDolbyVisionDisable
+    Version1    REG_DWORD    0x1
+
+HKEY_LOCAL_MACHINE\SYSTEM\XConfig\HDMIDolbyVisionGamingDisable
+    Version1    REG_DWORD    0x1
+
+HKEY_LOCAL_MACHINE\SYSTEM\XConfig\HDMIForceGoldenEdid
+    Version1    REG_DWORD    0x0
+
+HKEY_LOCAL_MACHINE\SYSTEM\XConfig\HDMIHDCPSetting
+    Version1    REG_DWORD    0x0
+
+HKEY_LOCAL_MACHINE\SYSTEM\XConfig\HDMIHddEdidEnable
+    Version1    REG_DWORD    0x0
+
+HKEY_LOCAL_MACHINE\SYSTEM\XConfig\HDMIHdrDisable
+    Version1    REG_DWORD    0x0
+
+HKEY_LOCAL_MACHINE\SYSTEM\XConfig\HDMIHdrEotf
+    Version1    REG_DWORD    0x0
+
+HKEY_LOCAL_MACHINE\SYSTEM\XConfig\HDMIInternalModesEnable
+    Version1    REG_DWORD    0x0
+
+HKEY_LOCAL_MACHINE\SYSTEM\XConfig\HDMIPixelEncodingDisable
+    Version1    REG_DWORD    0x2
+
+HKEY_LOCAL_MACHINE\SYSTEM\XConfig\HDMIRefreshRatesDisable
+    Version1    REG_DWORD    0x0
+
+HKEY_LOCAL_MACHINE\SYSTEM\XConfig\HDMIReserved
+    Version1    REG_BINARY    00000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+
+HKEY_LOCAL_MACHINE\SYSTEM\XConfig\HDMIResolutionHeight
+    Version1    REG_DWORD    0x438
+
+HKEY_LOCAL_MACHINE\SYSTEM\XConfig\HDMIResolutionInterlaced
+    Version1    REG_DWORD    0x0
+
+HKEY_LOCAL_MACHINE\SYSTEM\XConfig\HDMIResolutionRefresh
+    Version1    REG_DWORD    0x78
+
+HKEY_LOCAL_MACHINE\SYSTEM\XConfig\HDMIResolutionWidth
+    Version1    REG_DWORD    0x780
+
+HKEY_LOCAL_MACHINE\SYSTEM\XConfig\HDMISafeModeResetCount
+    Version1    REG_DWORD    0x0
+
+HKEY_LOCAL_MACHINE\SYSTEM\XConfig\HDMIStcrDisable
+    Version1    REG_DWORD    0x0
+
+HKEY_LOCAL_MACHINE\SYSTEM\XConfig\HDMIStereoscopicDisable
+    Version1    REG_DWORD    0x0
+
+HKEY_LOCAL_MACHINE\SYSTEM\XConfig\HDMIVrrDisable
+    Version1    REG_DWORD    0x1
+
+HKEY_LOCAL_MACHINE\SYSTEM\XConfig\HDMIVrrPolicy
+    Version1    REG_DWORD    0x0
+
+HKEY_LOCAL_MACHINE\SYSTEM\XConfig\HostExperimentation
+    Version1    REG_BINARY    00000000000000000000000000000000
+
+HKEY_LOCAL_MACHINE\SYSTEM\XConfig\HostVmToolingCritical
+    Version1    REG_BINARY    01
+
+HKEY_LOCAL_MACHINE\SYSTEM\XConfig\InitiateNeuForGS
+    Version1    REG_BINARY    00
+
+HKEY_LOCAL_MACHINE\SYSTEM\XConfig\InputProfilerAllowReporting
+    Version1    REG_BINARY    01
+
+HKEY_LOCAL_MACHINE\SYSTEM\XConfig\InstalledLangPacks
+    Version1    REG_SZ    
+
+HKEY_LOCAL_MACHINE\SYSTEM\XConfig\InstalledRecoveryFlavor
+    Version1    REG_BINARY    00
+
+HKEY_LOCAL_MACHINE\SYSTEM\XConfig\KinectMediaModeEngagementDisabled
+    Version1    REG_BINARY    00
+
+HKEY_LOCAL_MACHINE\SYSTEM\XConfig\KinectSensorMuted
+    Version1    REG_BINARY    00
+
+HKEY_LOCAL_MACHINE\SYSTEM\XConfig\LangPackMountFailure
+    Version1    REG_BINARY    00
+
+HKEY_LOCAL_MACHINE\SYSTEM\XConfig\LanguageSetupTime
+    Version1    REG_DWORD    0x0
+
+HKEY_LOCAL_MACHINE\SYSTEM\XConfig\LastConsoleLanguage
+    Version1    REG_SZ    en-US
+
+HKEY_LOCAL_MACHINE\SYSTEM\XConfig\LastKnownSystemTime
+    Version1    REG_QWORD    0x0
+
+HKEY_LOCAL_MACHINE\SYSTEM\XConfig\LegacyGpuPerformanceMode
+    Version1    REG_DWORD    0x0
+
+HKEY_LOCAL_MACHINE\SYSTEM\XConfig\LocaleSetupTime
+    Version1    REG_DWORD    0x0
+
+HKEY_LOCAL_MACHINE\SYSTEM\XConfig\ManufacturingTestMode
+    Version1    REG_DWORD    0x0
+
+HKEY_LOCAL_MACHINE\SYSTEM\XConfig\MaxSilentRebootsOnBugcheck
+    Version1    REG_DWORD    0x5
+
+HKEY_LOCAL_MACHINE\SYSTEM\XConfig\MteFlags
+    Version1    REG_DWORD    0x0
+
+HKEY_LOCAL_MACHINE\SYSTEM\XConfig\MTKAccFirmwareVersion
+    Version1    REG_DWORD    0x0
+
+HKEY_LOCAL_MACHINE\SYSTEM\XConfig\MTKRedOverride
+    Version1    REG_DWORD    0x0
+
+HKEY_LOCAL_MACHINE\SYSTEM\XConfig\MTKWiFiBugCheckControl
+    Version1    REG_DWORD    0x0
+
+HKEY_LOCAL_MACHINE\SYSTEM\XConfig\MTKWiFiEnable80211dScanning
+    Version1    REG_BINARY    00
+
+HKEY_LOCAL_MACHINE\SYSTEM\XConfig\MTKWiFiReloadResetRecovery
+    Version1    REG_BINARY    01
+
+HKEY_LOCAL_MACHINE\SYSTEM\XConfig\NetworkConnectivityFlags
+    Version1    REG_BINARY    00
+
+HKEY_LOCAL_MACHINE\SYSTEM\XConfig\NetworkDebug1V4DefaultGateway
+    Version1    REG_SZ    
+
+HKEY_LOCAL_MACHINE\SYSTEM\XConfig\NetworkDebug1V4EnableDHCP
+    Version1    REG_DWORD    0x1
+
+HKEY_LOCAL_MACHINE\SYSTEM\XConfig\NetworkDebug1V4IPAddress
+    Version1    REG_SZ    
+
+HKEY_LOCAL_MACHINE\SYSTEM\XConfig\NetworkDebug1V4IPAutoConfig
+    Version1    REG_DWORD    0x1
+
+HKEY_LOCAL_MACHINE\SYSTEM\XConfig\NetworkDebug1V4NameServer
+    Version1    REG_SZ    
+
+HKEY_LOCAL_MACHINE\SYSTEM\XConfig\NetworkDebug1V4SubnetMask
+    Version1    REG_SZ    
+
+HKEY_LOCAL_MACHINE\SYSTEM\XConfig\NetworkDebug1V6DefaultGateway
+    Version1    REG_SZ    
+
+HKEY_LOCAL_MACHINE\SYSTEM\XConfig\NetworkDebug1V6IPAddress
+    Version1    REG_SZ    
+
+HKEY_LOCAL_MACHINE\SYSTEM\XConfig\NetworkDebug1V6NameServer
+    Version1    REG_SZ    
+
+HKEY_LOCAL_MACHINE\SYSTEM\XConfig\NetworkDebug2V4DefaultGateway
+    Version1    REG_SZ    
+
+HKEY_LOCAL_MACHINE\SYSTEM\XConfig\NetworkDebug2V4EnableDHCP
+    Version1    REG_DWORD    0x1
+
+HKEY_LOCAL_MACHINE\SYSTEM\XConfig\NetworkDebug2V4IPAddress
+    Version1    REG_SZ    
+
+HKEY_LOCAL_MACHINE\SYSTEM\XConfig\NetworkDebug2V4IPAutoConfig
+    Version1    REG_DWORD    0x1
+
+HKEY_LOCAL_MACHINE\SYSTEM\XConfig\NetworkDebug2V4NameServer
+    Version1    REG_SZ    
+
+HKEY_LOCAL_MACHINE\SYSTEM\XConfig\NetworkDebug2V4SubnetMask
+    Version1    REG_SZ    
+
+HKEY_LOCAL_MACHINE\SYSTEM\XConfig\NetworkDebug2V6DefaultGateway
+    Version1    REG_SZ    
+
+HKEY_LOCAL_MACHINE\SYSTEM\XConfig\NetworkDebug2V6IPAddress
+    Version1    REG_SZ    
+
+HKEY_LOCAL_MACHINE\SYSTEM\XConfig\NetworkDebug2V6NameServer
+    Version1    REG_SZ    
+
+HKEY_LOCAL_MACHINE\SYSTEM\XConfig\NetworkHostName
+    Version1    REG_SZ    XBXOWNED
+
+HKEY_LOCAL_MACHINE\SYSTEM\XConfig\NetworkLiveEnvironment
+    Version1    REG_SZ    
+
+HKEY_LOCAL_MACHINE\SYSTEM\XConfig\NetworkSetupTime
+    Version1    REG_DWORD    0x0
+
+HKEY_LOCAL_MACHINE\SYSTEM\XConfig\NetworkWifiMACAddressOverride
+    Version1    REG_BINARY    000000000000
+
+HKEY_LOCAL_MACHINE\SYSTEM\XConfig\NetworkWifiV4DefaultGateway
+    Version1    REG_SZ    
+
+HKEY_LOCAL_MACHINE\SYSTEM\XConfig\NetworkWifiV4EnableDHCP
+    Version1    REG_DWORD    0x1
+
+HKEY_LOCAL_MACHINE\SYSTEM\XConfig\NetworkWifiV4IPAddress
+    Version1    REG_SZ    
+
+HKEY_LOCAL_MACHINE\SYSTEM\XConfig\NetworkWifiV4IPAutoConfig
+    Version1    REG_DWORD    0x1
+
+HKEY_LOCAL_MACHINE\SYSTEM\XConfig\NetworkWifiV4NameServer
+    Version1    REG_SZ    
+
+HKEY_LOCAL_MACHINE\SYSTEM\XConfig\NetworkWifiV4SubnetMask
+    Version1    REG_SZ    
+
+HKEY_LOCAL_MACHINE\SYSTEM\XConfig\NetworkWifiV6DefaultGateway
+    Version1    REG_SZ    
+
+HKEY_LOCAL_MACHINE\SYSTEM\XConfig\NetworkWifiV6IPAddress
+    Version1    REG_SZ    
+
+HKEY_LOCAL_MACHINE\SYSTEM\XConfig\NetworkWifiV6NameServer
+    Version1    REG_SZ    
+
+HKEY_LOCAL_MACHINE\SYSTEM\XConfig\NetworkWinHttpProxySettings
+    Version1    REG_BINARY    0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+
+HKEY_LOCAL_MACHINE\SYSTEM\XConfig\NetworkWinInetProxySettings
+    Version1    REG_BINARY    0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+
+HKEY_LOCAL_MACHINE\SYSTEM\XConfig\NetworkWiredMACAddressOverride
+    Version1    REG_BINARY    000000000000
+
+HKEY_LOCAL_MACHINE\SYSTEM\XConfig\NetworkWiredV4DefaultGateway
+    Version1    REG_SZ    
+
+HKEY_LOCAL_MACHINE\SYSTEM\XConfig\NetworkWiredV4EnableDHCP
+    Version1    REG_DWORD    0x1
+
+HKEY_LOCAL_MACHINE\SYSTEM\XConfig\NetworkWiredV4IPAddress
+    Version1    REG_SZ    
+
+HKEY_LOCAL_MACHINE\SYSTEM\XConfig\NetworkWiredV4IPAutoConfig
+    Version1    REG_DWORD    0x1
+
+HKEY_LOCAL_MACHINE\SYSTEM\XConfig\NetworkWiredV4NameServer
+    Version1    REG_SZ    
+
+HKEY_LOCAL_MACHINE\SYSTEM\XConfig\NetworkWiredV4SubnetMask
+    Version1    REG_SZ    
+
+HKEY_LOCAL_MACHINE\SYSTEM\XConfig\NetworkWiredV6DefaultGateway
+    Version1    REG_SZ    
+
+HKEY_LOCAL_MACHINE\SYSTEM\XConfig\NetworkWiredV6IPAddress
+    Version1    REG_SZ    
+
+HKEY_LOCAL_MACHINE\SYSTEM\XConfig\NetworkWiredV6NameServer
+    Version1    REG_SZ    
+
+HKEY_LOCAL_MACHINE\SYSTEM\XConfig\NvmexDefragTimeoutSeconds
+    Version1    REG_DWORD    0xb4
+
+HKEY_LOCAL_MACHINE\SYSTEM\XConfig\NvmexEnableFua
+    Version1    REG_BINARY    00
+
+HKEY_LOCAL_MACHINE\SYSTEM\XConfig\NvmexL1PowerControl
+    Version1    REG_DWORD    0x40
+
+HKEY_LOCAL_MACHINE\SYSTEM\XConfig\NvmexOptimizeDriveControl
+    Version1    REG_DWORD    0x0
+
+HKEY_LOCAL_MACHINE\SYSTEM\XConfig\NvmexPowerManagementV2Control
+    Version1    REG_DWORD    0x41
+
+HKEY_LOCAL_MACHINE\SYSTEM\XConfig\NvmexPs3PowerControl
+    Version1    REG_DWORD    0x40
+
+HKEY_LOCAL_MACHINE\SYSTEM\XConfig\OddFauxLock
+    Version1    REG_BINARY    00
+
+HKEY_LOCAL_MACHINE\SYSTEM\XConfig\OddFwUpdateResult
+    Version1    REG_DWORD    0x0
+
+HKEY_LOCAL_MACHINE\SYSTEM\XConfig\Oobe64BitNetworkSetupError1
+    Version1    REG_QWORD    0x0
+
+HKEY_LOCAL_MACHINE\SYSTEM\XConfig\Oobe64BitNetworkSetupError2
+    Version1    REG_QWORD    0x0
+
+HKEY_LOCAL_MACHINE\SYSTEM\XConfig\Oobe64BitNetworkSetupError3
+    Version1    REG_QWORD    0x0
+
+HKEY_LOCAL_MACHINE\SYSTEM\XConfig\Oobe64BitNetworkSetupError4
+    Version1    REG_QWORD    0x0
+
+HKEY_LOCAL_MACHINE\SYSTEM\XConfig\Oobe64BitNetworkSetupError5
+    Version1    REG_QWORD    0x0
+
+HKEY_LOCAL_MACHINE\SYSTEM\XConfig\OobeControllerSetupTime
+    Version1    REG_DWORD    0x0
+
+HKEY_LOCAL_MACHINE\SYSTEM\XConfig\OobeDisplaySetupPageCount
+    Version1    REG_DWORD    0x0
+
+HKEY_LOCAL_MACHINE\SYSTEM\XConfig\OobeHitAButtonTime
+    Version1    REG_DWORD    0x0
+
+HKEY_LOCAL_MACHINE\SYSTEM\XConfig\OobeLanguageSetupPageCount
+    Version1    REG_DWORD    0x0
+
+HKEY_LOCAL_MACHINE\SYSTEM\XConfig\OobeLocaleSetupPageCount
+    Version1    REG_DWORD    0x0
+
+HKEY_LOCAL_MACHINE\SYSTEM\XConfig\OobeNetworkSetupError1
+    Version1    REG_DWORD    0x0
+
+HKEY_LOCAL_MACHINE\SYSTEM\XConfig\OobeNetworkSetupError2
+    Version1    REG_DWORD    0x0
+
+HKEY_LOCAL_MACHINE\SYSTEM\XConfig\OobeNetworkSetupError3
+    Version1    REG_DWORD    0x0
+
+HKEY_LOCAL_MACHINE\SYSTEM\XConfig\OobeNetworkSetupError4
+    Version1    REG_DWORD    0x0
+
+HKEY_LOCAL_MACHINE\SYSTEM\XConfig\OobeNetworkSetupError5
+    Version1    REG_DWORD    0x0
+
+HKEY_LOCAL_MACHINE\SYSTEM\XConfig\OobeNetworkSetupPageCount
+    Version1    REG_DWORD    0x0
+
+HKEY_LOCAL_MACHINE\SYSTEM\XConfig\OobeNumWirelessNetworks
+    Version1    REG_DWORD    0x0
+
+HKEY_LOCAL_MACHINE\SYSTEM\XConfig\OobeSettingsServiceError
+    Version1    REG_QWORD    0x0
+
+HKEY_LOCAL_MACHINE\SYSTEM\XConfig\OOBEState
+    Version1    REG_DWORD    0x1
+
+HKEY_LOCAL_MACHINE\SYSTEM\XConfig\OobeTelemetryFlags
+    Version1    REG_BINARY    00
+
+HKEY_LOCAL_MACHINE\SYSTEM\XConfig\Pass2ClearDriveState
+    Version1    REG_BINARY    00
+
+HKEY_LOCAL_MACHINE\SYSTEM\XConfig\Pass3UpdateAttempts
+    Version1    REG_BINARY    00
+
+HKEY_LOCAL_MACHINE\SYSTEM\XConfig\PersistentCleanBoot
+    Version1    REG_DWORD    0x0
+
+HKEY_LOCAL_MACHINE\SYSTEM\XConfig\PixFastTransportMode
+    Version1    REG_BINARY    01
+
+HKEY_LOCAL_MACHINE\SYSTEM\XConfig\PMemFeatureFlags
+    Version1    REG_DWORD    0x102
+
+HKEY_LOCAL_MACHINE\SYSTEM\XConfig\PowerChimeMode
+    Version1    REG_BINARY    00
+
+HKEY_LOCAL_MACHINE\SYSTEM\XConfig\PowerPolicyFlags
+    Version1    REG_BINARY    06
+
+HKEY_LOCAL_MACHINE\SYSTEM\XConfig\PreviousUptime
+    Version1    REG_QWORD    0x0
+
+HKEY_LOCAL_MACHINE\SYSTEM\XConfig\PrototypeMode
+    Version1    REG_DWORD    0x8d000003
+
+HKEY_LOCAL_MACHINE\SYSTEM\XConfig\PrototypeModeLiveSet
+    Version1    REG_DWORD    0x8d000003
+
+HKEY_LOCAL_MACHINE\SYSTEM\XConfig\PrototypeSocExpireDate
+    Version1    REG_QWORD    0x1d3829376dee980
+
+HKEY_LOCAL_MACHINE\SYSTEM\XConfig\RecreateScratchXvdsOnBoot
+    Version1    REG_BINARY    00
+
+HKEY_LOCAL_MACHINE\SYSTEM\XConfig\ReenableUXDefaults
+    Version1    REG_BINARY    00
+
+HKEY_LOCAL_MACHINE\SYSTEM\XConfig\RestoreDevXvds
+    Version1    REG_BINARY    00
+
+HKEY_LOCAL_MACHINE\SYSTEM\XConfig\RunDevOobeScriptOnBoot
+    Version1    REG_BINARY    01
+
+HKEY_LOCAL_MACHINE\SYSTEM\XConfig\ScratchDriveSizeInGb
+    Version1    REG_DWORD    0x1ed
+
+HKEY_LOCAL_MACHINE\SYSTEM\XConfig\ShellReadyTime
+    Version1    REG_QWORD    0x0
+
+HKEY_LOCAL_MACHINE\SYSTEM\XConfig\ShutdownReason
+    Version1    REG_BINARY    0000
+
+HKEY_LOCAL_MACHINE\SYSTEM\XConfig\SkipAllLanguageInstalls
+    Version1    REG_BINARY    00
+
+HKEY_LOCAL_MACHINE\SYSTEM\XConfig\SMCErrorLogCurrentBlockIndex
+    Version1    REG_DWORD    0x0
+
+HKEY_LOCAL_MACHINE\SYSTEM\XConfig\SMCErrorLogCurrentBlockOffset
+    Version1    REG_DWORD    0x0
+
+HKEY_LOCAL_MACHINE\SYSTEM\XConfig\SMCErrorLogCurrentSequenceNumber
+    Version1    REG_DWORD    0x0
+
+HKEY_LOCAL_MACHINE\SYSTEM\XConfig\SraAppId
+    Version1    REG_DWORD    0x0
+
+HKEY_LOCAL_MACHINE\SYSTEM\XConfig\SraGraphicsDriverMode
+    Version1    REG_BINARY    01
+
+HKEY_LOCAL_MACHINE\SYSTEM\XConfig\SraMemoryReductionSize
+    Version1    REG_DWORD    0x0
+
+HKEY_LOCAL_MACHINE\SYSTEM\XConfig\StreamingViolationHmbTimeoutSeconds
+    Version1    REG_DWORD    0x12c
+
+HKEY_LOCAL_MACHINE\SYSTEM\XConfig\SUNarratorEnabled
+    Version1    REG_BINARY    00
+
+HKEY_LOCAL_MACHINE\SYSTEM\XConfig\SUTheme
+    Version1    REG_DWORD    0x1
+
+HKEY_LOCAL_MACHINE\SYSTEM\XConfig\SUUserColor
+    Version1    REG_DWORD    0xff107c10
+
+HKEY_LOCAL_MACHINE\SYSTEM\XConfig\SystemDimTimeout
+    Version1    REG_BINARY    00
+
+HKEY_LOCAL_MACHINE\SYSTEM\XConfig\SystemForceIdleTimeout
+    Version1    REG_DWORD    0x0
+
+HKEY_LOCAL_MACHINE\SYSTEM\XConfig\SystemIdleTimeout
+    Version1    REG_DWORD    0x0
+
+HKEY_LOCAL_MACHINE\SYSTEM\XConfig\SystemPhysicalMemory
+    Version1    REG_DWORD    0x0
+
+HKEY_LOCAL_MACHINE\SYSTEM\XConfig\TempOfflineLicensingTime
+    Version1    REG_QWORD    0x1dd6736af9c6ccb
+
+HKEY_LOCAL_MACHINE\SYSTEM\XConfig\Thermal_OsTrip
+    Version1    REG_DWORD    0x0
+
+HKEY_LOCAL_MACHINE\SYSTEM\XConfig\Thermal_PspFatal
+    Version1    REG_DWORD    0x0
+
+HKEY_LOCAL_MACHINE\SYSTEM\XConfig\Thermal_SmcActive
+    Version1    REG_DWORD    0x0
+
+HKEY_LOCAL_MACHINE\SYSTEM\XConfig\Thermal_SmcQuiet
+    Version1    REG_DWORD    0x0
+
+HKEY_LOCAL_MACHINE\SYSTEM\XConfig\Thermal_SmcVReg
+    Version1    REG_DWORD    0x0
+
+HKEY_LOCAL_MACHINE\SYSTEM\XConfig\Thermal_SocTrip
+    Version1    REG_DWORD    0x0
+
+HKEY_LOCAL_MACHINE\SYSTEM\XConfig\TitleCompatOverride
+    Version1    REG_BINARY    00
+
+HKEY_LOCAL_MACHINE\SYSTEM\XConfig\TitleId
+    Version1    REG_DWORD    0x0
+
+HKEY_LOCAL_MACHINE\SYSTEM\XConfig\TitlePerfOverlayEnable
+    Version1    REG_BINARY    01
+
+HKEY_LOCAL_MACHINE\SYSTEM\XConfig\TitleRestored
+    Version1    REG_BINARY    00
+
+HKEY_LOCAL_MACHINE\SYSTEM\XConfig\ToolingMemoryOverflow
+    Version1    REG_BINARY    01
+
+HKEY_LOCAL_MACHINE\SYSTEM\XConfig\UpdateDownloadPolicy
+    Version1    REG_BINARY    02
+
+HKEY_LOCAL_MACHINE\SYSTEM\XConfig\UseAlternateXConfigDefaults
+    Version1    REG_BINARY    00
+
+HKEY_LOCAL_MACHINE\SYSTEM\XConfig\WirelessRadioSettings
+    Version1    REG_DWORD    0x0
+
+HKEY_LOCAL_MACHINE\SYSTEM\XConfig\XblEnvironment
+    Version1    REG_SZ    
+
+HKEY_LOCAL_MACHINE\SYSTEM\XConfig\XblSandbox
+    Version1    REG_SZ    
+
+HKEY_LOCAL_MACHINE\SYSTEM\XConfig\XtfSessionKey
+    Version1    REG_SZ    
+
+HKEY_LOCAL_MACHINE\SYSTEM\XConfig\XvddDeadlockWatchdogTimeoutSeconds
+    Version1    REG_DWORD    0x0
+
+HKEY_LOCAL_MACHINE\SYSTEM\XConfig\XvddLockCancellationScenarios
+    Version1    REG_DWORD    0x7
+
+HKEY_LOCAL_MACHINE\SYSTEM\XConfig\XvddLockCancellationWaitTimeout
+    Version1    REG_DWORD    0x2
+
+HKEY_LOCAL_MACHINE\SYSTEM\XConfig\XvddOomCrashControlAdapter
+    Version1    REG_DWORD    0x0
+
+HKEY_LOCAL_MACHINE\SYSTEM\XConfig\XvddOomCrashControlDisk
+    Version1    REG_DWORD    0x0
+
+HKEY_LOCAL_MACHINE\SYSTEM\XConfig\XvioErrCtrl
+    Version1    REG_DWORD    0x2
+
+HKEY_LOCAL_MACHINE\SYSTEM\XConfig\XvnpEnableDscpQosTagging
+    Version1    REG_BINARY    00
+
+HKEY_LOCAL_MACHINE\SYSTEM\XConfig\XvnpEnableWmmQosTagging
+    Version1    REG_BINARY    00
+
+HKEY_LOCAL_MACHINE\SYSTEM\XConfig\XvtoolFlags
+    Version1    REG_BINARY    00
+

@@ -1,0 +1,201 @@
+[+] W: drive defined in bridge mapping to D:\Windows
+[+] W: drive defined in bridge mapping to D:\Windows
+[Bridge] Initializing Hermes Native Bridge (Se* Privileges + XRO + VMM + XPAL + Local Llama)...
+[Se*] Enabled privileges (0): []
+[XRO] C:\ Unlock status: 0x80070005
+[XRO] C:\Windows\Temp Unlock status: 0x80070005
+[XRO] C:\ProgramData Unlock status: 0x80070005
+[XRO] C:\ProgramData\ssh Unlock status: 0x80070005
+[XRO] M:\ Unlock status: 0x80070032
+[XRO] S:\ Unlock status: 0x80070032
+[XRO] Q:\ Unlock status: 0x80070032
+[XRO] U:\ Unlock status: 0x80070032
+[-] VMM Client Control: could not open xvmctrl
+[XPAL] Self-arm XConfig 0x27=6 (0xC0000022) 0x39=6 (0xC0000022)
+[XPAL] ConsoleMode=0x64 VmType=0x02 Capabilities=0x04000005
+[HKEY] HKCU Winlogon note: [WinError 5] Access is denied
+[Bridge] Hermes Native Bridge active on 0.0.0.0:1984
+[Bridge] Executing (cwd=None): echo BRIDGE_OK
+[Bridge] Executing (cwd=D:\DevelopmentFiles): D:\DevelopmentFiles\python\python.exe "D:\DevelopmentFiles\set_mode_01.py"
+[Bridge] Executing (cwd=D:\DevelopmentFiles): D:\DevelopmentFiles\python\python.exe "D:\DevelopmentFiles\set_autologon.py"
+[Bridge] Executing (cwd=D:\DevelopmentFiles): D:\DevelopmentFiles\python\python.exe "D:\DevelopmentFiles\set_telemetry3.py"
+[Bridge] Executing (cwd=D:\DevelopmentFiles): D:\DevelopmentFiles\python\python.exe "D:\DevelopmentFiles\search_activation_flow.py"
+[Bridge] Executing (cwd=D:\DevelopmentFiles): D:\DevelopmentFiles\python\python.exe "D:\DevelopmentFiles\run_xrounlock.py"
+[Bridge] Executing (cwd=D:\DevelopmentFiles): D:\DevelopmentFiles\python\python.exe "D:\DevelopmentFiles\run_vmm_test.py"
+[Bridge] Executing (cwd=D:\DevelopmentFiles): D:\DevelopmentFiles\python\python.exe "D:\DevelopmentFiles\run_unattended_direct.py"
+[Bridge] Executing (cwd=D:\DevelopmentFiles): C:\Windows\System32\cmd.exe /c "D:\DevelopmentFiles\run_unattended_direct.bat"
+[Bridge] Executing (cwd=D:\DevelopmentFiles): D:\DevelopmentFiles\python\python.exe "D:\DevelopmentFiles\run_transform_test.py"
+[Bridge] Initializing Hermes Native Bridge (Se* Privileges + XRO + VMM + XPAL + Local Llama)...
+[Se*] Enabled privileges (1): ['SeShutdownPrivilege']
+[XRO] C:\ Unlock status: 0x00000000
+[XRO] C:\Windows\Temp Unlock status: 0x80070002
+[XRO] C:\ProgramData Unlock status: 0x80070002
+[XRO] C:\ProgramData\ssh Unlock status: 0x80070002
+[XRO] M:\ Unlock status: 0x80070002
+[XRO] S:\ Unlock status: 0x80070002
+[XRO] Q:\ Unlock status: 0x80070002
+[XRO] U:\ Unlock status: 0x80070002
+[+] Opened \\.\xvmctrl
+[VMM] XVIOMONC_GETIP (0x001500A0): ERR=87
+[VMM] XVIOMON_OS_INIT (0x001500A4): ERR=87
+[VMM] QUERY_040 (0x00150100) VmId=1: ERR=87
+[VMM] STATE_SIGNAL (0x0015010C) VmId=1: OK (0B) []
+[VMM] HARDWARE_STATS (0x00150114) VmId=1: OK (0B) []
+[VMM] POWER_04C (0x00150130) VmId=1: ERR=87
+[VMM] RESOURCE_BOUNDARY (0x00150178) VmId=1: OK (0B) []
+[VMM] HOLDING_PARTITION (0x00150280) VmId=1: OK (0B) []
+[VMM] TELEMETRY (0x00150298) VmId=1: ERR=87
+[VMM] PERF (0x0015029C) VmId=1: ERR=87
+[VMM] QUERY_040 (0x00150100) VmId=0: ERR=87
+[VMM] STATE_SIGNAL (0x0015010C) VmId=0: OK (0B) []
+[VMM] HARDWARE_STATS (0x00150114) VmId=0: OK (0B) []
+[VMM] POWER_04C (0x00150130) VmId=0: ERR=87
+[VMM] RESOURCE_BOUNDARY (0x00150178) VmId=0: OK (0B) []
+[VMM] HOLDING_PARTITION (0x00150280) VmId=0: OK (0B) []
+[VMM] TELEMETRY (0x00150298) VmId=0: ERR=87
+[VMM] PERF (0x0015029C) VmId=0: ERR=87
+[VMM] QUERY_040 (0x00150100) VmId=2: ERR=87
+[VMM] STATE_SIGNAL (0x0015010C) VmId=2: OK (0B) []
+[VMM] HARDWARE_STATS (0x00150114) VmId=2: OK (0B) []
+[VMM] POWER_04C (0x00150130) VmId=2: OK (8B) [00 00 8F 99 7E 02 00 00]
+[VMM] RESOURCE_BOUNDARY (0x00150178) VmId=2: OK (0B) []
+[VMM] HOLDING_PARTITION (0x00150280) VmId=2: OK (0B) []
+[VMM] TELEMETRY (0x00150298) VmId=2: ERR=87
+[VMM] PERF (0x0015029C) VmId=2: ERR=87
+[VMM] HOLDING_PARTITION Release (0x00150280 in=0): OK (Full Control Released)
+[XPAL] ConsoleMode=0x64 VmType=0x02 Capabilities=0x04000005
+[HKEY] HKCU Winlogon DisableClassicDesktop=0 UserMgrLaunchShell=1 OK
+[Bridge] Hermes Native Bridge active on 0.0.0.0:1984
+[Bridge] Model Engine ready (on-demand load; use Model Swapper or + HF DL).
+[Bridge] Executing (cwd=None): 
+[Bridge] Initializing Hermes Native Bridge (Se* Privileges + XRO + VMM + XPAL + Local Llama)...
+[Se*] Enabled privileges (1): ['SeShutdownPrivilege']
+[XRO] C:\ Unlock status: 0x00000000
+[XRO] C:\Windows\Temp Unlock status: 0x80070002
+[XRO] C:\ProgramData Unlock status: 0x80070002
+[XRO] C:\ProgramData\ssh Unlock status: 0x80070002
+[XRO] M:\ Unlock status: 0x80070002
+[XRO] S:\ Unlock status: 0x80070002
+[XRO] Q:\ Unlock status: 0x80070002
+[XRO] U:\ Unlock status: 0x80070002
+[+] Opened \\.\xvmctrl
+[VMM] XVIOMONC_GETIP (0x001500A0): ERR=87
+[VMM] XVIOMON_OS_INIT (0x001500A4): ERR=87
+[VMM] QUERY_040 (0x00150100) VmId=1: ERR=87
+[VMM] STATE_SIGNAL (0x0015010C) VmId=1: OK (0B) []
+[VMM] HARDWARE_STATS (0x00150114) VmId=1: OK (0B) []
+[VMM] POWER_04C (0x00150130) VmId=1: ERR=87
+[VMM] RESOURCE_BOUNDARY (0x00150178) VmId=1: OK (0B) []
+[VMM] HOLDING_PARTITION (0x00150280) VmId=1: OK (0B) []
+[VMM] TELEMETRY (0x00150298) VmId=1: ERR=87
+[VMM] PERF (0x0015029C) VmId=1: ERR=87
+[VMM] QUERY_040 (0x00150100) VmId=0: ERR=87
+[VMM] STATE_SIGNAL (0x0015010C) VmId=0: OK (0B) []
+[VMM] HARDWARE_STATS (0x00150114) VmId=0: OK (0B) []
+[VMM] POWER_04C (0x00150130) VmId=0: ERR=87
+[VMM] RESOURCE_BOUNDARY (0x00150178) VmId=0: OK (0B) []
+[VMM] HOLDING_PARTITION (0x00150280) VmId=0: OK (0B) []
+[VMM] TELEMETRY (0x00150298) VmId=0: ERR=87
+[VMM] PERF (0x0015029C) VmId=0: ERR=87
+[VMM] QUERY_040 (0x00150100) VmId=2: ERR=87
+[VMM] STATE_SIGNAL (0x0015010C) VmId=2: OK (0B) []
+[VMM] HARDWARE_STATS (0x00150114) VmId=2: OK (0B) []
+[VMM] POWER_04C (0x00150130) VmId=2: OK (8B) [00 00 57 C5 25 02 00 00]
+[VMM] RESOURCE_BOUNDARY (0x00150178) VmId=2: ERR=121
+[VMM] HOLDING_PARTITION (0x00150280) VmId=2: OK (0B) []
+[VMM] TELEMETRY (0x00150298) VmId=2: ERR=87
+[VMM] PERF (0x0015029C) VmId=2: ERR=87
+[VMM] HOLDING_PARTITION Release (0x00150280 in=0): OK (Full Control Released)
+[XPAL] ConsoleMode=0x64 VmType=0x02 Capabilities=0x04000005
+[HKEY] HKCU Winlogon DisableClassicDesktop=0 UserMgrLaunchShell=1 OK
+[Bridge] Hermes Native Bridge active on 0.0.0.0:1984
+[Bridge] Model Engine ready (on-demand load; use Model Swapper or + HF DL).
+[Bridge] Executing (cwd=None): 
+[Bridge] Executing (cwd=D:\DevelopmentFiles): "D:\DevelopmentFiles\LooseApps\pkg\python.exe" -u "D:\DevelopmentFiles\convert_crlf.py"
+[Bridge] Executing (cwd=D:\DevelopmentFiles): "D:\DevelopmentFiles\LooseApps\pkg\python.exe" -u "D:\DevelopmentFiles\disasm_slots.py"
+[Bridge] Executing (cwd=D:\DevelopmentFiles): "D:\DevelopmentFiles\LooseApps\pkg\python.exe" -u "D:\DevelopmentFiles\enable_se_privileges.py"
+[Bridge] Executing (cwd=D:\DevelopmentFiles): "D:\DevelopmentFiles\LooseApps\pkg\python.exe" -u "D:\DevelopmentFiles\evict_wdp.py"
+[Bridge] Executing (cwd=D:\DevelopmentFiles): "D:\DevelopmentFiles\LooseApps\pkg\python.exe" -u "D:\DevelopmentFiles\find_zero_slots.py"
+[Bridge] Executing (cwd=D:\DevelopmentFiles): "D:\DevelopmentFiles\LooseApps\pkg\python.exe" -u "D:\DevelopmentFiles\fix_bridge.py"
+[Bridge] Executing (cwd=D:\DevelopmentFiles): "D:\DevelopmentFiles\LooseApps\pkg\python.exe" -u "D:\DevelopmentFiles\fix_slots_release.py"
+[Bridge] Executing (cwd=D:\DevelopmentFiles): "D:\DevelopmentFiles\LooseApps\pkg\python.exe" -u "D:\DevelopmentFiles\full_chain_mfg_rw.py"
+[Bridge] Executing (cwd=None): cd /d C:\ && (dir /ad /b 2>nul & echo ---FE_SPLIT--- & dir /a-d /b 2>nul)
+[Bridge] Executing (cwd=None): cd /d C:\ && (dir /ad /b 2>nul & echo ---HERMES_FILES_SPLIT--- & dir /a-d /b 2>nul)
+[Bridge] Executing (cwd=None): cd /d "C:\Program Files" && (dir /ad /b 2>nul & echo ---HERMES_FILES_SPLIT--- & dir /a-d /b 2>nul)
+[Bridge] Executing (cwd=None): cd /d "C:\Program Files\WindowsApps" && (dir /ad /b 2>nul & echo ---HERMES_FILES_SPLIT--- & dir /a-d /b 2>nul)
+[Bridge] Executing (cwd=None): cd /d "C:\Program Files\WindowsApps\Access is denied." && (dir /ad /b 2>nul & echo ---HERMES_FILES_SPLIT--- & dir /a-d /b 2>nul)
+[Bridge] Executing (cwd=None): cd /d C:\ && (dir /ad /b 2>nul & echo ---HERMES_FILES_SPLIT--- & dir /a-d /b 2>nul)
+[Bridge] Executing (cwd=None): cd /d C:\ && (dir /ad /b 2>nul & echo ---HERMES_FILES_SPLIT--- & dir /a-d /b 2>nul)
+[Bridge] Executing (cwd=None): cd /d C:\ && (dir /ad /b 2>nul & echo ---HERMES_FILES_SPLIT--- & dir /a-d /b 2>nul)
+[Bridge] Executing (cwd=None): cd /d C:\ && (dir /ad /b 2>nul & echo ---HERMES_FILES_SPLIT--- & dir /a-d /b 2>nul)
+[Bridge] Executing (cwd=None): cd /d C:\ && (dir /ad /b 2>nul & echo ---HERMES_FILES_SPLIT--- & dir /a-d /b 2>nul)
+[Bridge] Executing (cwd=None): cd /d C:\ && (dir /ad /b 2>nul & echo ---HERMES_FILES_SPLIT--- & dir /a-d /b 2>nul)
+[Bridge] Executing (cwd=None): cd /d M:\ && (dir /ad /b 2>nul & echo ---HERMES_FILES_SPLIT--- & dir /a-d /b 2>nul)
+[Bridge] Executing (cwd=None): cd /d Q:\ && (dir /ad /b 2>nul & echo ---HERMES_FILES_SPLIT--- & dir /a-d /b 2>nul)
+[Bridge] Executing (cwd=None): cd /d S:\ && (dir /ad /b 2>nul & echo ---HERMES_FILES_SPLIT--- & dir /a-d /b 2>nul)
+[Bridge] Executing (cwd=None): cd /d X:\ && (dir /ad /b 2>nul & echo ---HERMES_FILES_SPLIT--- & dir /a-d /b 2>nul)
+[Bridge] Executing (cwd=None): cd /d Y:\ && (dir /ad /b 2>nul & echo ---HERMES_FILES_SPLIT--- & dir /a-d /b 2>nul)
+[Bridge] Executing (cwd=None): cd /d C:\ && (dir /ad /b 2>nul & echo ---HERMES_FILES_SPLIT--- & dir /a-d /b 2>nul)
+[Bridge] Executing (cwd=None): cd /d C:\ && (dir /ad /b 2>nul & echo ---HERMES_FILES_SPLIT--- & dir /a-d /b 2>nul)
+[Bridge] Executing (cwd=J:\tools\): "J:\tools\xrolock.exe"
+[Bridge] Executing (cwd=J:\tools\): "J:\tools\toolsautoexec.exe"
+[Bridge] Executing (cwd=J:\tools\): "J:\tools\wdapp.exe"
+[Bridge] Executing (cwd=J:\tools\): "J:\tools\wdconfig.exe"
+[Bridge] Executing (cwd=J:\tools\): "J:\tools\wdcred.exe"
+[Bridge] Executing (cwd=J:\tools\): "J:\tools\xstudioserviceexe.exe"
+[Bridge] Executing (cwd=J:\tools\): "J:\tools\xstudioserviceexe.exe"
+[Bridge] Executing (cwd=J:\tools\): "J:\tools\xtfhost.exe"
+[Bridge] Executing (cwd=J:\tools\): "J:\tools\xtfrtservice.exe"
+[Bridge] Executing (cwd=J:\tools\): "J:\tools\kill.exe"
+[Bridge] Executing (cwd=J:\tools\title): "J:\tools\title\xboxnetapidiagtitle.exe"
+[Bridge] Executing (cwd=J:\tools\title): "J:\tools\title\xboxnetapidiagtitle.exe"
+[Bridge] Executing (cwd=J:\tools\title): "J:\tools\title\xboxnetapidiagtitle.exe"
+[Bridge] Executing (cwd=J:\tools): "J:\tools\agent-xbox.exe"
+[Bridge] Executing (cwd=J:\tools): "J:\tools\agent-xbox.exe"
+[Bridge] Executing (cwd=J:\tools): "J:\tools\shutdown.exe"
+[Bridge] Executing (cwd=J:\tools\debugmon\debugmondev16payload): "J:\tools\debugmon\debugmondev16payload\vsdebuglaunchnotify.exe"
+[Bridge] Executing (cwd=J:\tools\debugmon\debugmondev16payload): "J:\tools\debugmon\debugmondev16payload\vsdebuglaunchnotify.exe"
+[+] W: drive defined in bridge mapping to D:\Windows
+[Bridge] Initializing Hermes Native Bridge (Se* Privileges + XRO + VMM + XPAL + Local Llama)...
+[Se*] Enabled privileges (1): ['SeShutdownPrivilege']
+[XRO] C:\ Unlock status: 0x00000000
+[XRO] C:\Windows\Temp Unlock status: 0x80070002
+[XRO] C:\ProgramData Unlock status: 0x80070002
+[XRO] C:\ProgramData\ssh Unlock status: 0x80070002
+[XRO] M:\ Unlock status: 0x80070002
+[XRO] S:\ Unlock status: 0x80070002
+[XRO] Q:\ Unlock status: 0x80070002
+[XRO] U:\ Unlock status: 0x80070002
+[+] Opened \\.\xvmctrl
+[VMM] XVIOMONC_GETIP (0x001500A0): ERR=87
+[VMM] XVIOMON_OS_INIT (0x001500A4): ERR=87
+[VMM] QUERY_040 (0x00150100) VmId=1: ERR=87
+[VMM] STATE_SIGNAL (0x0015010C) VmId=1: OK (0B) []
+[VMM] HARDWARE_STATS (0x00150114) VmId=1: OK (0B) []
+[VMM] POWER_04C (0x00150130) VmId=1: ERR=87
+[VMM] RESOURCE_BOUNDARY (0x00150178) VmId=1: OK (0B) []
+[VMM] HOLDING_PARTITION (0x00150280) VmId=1: OK (0B) []
+[VMM] TELEMETRY (0x00150298) VmId=1: ERR=87
+[VMM] PERF (0x0015029C) VmId=1: ERR=87
+[VMM] QUERY_040 (0x00150100) VmId=0: ERR=87
+[VMM] STATE_SIGNAL (0x0015010C) VmId=0: OK (0B) []
+[VMM] HARDWARE_STATS (0x00150114) VmId=0: OK (0B) []
+[VMM] POWER_04C (0x00150130) VmId=0: ERR=87
+[VMM] RESOURCE_BOUNDARY (0x00150178) VmId=0: OK (0B) []
+[VMM] HOLDING_PARTITION (0x00150280) VmId=0: OK (0B) []
+[VMM] TELEMETRY (0x00150298) VmId=0: ERR=87
+[VMM] PERF (0x0015029C) VmId=0: ERR=87
+[VMM] QUERY_040 (0x00150100) VmId=2: ERR=87
+[VMM] STATE_SIGNAL (0x0015010C) VmId=2: OK (0B) []
+[VMM] HARDWARE_STATS (0x00150114) VmId=2: OK (0B) []
+[VMM] POWER_04C (0x00150130) VmId=2: OK (8B) [00 00 28 1D 4D 02 00 00]
+[VMM] RESOURCE_BOUNDARY (0x00150178) VmId=2: OK (0B) []
+[VMM] HOLDING_PARTITION (0x00150280) VmId=2: OK (0B) []
+[VMM] TELEMETRY (0x00150298) VmId=2: ERR=87
+[VMM] PERF (0x0015029C) VmId=2: ERR=87
+[VMM] HOLDING_PARTITION Release (0x00150280 in=0): OK (Full Control Released)
+[XPAL] ConsoleMode=0x64 VmType=0x02 Capabilities=0x04000005
+[HKEY] HKCU Winlogon DisableClassicDesktop=0 UserMgrLaunchShell=1 OK
+[Bridge] Hermes Native Bridge active on 0.0.0.0:1984
+[Bridge] Model Engine ready (on-demand load; use Model Swapper or + HF DL).
+[Bridge] Executing (cwd=None): 

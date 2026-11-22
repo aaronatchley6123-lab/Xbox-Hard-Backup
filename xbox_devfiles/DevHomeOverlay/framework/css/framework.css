@@ -1,0 +1,3072 @@
+﻿/* Copyright (c) Microsoft Corporation. All rights reserved. */
+
+/* 
+ * Default styles 
+ */
+
+/* The following declaration will make us render at 1080 instead of the default which would scale us up. */
+@media (max-height: 1080px) {
+    @-ms-viewport {
+        height: 1080px;
+    }
+}
+
+:root {
+    --white: rgb(255, 255, 255);
+    --light-gray: rgb(235, 235, 235);
+    --gray: rgb(200, 200, 200);
+    --dark-gray: rgb(100, 100, 100);
+    --darker-gray: rgb(98, 98, 98);
+    --xbox-green: rgb(16, 124, 16);
+    --sports-green: rgb(16, 133, 62);
+    --grass-green: rgb(45, 171, 17);
+    --lime: rgb(98, 192, 45);
+    --turf-green: rgb(16, 204, 106);
+    --navy-blue: rgb(16, 99, 177);
+    --default-blue: rgb(16, 115, 214);
+    --cyan: rgb(23, 131, 200);
+    --sea-foam-teal: rgb(16, 128, 133);
+    --stealth-gray: rgb(74, 84, 89);
+    --crimson: rgb(153, 16, 16);
+    --mod-red: rgb(235, 51, 51);
+    --pale-red: rgb(231, 72, 86);
+    --rosa-rita: rgb(235, 16, 94);
+    --orange: rgb(237, 90, 49);
+    --gold: rgb(235, 140, 16);
+    --lime-green: rgb(4, 179, 88);
+    --light-coral: rgb(255, 144, 144);
+    --black-crow: rgb(34, 35, 34);
+}
+
+body {
+    font-family: 'Segoe UI';
+    font-size: 18px;
+    line-height: 18px;
+    font-weight: normal;
+    padding: 0;
+    margin: 0;
+    word-wrap: break-word;
+}
+
+/* 
+ * App-wide styles 
+ */
+
+.xbdh-hidden {
+    display: none !important;
+}
+
+.xbdh-invisible {
+    visibility: hidden !important;
+}
+
+div:focus {
+    outline: none;
+}
+
+h2:focus {
+    outline: none;
+}
+
+.xbdh-fontweight-bold {
+    font-weight: 600;
+}
+
+/* 
+ * Icons 
+ */
+
+.xbdh-icon-menu::before {
+    font-family: 'Segoe Xbox MDL2 Symbol';
+    content: '\E3E8';
+}
+
+.xbdh-icon-menu-button::before {
+    font-family: 'Segoe Xbox MDL2 Symbol';
+    content: '\E3E8';
+}
+
+.xbdh-icon-view-button::before {
+    font-family: 'Segoe Xbox MDL2 Symbol';
+    content: '\E3EA';
+}
+
+.xbdh-icon-expand::before {
+    font-family: 'Segoe UI Symbol';
+    content: '\E08B';
+}
+
+.xbdh-icon-collapse::before {
+    font-family: 'Segoe UI Symbol';
+    content: '\E0E4';
+}
+
+/* 
+ * Customization 
+ */
+
+.xbdh-customizing .xbdh-active {
+    border-width: 2px;
+    border-style: solid;
+}
+
+/* Semantic zoom */
+.xbdh-zoomed-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    padding-left: 204px;
+    background-color: rgba(16, 16, 16, 0.7);
+    overflow: auto;
+}
+
+.xbdh-zoomed-workspace {
+    display: -ms-grid;
+    -ms-grid-columns: (24px)[64];
+    -ms-grid-rows: (24px)[16];
+    height: 312px;
+    width: auto;
+    overflow: auto;
+    -ms-overflow-style: none;
+}
+
+.xbdh-zoomed-workspace-title {
+    margin-top: 204px;
+    width: 80%;
+}
+
+.xbdh-zoomed-window {
+    border: 2px solid var(--dark-gray);
+    display: -ms-grid;
+    -ms-grid-columns: 1fr auto 1fr;
+    -ms-grid-rows: 1fr auto 1fr;
+    height: calc(100% - 16px);
+    width: calc(100% - 16px);
+}
+
+.xbdh-zoomed-window-name {
+    -ms-grid-column: 2;
+    -ms-grid-row: 2;
+    color: var(--light-gray);
+}
+
+/* 
+ * App Header 
+ */
+
+.xbdh-shell-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 130px;
+    width: 100vw;
+}
+
+.xbdh-shell-content {
+    display: flex;
+    flex-direction: row;
+    padding: 162px 98px 70px 98px;
+    overflow: auto;
+    -ms-overflow-style: none;
+}
+
+.xbdh-shell-switchworkspace {
+    margin-right: 64px;
+    min-width: 208px;
+}
+
+.xbdh-shell-workspaceoption {
+    display: block;
+    margin-bottom: 26px;
+    margin-top: 24px;
+    padding: 6px 0 6px 6px;
+    font-size: 24px;
+    border: 3px solid transparent;
+    border-radius: 10px;
+}
+
+.xbdh-shell-workspaceoption-label {
+    font-weight: 600;
+    display: inline-block;
+    padding-bottom: 9px;
+    padding-top: 9px;
+}
+
+.xbdh-shell-workspaceoption {
+    color: var(--dark-gray);
+}
+
+.xbdh-shell-workspaceoption.xbdh-active {
+    font-weight: 700;
+    color: var(--light-gray);
+}
+
+.xbdh-shell-workspaceoption:focus .xbdh-shell-workspaceoption-label {
+    /*border-bottom-style: solid;*/
+}
+
+.xbdh-showmenuicononhover {
+    position: relative;
+}
+
+.xbdh-showmenuicononhover::before {
+    opacity: 0;
+    position: absolute;
+    top: 12px;
+    right: 16px;
+    font-size: 16pt;
+    font-family: 'Segoe Xbox MDL2 Symbol';
+    content: '\E3EA';
+    transition: opacity 500ms 500ms linear;
+}
+
+.xbdh-showmenuicononhover:focus::before {
+    opacity: 1;
+}
+
+.xbdh-viewicon {
+    width: 24px;
+    height: 24px;
+    position: absolute;
+    top: 18px;
+    right: 14px;
+    filter: invert(1);
+}
+
+.xbdh-viewicon.xbdh-viewicon-hidemenuicononhover {
+    opacity: 0;
+    transition: opacity 500ms 500ms linear;
+}
+
+.xbdh-viewicon.xbdh-viewicon-showmenuicononhover {
+    opacity: 1;
+    transition: opacity 500ms 500ms linear;
+}
+
+/* Put all of the exceptions to the normal text color of off-gray here. */
+.xbdh-theme-dark .xbdh-shell-header,
+.xbdh-theme-dark .xbdh-quicktask-header .xbdh-quicktask-togglerecord,
+.xbdh-theme-dark .xbdh-menu,
+.xbdh-theme-dark .xbdh-overlay,
+.xbdh-theme-dark .xbdh-contextmenu,
+.xbdh-theme-dark .xbdh-contextmenu.xbdh-list > button,
+.xbdh-theme-dark .xbdh-overlay button,
+.xbdh-theme-dark .xbdh-overlay input[type=button],
+.xbdh-theme-dark .xbdh-overlay input[type=reset],
+.xbdh-theme-dark .xbdh-overlay input[type=submit],
+.xbdh-theme-dark .xbdh-overlay button[type=submit].pagecontrol {
+    color: var(--light-gray);
+}
+
+.xbdh-theme-dark .xbdh-combobox-overlay {
+    color: var(--white);
+}
+
+.xbdh-theme-light .xbdh-shell-header,
+.xbdh-theme-light .xbdh-quicktask-header .xbdh-quicktask-togglerecord,
+.xbdh-theme-light .xbdh-menu,
+.xbdh-theme-light .xbdh-overlay,
+.xbdh-theme-light .xbdh-contextmenu,
+.xbdh-theme-light .xbdh-contextmenu.xbdh-list > button,
+.xbdh-theme-light .xbdh-combobox-overlay,
+.xbdh-theme-light .xbdh-overlay button,
+.xbdh-theme-light .xbdh-overlay input[type=button],
+.xbdh-theme-light .xbdh-overlay input[type=reset],
+.xbdh-theme-light .xbdh-overlay input[type=submit],
+.xbdh-theme-light .xbdh-overlay button[type=submit].pagecontrol {
+    color: rgb(16, 16, 16);
+}
+
+.xbdh-shell-header-left,
+.xbdh-shell-header-right {
+    position: fixed;
+    top: 64px;
+}
+
+.xbdh-shell-header-left {
+    left: 98px;
+    max-height: 72px;
+    max-width: 1472px;
+    overflow: hidden;
+}
+
+.xbdh-shell-title-metadata {
+    display: inline-block;
+}
+
+.xbdh-shell-title-metadata-label {
+    color: rgb(209, 209, 204);
+    font-size: 18px;
+    line-height: 16px;
+    text-transform: uppercase;
+}
+
+.xbdh-shell-title-metadata-value {
+    display: inline-block;
+    margin-right: 32px;
+    margin-bottom: 4px;
+    font-size: 40px;
+    line-height: 42px;
+    font-weight: 100;
+    color: var(--light-gray);
+}
+
+.xbdh-shell-header-right {
+    right: 98px;
+    display: -ms-grid;
+    -ms-grid-columns: auto auto auto auto;
+    -ms-grid-rows: auto auto;
+}
+
+.xbdh-shell-menubutton {
+    -ms-grid-column: 1;
+    height: 54px;
+    width: 54px;
+    margin-right: 16px;
+}
+
+.xbdh-shell-menubutton:focus {
+    color: var(--light-gray);
+}
+
+.xbdh-shell-title {
+    -ms-grid-column: 2;
+}
+
+.xbdh-shell-title-devhome {
+    font-size: 30px;
+    line-height: 30px;
+}
+
+.xbdh-shell-title-metadata span {
+    margin-right: 12px;
+}
+
+.xbdh-shell-time {
+    display: inline-block;
+}
+
+.xbdh-shell-time,
+.xbdh-shell-date {
+    -ms-grid-row-align: center;
+    -ms-grid-column-align: end;
+}
+
+.xbdh-shell-time {
+    -ms-grid-column: 3;
+    -ms-grid-row: 1;
+    font-size: 42px;
+    line-height: 42px;
+}
+
+.xbdh-shell-date {
+    -ms-grid-column: 1;
+    margin-top: 4px;
+    -ms-grid-row: 2;
+}
+
+.xbdh-shell-header button.xbdh-shell-notifications {
+    -ms-grid-column: 2;
+    margin: 4px 16px 0px 16px;
+    width: 120px;
+    color: rgb(235, 235, 16);
+    border-radius: 5px;
+}
+
+.xbdh-shell-header button.xbdh-shell-notifications-nounread {
+    -ms-grid-column: 2;
+    width: 120px;
+    margin: 4px 16px 0px 16px;
+    color: rgb(58, 58, 58);
+    border-radius: 5px;
+}
+
+.xbdh-shell-notifications::before {
+    font-size: 36px;
+    font-family: 'Segoe Xbox MDL2 Symbol';
+    content: '\E530';
+    margin-right: 8px;
+}
+
+.xbdh-shell-notifications-nounread::before {
+    font-size: 36px;
+    font-family: 'Segoe Xbox MDL2 Symbol';
+    content: '\E530';
+    margin-right: 8px;
+}
+
+.xbdh-shell-notifications-closecommand {
+    margin-top: 64px;
+}
+
+.xbdh-shell-notification {
+    border: 1px solid rgb(58, 58, 58);
+    padding: 12px 32px;
+    margin: 3px;
+}
+
+.xbdh-shell-compatMode::before {
+    font-size: 28px;
+    font-family: 'Segoe Xbox MDL2 Symbol';
+    font-weight: bold;
+    content: '\E404';
+    margin-right: 8px;
+    color: rgb(235, 235, 16);
+    position: absolute;
+    display: block;
+    top: 18px;
+}
+
+.xbdh-shell-compatMode {
+    -ms-grid-column: 1;
+    margin: 4px 16px 0px 24px;
+    border-radius: 5px;
+}
+
+#xbdh-shell-compatMode-label {
+    padding-top: 4px;
+    margin: 0px 0px 0px 24px;
+    font-size: 16px
+}
+#xbdh-shell-compatMode-extraMemory {
+    font-size: 14px;
+    padding-bottom: 4px;
+    margin: 0px 0px 0px 18px;
+
+}
+
+.xbdh-shell-notification-title {
+    margin-top: 0;
+}
+
+.xbdh-shell-notification-title-urgent {
+    margin-top: 0;
+    color: rgb(235, 235, 16);
+}
+
+.xbdh-shell-notification-title-read {
+    margin-top: 0;
+    color: var(--dark-gray);
+}
+
+.xbdh-shell-notification-description-read {
+    color: var(--dark-gray);
+}
+
+.xbdh-shell-notification-primarycommand {
+    margin-top: 32px;
+}
+
+.xbdh-shell-notification-primarycommand-text-read {
+    color: var(--dark-gray);
+}
+
+/* Transient notifications */
+.xbdh-notification {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    height: 100px;
+    width: 424px;
+    color: var(--light-gray);
+    font-size: 24px;
+    line-height: 32px;
+    transform: translate(0px, 430px);
+    transition-property: transform;
+    transition-duration: 1s;
+    transition-timing-function: cubic-bezier(0.16, 1, 0.29, 0.99);
+}
+
+.xbdh-notification-enteranimation {
+    transform: none;
+}
+
+.xbdh-notification-unattendedscriptrunning-container {
+    margin: 8px 16px;
+}
+
+.xbdh-notification progress.xbdh-notification-unattendedscriptrunning-progress {
+    color: var(--light-gray);
+    margin-right: 16px;
+}
+
+.xbdh-fader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    background-color: rgba(16, 16, 16, 0.7);
+}
+
+/*
+ *  Quick tasks
+ */
+.xbdh-quicktask-header {
+    display: -ms-grid;
+    -ms-grid-columns: auto 1fr auto;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 130px;
+    width: 100vw;
+}
+
+.xbdh-quicktask-header-left {
+    -ms-grid-column: 1;
+    position: fixed;
+    top: 88px;
+    left: 98px;
+}
+
+.xbdh-quicktask-header-right {
+    -ms-grid-column: 3;
+    position: fixed;
+    top: 64px;
+    right: 98px;
+}
+
+.xbdh-quicktask-recordindicator,
+.xbdh-quicktask-recordindicatortext
+{
+    display: inline-block;
+}
+
+.xbdh-quicktask-recordindicatortext
+{
+    vertical-align: top;
+}
+
+.xbdh-quicktask-recording .xbdh-quicktask-recordindicatortext {
+    color: var(--light-gray);
+}
+
+.xbdh-quicktask-recordindicator {
+    height: 18px;
+    width: 18px;
+    border-radius: 9px;
+    background-color: var(--dark-gray);
+    margin-right: 8px;
+}
+
+.xbdh-quicktask-recording .xbdh-quicktask-recordindicator {
+    background-color: rgb(235, 16, 16);
+}
+
+/* 
+ * Menu 
+ */
+.xbdh-menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: row;
+    height: 100vh;
+}
+
+.xbdh-menu-options-0,
+.xbdh-menu-options-1 {
+    padding-top: 164px;
+    height: 100vh;
+    width: 400px;
+}
+
+.xbdh-menu-options-1 form,
+.xbdh-menu-options-2 form {
+    max-width: 816px;
+}
+
+.xbdh-menu-options-1.pagecontrol {
+    width: 1520px;
+}
+
+.xbdh-menu-option {
+    display: block;
+    padding: 0 32px;
+    line-height: 54px;
+}
+
+.xbdh-menu-options-0 .xbdh-menu-option {
+    padding-left: 98px;
+}
+
+.xbdh-menu-consoleinfo {
+    position: absolute;
+    bottom: 76px;
+    left: 76px;
+    width: 380px;
+}
+
+.xbdh-menu-options-2 {
+    width: 340px;
+}
+
+    .xbdh-window.xbdh-menu-options-2 {
+        padding: 146px 98px 38px 98px;
+        width: 1120px;
+    }
+
+    .xbdh-menu-options-2.pagecontrol {
+        width: 1120px;
+    }
+
+    .xbdh-window.xbdh-menu-options-2 p,
+    .xbdh-window.xbdh-menu-options-2 p {
+        margin: 40px 0;
+    }
+
+    .xbdh-window.xbdh-menu-options-1 button, 
+    .xbdh-window.xbdh-menu-options-2 button {
+        min-width: 204px;
+        width: auto;
+    }
+
+.xbdh-overlay.xbdh-menu-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 944px; /* 1080 - 68 * 2 - to account for padding and offset */
+    width: 1784px; /* To account for padding */
+    padding: 54px 54px;
+}
+
+.xbdh-overlay.xbdh-menu-overlay h1 {
+    margin-bottom: 54px;
+}
+
+/* 
+ * ComboBox 
+ */
+
+.xbdh-combobox {
+    display: -ms-grid;
+    -ms-grid-rows: 1fr 8px 1fr;
+    -ms-grid-columns: 16px 1fr 32px;
+    border: solid 1px rgba(235, 235, 235, 0);
+    height: 54px;
+    width: 100%;
+    min-width: 180px;
+}
+
+.xbdh-combobox.xbdh-combobox-singlerow {
+    -ms-grid-rows: 1fr;
+}
+
+.xbdh-combobox-label {
+    -ms-grid-column: 2;
+    -ms-grid-row: 1;
+    -ms-grid-row-align: end;
+}
+
+.xbdh-combobox-label {
+    -ms-grid-column: 2;
+    -ms-grid-row: 3;
+    -ms-grid-row-align: start;
+}
+
+.xbdh-combobox.xbdh-combobox-singlerow .xbdh-combobox-label {
+    -ms-grid-row: 1;
+    -ms-grid-row-align: center;
+}
+
+.xbdh-combobox-togglevisual {
+    -ms-grid-column: 3;
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 3;
+    -ms-grid-row-align: center;
+    font-size: 32px; 
+    margin-left: -8px;
+}
+
+.xbdh-combobox-togglevisual::before {
+    font-family: 'Segoe UI Symbol';
+    content: '\E08B';
+}
+
+.xbdh-combobox-overlay.xbdh-list {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: auto;
+    width: auto;
+}
+
+.xbdh-combobox-option {
+    height: 44px;
+    line-height: 44px;
+    padding: 4px 2px;
+    border: solid 2px transparent;
+    margin: 4px 0px;
+}
+
+.xbdh-combobox-option > div {
+    padding: 0px 30px;
+}
+
+.xbdh-combobox-option-selected > div {
+    background-color: var(--darker-gray);
+}
+
+/* 
+ * Context menu 
+ */
+
+.xbdh-contextmenu {
+    position: absolute;
+}
+
+    .xbdh-contextmenu.xbdh-list {
+        height: auto;
+        width: auto;
+    }
+
+    .xbdh-contextmenu.xbdh-list > button {
+        line-height: 54px;
+    }
+
+/* 
+ * Overlay 
+ */
+
+.xbdh-overlay {
+    position: fixed;
+    top: 64px;
+    height: 952px;
+    left: 0;
+    width: 1784px; /* 1920 (screen width) - 64px * 2 (padding left and right) */
+    padding: 54px;
+}
+
+.xbdh-overlay input[type='text'],
+.xbdh-overlay input[type='password'],
+.xbdh-overlay input[type='email'],
+.xbdh-overlay input[type='number'],
+.xbdh-overlay input[type='tel'],
+.xbdh-overlay input[type='url'],
+.xbdh-overlay input[type='search'],
+.xbdh-overlay textarea {
+    width: 100%;
+}
+
+.xbdh-overlay-fileoutput {
+    width: 75%;
+    margin-left: 40px;
+    max-height: 600px;
+    overflow: auto;
+}
+
+.xbdh-overlay.xbdh-overlay-tall {
+    top: 54px;
+    height: 808px;
+}
+
+.xbdh-overlay.xbdh-overlay-medium {
+    top: 248px;
+    height: 584px;
+}
+
+.xbdh-overlay.xbdh-overlay-short {
+    top: 370px;
+    height: 340px;
+}
+
+/*
+ * Dialog
+ */
+
+.xbdh-popup-primarycommnad,
+.xbdh-popup-secondarycommnad,
+.xbdh-errormessage-primaryaction,
+.xbdh-errormessage-secondaryaction {
+    margin-top: 48px;
+}
+
+/* 
+ * Workspace 
+ */
+
+.xbdh-workspace {
+    /* Styles used by the layout algorithm */
+    display: -ms-grid;
+    -ms-grid-columns: (54px)[64];
+    -ms-grid-rows: (54px)[16];
+    height: 896px;
+    width: auto;
+}
+
+/* Windows */
+.xbdh-window {
+    margin: 0;
+    height: calc(100% - 20px);
+    width: calc(100% - 20px);
+    box-sizing: border-box;
+    position: relative;
+    overflow: auto;
+}
+
+.xbdh-window-title {
+    font-size: 24px;
+    line-height: 36px;
+    height: 36px;
+    padding: 16px 32px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin: 0px;
+}
+
+.xbdh-remotetool-host {
+    height: 100%;
+    width: 100%;
+    border: none;
+}
+
+/* Common controls */
+
+/* Text */
+h1 {
+    font-size: 32px;
+    line-height: 46px;
+    font-weight: normal;
+    margin: 16px 0;
+}
+
+h2 {
+    font-size: 24px;
+    font-weight: normal;
+    line-height: 32px;
+}
+
+/* Form styles */
+form,
+.xbdh-form {
+   padding: 0 32px; 
+}
+
+.xbdh-field {
+    display: -ms-grid;
+    -ms-grid-columns: 1fr 1fr;
+    -ms-grid-rows: 1fr;
+    height: 64px;
+    width: 100%;
+}
+
+.xbdh-field .xbdh-label {
+    -ms-grid-column: 1;
+    -ms-grid-row-align: center;
+}
+
+.xbdh-field .xbdh-value {
+    -ms-grid-column: 2;
+    -ms-grid-row-align: center;
+}
+
+.xbdh-form-buttons {
+    padding-top: 54px;
+}
+
+.xbdh-form-errormessage {
+    margin: 16px 0;
+    color: rgb(235, 235, 16);
+}
+
+.xbdh-form-leftsection {
+    margin-right: 96px;
+}
+
+.xbdh-form-leftsection,
+.xbdh-form-rightsection {
+    display: inline-block;
+    width: calc(50% - 128px);
+    vertical-align: top;
+}
+
+.xbdh-form-leftsection input[type='checkbox'],
+.xbdh-form-rightsection input[type='checkbox'] {
+    margin: 60px 0 26px 0;
+}
+
+.xbdh-form-leftsection input[type='checkbox'] + label,
+.xbdh-form-rightsection input[type='checkbox'] + label {
+    margin: -18px 0 0 12px;
+    vertical-align: middle;
+}
+
+.xbdh-form-leftsection input[type='radio'],
+.xbdh-form-rightsection input[type='radio'] {
+    margin: 60px 0 26px 0;
+}
+
+.xbdh-form-leftsection input[type='radio'] + label,
+.xbdh-form-rightsection input[type='radio'] + label {
+    margin: -18px 0 0 12px;
+    vertical-align: middle;
+}
+
+.xbdh-spacer-medium {
+    height: 24px;
+}
+
+.xbdh-error {
+    margin-top: 4px;
+    margin-bottom: 16px;
+    color: rgb(230, 230, 3);
+}
+
+/* Button */
+button,
+input[type=button],
+input[type=reset],
+input[type=submit],
+button[type=submit] {
+    outline: none;
+    background: transparent;
+    padding: 0 12px;
+    margin: 0;
+    text-align: left;
+    border: 0px solid rgba(235, 235, 235, 0);
+    width: 254px;
+    height: 54px;
+    font-size: 18px;
+    text-align: center;
+}
+
+.xbdh-window button,
+.xbdh-window input[type=button],
+.xbdh-window input[type=reset],
+.xbdh-window input[type=submit],
+.xbdh-window button[type=submit] {
+    min-width: 0;
+    width: 100%;
+}
+
+/* Anchor */
+a {
+    outline-style: none;
+    text-decoration: none;
+    border-bottom: 2px solid transparent;
+}
+
+a:focus {
+    border-bottom-style: solid;
+}
+
+/* Textbox */
+input[type='text'],
+input[type='password'],
+input[type='email'],
+input[type='number'],
+input[type='tel'],
+input[type='url'],
+input[type='search'],
+textarea {
+    -ms-user-select: element;
+    width: calc(100% - 32px); /* There are 32px of padding on the left and right */
+    height: 54px;
+    margin: 4px 0 4px 0;
+    font-size: 18px;
+    border: none;
+    outline: none;
+    padding: 0px 16px;
+    background-color: transparent;
+    border-width: 1px;
+    border-style: solid;
+}
+
+input[type='text']::-webkit-input-placeholder,
+input[type='password']::-webkit-input-placeholder,
+input[type='email']::-webkit-input-placeholder,
+input[type='number']::-webkit-input-placeholder,
+input[type='tel']::-webkit-input-placeholder,
+input[type='url']::-webkit-input-placeholder,
+input[type='search']::-webkit-input-placeholder,
+textarea::-webkit-input-placeholder {
+    color: var(--light-gray);
+}
+
+input[type='text']:focus::-webkit-input-placeholder,
+input[type='password']:focus::-webkit-input-placeholder,
+input[type='email']:focus::-webkit-input-placeholder,
+input[type='number']:focus::-webkit-input-placeholder,
+input[type='tel']:focus::-webkit-input-placeholder,
+input[type='url']:focus::-webkit-input-placeholder,
+input[type='search']:focus::-webkit-input-placeholder,
+textarea:focus::-webkit-input-placeholder {
+    color: var(--black-crow);
+}
+
+    input[type='text']:focus,
+    input[type='password']:focus,
+    input[type='email']:focus,
+    input[type='number']:focus,
+    input[type='tel']:focus,
+    input[type='url']:focus,
+    input[type='search']:focus,
+    textarea:focus {
+        /* TextBox backgrounds are always white, regardless of light or dark theme. */
+        background-color: var(--light-gray);
+        color: rgb(16, 16, 16);
+    }
+
+    .xbdh-theme-light input[type='text']:disabled,
+    .xbdh-theme-light input[type='password']:disabled,
+    .xbdh-theme-light input[type='email']:disabled,
+    .xbdh-theme-light input[type='number']:disabled,
+    .xbdh-theme-light input[type='tel']:disabled,
+    .xbdh-theme-light input[type='url']:disabled,
+    .xbdh-theme-light input[type='search']:disabled,
+    .xbdh-theme-light input[disabled],
+    .xbdh-theme-light textarea:disabled,
+    .xbdh-theme-light textarea[disabled],
+    .xbdh-theme-dark input[type='text']:disabled,
+    .xbdh-theme-dark input[type='password']:disabled,
+    .xbdh-theme-dark input[type='email']:disabled,
+    .xbdh-theme-dark input[type='number']:disabled,
+    .xbdh-theme-dark input[type='tel']:disabled,
+    .xbdh-theme-dark input[type='url']:disabled,
+    .xbdh-theme-dark input[type='search']:disabled,
+    .xbdh-theme-dark input[disabled],
+    .xbdh-theme-dark textarea:disabled,
+    .xbdh-theme-dark textarea[disabled],
+    .xbdh-theme-light .xbdh-window.xbdh-active input[type='text']:disabled,
+    .xbdh-theme-light .xbdh-window.xbdh-active input[type='password']:disabled,
+    .xbdh-theme-light .xbdh-window.xbdh-active input[type='email']:disabled,
+    .xbdh-theme-light .xbdh-window.xbdh-active input[type='number']:disabled,
+    .xbdh-theme-light .xbdh-window.xbdh-active input[type='tel']:disabled,
+    .xbdh-theme-light .xbdh-window.xbdh-active input[type='url']:disabled,
+    .xbdh-theme-light .xbdh-window.xbdh-active input[type='search']:disabled,
+    .xbdh-theme-light .xbdh-window.xbdh-active input[disabled],
+    .xbdh-theme-light .xbdh-window.xbdh-active textarea:disabled,
+    .xbdh-theme-light .xbdh-window.xbdh-active textarea[disabled],
+    .xbdh-theme-dark .xbdh-window.xbdh-active input[type='text']:disabled,
+    .xbdh-theme-dark .xbdh-window.xbdh-active input[type='password']:disabled,
+    .xbdh-theme-dark .xbdh-window.xbdh-active input[type='email']:disabled,
+    .xbdh-theme-dark .xbdh-window.xbdh-active input[type='number']:disabled,
+    .xbdh-theme-dark .xbdh-window.xbdh-active input[type='tel']:disabled,
+    .xbdh-theme-dark .xbdh-window.xbdh-active input[type='url']:disabled,
+    .xbdh-theme-dark .xbdh-window.xbdh-active input[type='search']:disabled,
+    .xbdh-theme-dark .xbdh-window.xbdh-active input[disabled],
+    .xbdh-theme-dark .xbdh-window.xbdh-active textarea:disabled,
+    .xbdh-theme-dark .xbdh-window.xbdh-active textarea[disabled] {
+        border-color: rgb(52, 52, 52);
+    }
+
+    /* Hide the 'eye' and 'X' icon on the password box because they are not actionable on Xbox */
+    input::-ms-clear {
+        display: none;
+    }
+
+    input::-ms-reveal {
+        display: none;
+    }
+
+/* Dropdown */
+select {
+    border: solid 1px rgba(235, 235, 235, 0);
+    background-color: transparent;
+    font-size: 18px;
+    height: 54px;
+    width: 100%;
+    min-width: 180px;
+    padding: 0 16px;
+    -ms-overflow-style: -ms-autohiding-scrollbar;
+}
+
+    select::-ms-expand {
+        height: 28px;
+        width: 28px;
+        background-color: transparent;
+        border: none;
+    }
+
+    select:focus::-ms-value {
+        /* The background must be transparent otherwise the background cannot show through */
+        background-color: transparent;
+    }
+
+/* Checkbox */
+input:disabled::-ms-check, 
+input:disabled:active::-ms-check {
+    background-clip: border-box;
+}
+
+input[type='checkbox'] {
+    width: 26px;
+    height: 26px;
+    outline: none;
+    outline-width: 1px;
+    outline-style: solid;
+}
+
+input::-ms-check {
+    display: inline-block;
+    border-width: 2px;
+    border-style: solid;
+    background-clip: border-box;
+    background-color: transparent;
+    border: none;
+    padding: 0;
+}
+
+input[type='checkbox']::-ms-check {
+	height: 18px;
+    width: 18px;
+    border: none;
+    background-color: transparent;
+}
+
+.xbdh-theme-dark input[type='checkbox'][disabled],
+.xbdh-theme-light input[type='checkbox'][disabled] {
+    color: rgb(60, 60, 60);
+    outline-color: rgb(52, 52, 52);
+}
+
+/* Radio */
+input[type='radio'] {
+    width: 26px;
+    height: 26px;
+    outline: none;
+    -webkit-appearance: none;
+    border: 1px solid var(--light-gray);
+    border-radius: 50%;
+}
+
+input[type='radio']::-ms-check {
+    height: 18px;
+    width: 18px;
+    border: none;
+    background-color: transparent;
+}
+
+.xbdh-theme-dark input[type='radio'][disabled],
+.xbdh-theme-light input[type='radio'][disabled] {
+    color: rgb(60, 60, 60);
+    outline-color: rgb(52, 52, 52);
+}
+
+/* List */
+.xbdh-list {
+    height: calc(100% - 54px);
+    width: 100%;
+    overflow: auto;
+    -ms-overflow-style: -ms-autohiding-scrollbar;
+}
+
+    .xbdh-list > button,
+    .xbdh-list > .win-focusable {
+        display: flex;
+        flex-direction: row;
+        flex-pack: justify;
+        outline: none;
+        background: transparent;
+        padding: 0 32px;
+        margin: 0;
+        text-align: left;
+        width: 100%;
+        line-height: 24px;
+        text-overflow: ellipsis;
+        box-sizing: border-box;
+    }
+
+    .xbdh-theme-light .xbdh-list > button,
+    .xbdh-theme-light .xbdh-list > .win-focusable,
+    .xbdh-theme-dark .xbdh-list > button,
+    .xbdh-theme-dark .xbdh-list > .win-focusable {
+        border: none;
+    }
+
+    .xbdh-theme-light .xbdh-active .xbdh-list > button,
+    .xbdh-theme-light .xbdh-active .xbdh-list > .win-focusable,
+    .xbdh-theme-dark .xbdh-active .xbdh-list > button,
+    .xbdh-theme-dark .xbdh-active .xbdh-list > .win-focusable {
+        color: rgb(180, 180, 180);
+    }
+
+    .xbdh-checkbox,
+    .xbdh-list > .xbdh-checkbox.win-focusable {
+        padding: 0 32px;
+        height: 54px;
+    }
+
+xbdh-radio,
+.xbdh-list > .xbdh-radio.win-focusable {
+    padding: 0 32px;
+    height: 54px;
+}
+
+    .xbdh-checkbox input[type='checkbox'] {
+		outline: 1px solid var(--light-gray);
+        align-self: center;
+    }
+
+xbdh-radio input[type='radio'] {
+    outline: 1px solid var(--light-gray);
+    align-self: center;
+}
+
+.xbdh-window label,
+.xbdh-overlay label {
+    margin-top: 14px;
+    margin-bottom: 8px;
+    display: block;
+    font-weight: 600;
+    color: var(--light-gray);
+}
+
+/* Progress spinner */
+.xbdh-indeterminateprogressoverlay {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.xbdh-indeterminateprogressoverlay-progress {
+    position: absolute;
+    top: calc(50% - 50px);
+    left: calc(50% - 50px);
+    height: 100px;
+    width: 100px;
+}
+
+progress:indeterminate::-ms-fill {
+    animation-name: -ms-ring;
+}
+
+.xbdh-indeterminateprogressoverlay-description {
+    position: absolute;
+    top: calc(50% + 100px);
+    left: calc(50% - 100px);
+    color: var(--light-gray);
+}
+
+/* Input controls in relation to other elements */
+select + button,
+input + button,
+.xbdh-combobox + button {
+    margin-top: 32px;
+}
+
+input[type='checkbox'] + label {
+    margin-left: 16px;
+    display: inline-block;
+    width: calc(100% - 80px);
+    vertical-align: text-bottom;
+}
+
+input[type='radio'] + label {
+    margin-left: 16px;
+    display: inline-block;
+    width: calc(100% - 80px);
+    vertical-align: text-bottom;
+}
+
+.xbdh-whatnewframe {
+    height: 724px;
+    width: 1786px;
+    border: none;
+}
+.xbdh-whatnewframe:focus {
+    outline: none;
+}
+
+/* Extended Splash Screen Styles */
+#extendedsplashscreen {
+    background-color: rgb(34, 34, 34);
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    /* We pick a z-index higher than any of the overlays */
+    z-index: 1010;
+}
+
+#extendedsplashscreenimage {
+    position: absolute;
+}
+
+#extendedsplashscreenprogress {
+    position: absolute;
+    height: 100px;
+    width: 100px;
+    color: var(--light-gray);
+}
+
+/* 
+ * First run experience 
+ */
+.xbdh-firstrun {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    background-color: rgb(34, 34, 34);
+    z-index: 99;
+}
+
+.xbdh-theme-dark .xbdh-firstrun,
+.xbdh-theme-dark .xbdh-firstrun button {
+    color: var(--light-gray);
+}
+
+.xbdh-firstrun-welcomepage {
+    padding: 364px 0px 0px 208px;
+}
+
+.xbdh-firstrun-welcome-description {
+    font-size: 32pt;
+    line-height: 42pt;
+    padding-bottom: 96px;
+    width: 1200px;
+}
+
+.xbdh-firstrun-welcome-skip {
+    width: 208px;
+}
+
+/* Community */
+.xbdh-shell-relnotes {
+    -ms-grid-column: 3;
+    display: none;
+}
+
+.xbdh-uwp .xbdh-shell-relnotes {
+    margin-left: 96px;
+    padding: 16px 24px;
+    font-size: 24pt;
+    border: 1px solid green;
+    display: block;
+}
+
+/* Themes */
+
+/* Light theme */
+body.xbdh-theme-light {
+    background-color: var(--light-gray);
+    color: rgb(16, 16, 16);
+}
+
+.xbdh-theme-light .xbdh-menu {
+    background-color: rgb(229, 229, 229);
+}
+
+.xbdh-theme-light .xbdh-menu-options-0 {
+    background-color: rgb(229, 229, 229);
+}
+
+.xbdh-theme-light .xbdh-menu-options-1 {
+    background-color: rgb(229, 229, 229);
+}
+
+.xbdh-theme-light .xbdh-menu-option.xbdh-selected {
+    background-color: rgb(194, 194, 194);
+}
+
+.xbdh-theme-light .xbdh-menu .xbdh-window {
+    background-color: rgb(229, 229, 229);
+}
+
+.xbdh-theme-light .xbdh-overlay,
+.xbdh-theme-light .xbdh-contextmenu,
+.xbdh-theme-light .xbdh-menu-overlay {
+    background-color: rgb(229, 229, 229);
+}
+
+.xbdh-theme-light .xbdh-combobox-overlay {
+    background-color: var(--light-gray);
+}
+
+.xbdh-theme-light .xbdh-window {
+    background-color: rgba(235, 235, 235, 0.7);
+}
+
+.xbdh-theme-light .xbdh-window.xbdh-active > .xbdh-window-title {
+    color: rgb(16, 16, 16);
+}
+
+.xbdh-theme-light .xbdh-window.xbdh-active {
+    background-color: rgb(229, 229, 229);
+}
+
+.xbdh-theme-light .xbdh-window .xbdh-content {
+    color: rgb(83, 83, 83);
+}
+
+.xbdh-theme-light .xbdh-window.xbdh-active .xbdh-toggle-handle,
+.xbdh-theme-light .xbdh-window.xbdh-active .xbdh-content {
+    color: rgb(16, 16, 16);
+}
+
+.xbdh-theme-light .xbdh-window .xbdh-toggle-handle {
+    background-color: rgb(229, 229, 229);
+    color: rgb(83, 83, 83);
+}
+
+.xbdh-theme-light .xbdh-window .xbdh-toggle-handle:disabled {
+    color: rgb(194, 194, 194);
+}
+
+.xbdh-theme-light button,
+.xbdh-theme-light input[type=button],
+.xbdh-theme-light input[type=reset],
+.xbdh-theme-light input[type=submit],
+.xbdh-theme-light button[type=submit] {
+    border: 1px solid rgb(78, 78, 78);
+    color: rgb(83, 83, 83);
+}
+
+.xbdh-theme-light .xbdh-window.xbdh-active button,
+.xbdh-theme-light .xbdh-window.xbdh-active input[type=button],
+.xbdh-theme-light .xbdh-window.xbdh-active input[type=reset],
+.xbdh-theme-light .xbdh-window.xbdh-active input[type=submit],
+.xbdh-theme-light .xbdh-window.xbdh-active button[type=submit],
+.xbdh-theme-dark .xbdh-shell-header button:focus,
+.xbdh-theme-dark .xbdh-overlay button:focus,
+.xbdh-theme-dark .xbdh-window.xbdh-active button:focus,
+.xbdh-theme-dark .xbdh-window.xbdh-active input[type=button]:focus,
+.xbdh-theme-dark .xbdh-window.xbdh-active input[type=reset]:focus,
+.xbdh-theme-dark .xbdh-window.xbdh-active input[type=submit]:focus,
+.xbdh-theme-dark .xbdh-window.xbdh-active button[type=submit]:focus {
+    border-color: rgb(16, 16, 16);
+    color: rgb(16, 16, 16);
+}
+
+.xbdh-theme-light button[disabled],
+.xbdh-theme-light input[type=button][disabled],
+.xbdh-theme-light input[type=reset][disabled],
+.xbdh-theme-light input[type=submit][disabled],
+.xbdh-theme-light button[type=submit][disabled],
+.xbdh-theme-light .xbdh-window.xbdh-active button[disabled],
+.xbdh-theme-light .xbdh-window.xbdh-active input[type=button][disabled],
+.xbdh-theme-light .xbdh-window.xbdh-active input[type=reset][disabled],
+.xbdh-theme-light .xbdh-window.xbdh-active input[type=submit][disabled],
+.xbdh-theme-light .xbdh-window.xbdh-active button[type=submit][disabled] {
+    border-color: var(--gray);
+    color: rgb(194, 194, 194);
+}
+
+.xbdh-theme-light button:focus,
+.xbdh-theme-light input[type=button]:focus,
+.xbdh-theme-light input[type=reset]:focus,
+.xbdh-theme-light input[type=submit]:focus,
+.xbdh-theme-light button[type=submit]:focus {
+    border-color: transparent;
+    color: rgb(16, 16, 16);
+}
+
+.xbdh-theme-light button.xbdh-pressed,
+.xbdh-theme-light input[type='button']:active,
+.xbdh-theme-light input[type='button'].win-tile-underline:active {
+    box-shadow: inset 0 0 0 4px rgb(16, 16, 16);
+}
+
+.xbdh-theme-light a {
+    color: rgb(16, 16, 16);
+}
+
+.xbdh-theme-light input[type='text'],
+.xbdh-theme-light input[type='password'],
+.xbdh-theme-light input[type='email'],
+.xbdh-theme-light input[type='number'],
+.xbdh-theme-light input[type='tel'],
+.xbdh-theme-light input[type='url'],
+.xbdh-theme-light input[type='search'],
+.xbdh-theme-light textarea {
+    color: rgb(80, 80, 80);
+    border-color: rgb(80, 80, 80);
+}
+
+.xbdh-theme-light .xbdh-window.xbdh-active input[type='text'],
+.xbdh-theme-light .xbdh-window.xbdh-active input[type='password'],
+.xbdh-theme-light .xbdh-window.xbdh-active input[type='email'],
+.xbdh-theme-light .xbdh-window.xbdh-active input[type='number'],
+.xbdh-theme-light .xbdh-window.xbdh-active input[type='tel'],
+.xbdh-theme-light .xbdh-window.xbdh-active input[type='url'],
+.xbdh-theme-light .xbdh-window.xbdh-active input[type='search'],
+.xbdh-theme-light .xbdh-window.xbdh-active textarea {
+    color: rgb(16, 16, 16);
+    border-color: rgb(16, 16, 16);
+}
+
+    .xbdh-theme-light input[type='text']:focus,
+    .xbdh-theme-light input[type='password']:focus,
+    .xbdh-theme-light input[type='email']:focus,
+    .xbdh-theme-light input[type='number']:focus,
+    .xbdh-theme-light input[type='tel']:focus,
+    .xbdh-theme-light input[type='url']:focus,
+    .xbdh-theme-light input[type='search']:focus,
+    .xbdh-theme-light textarea:focus {
+        outline-color: var(--light-gray);
+        border-color: transparent;
+    } 
+
+    .xbdh-theme-light select,
+    .xbdh-theme-light .xbdh-combobox {
+        border: 1px solid rgb(171, 171, 171);
+        color: rgb(32, 32, 32);
+    }
+
+    .xbdh-theme-light .xbdh-window.xbdh-active select,
+    .xbdh-theme-light .xbdh-window.xbdh-active .xbdh-combobox {
+        border-color: rgb(16, 16, 16);
+        color: rgb(16, 16, 16);
+    }
+
+    .xbdh-theme-light select::-ms-expand {
+        color: rgb(16, 16, 16);
+    }
+
+    .xbdh-theme-light select:focus::-ms-value {
+        color: rgb(16, 16, 16);
+    }
+
+    .xbdh-theme-light option:checked {
+        color: rgb(16, 16, 16);
+        background-color: var(--light-gray);
+    }
+
+    .xbdh-theme-light option:not(:checked) {
+        color: var(--light-gray);
+    }
+
+    .xbdh-theme-light select:focus,
+    .xbdh-theme-light select:active,
+    .xbdh-theme-light .xbdh-combobox:focus,
+    .xbdh-theme-light .xbdh-combobox:active {
+        border-color: transparent;
+        color: rgb(16, 16, 16);
+    }
+
+.xbdh-theme-light select:disabled,
+.xbdh-theme-light select[disabled],
+.xbdh-theme-light .xbdh-combobox.xbdh-disabled,
+.xbdh-theme-light .xbdh-radio.xbdh-disabled
+.xbdh-theme-light select:disabled::-ms-expand,
+.xbdh-theme-light select[disabled]::-ms-expand,
+.xbdh-theme-light .xbdh-window.xbdh-active select:disabled,
+.xbdh-theme-light .xbdh-window.xbdh-active select[disabled],
+.xbdh-theme-light .xbdh-window.xbdh-active .xbdh-combobox.xbdh-disabled,
+.xbdh-theme-light .xbdh-window.xbdh-active select:disabled::-ms-expand,
+.xbdh-theme-light .xbdh-window.xbdh-active select[disabled]::-ms-expand {
+    border-color: rgb(51, 51, 51);
+    color: rgb(58, 58, 58);
+}
+
+    .xbdh-theme-light input::-ms-check {
+        color: rgb(58, 58, 58);
+    }
+
+    .xbdh-theme-light .xbdh-window.xbdh-active input::-ms-check {
+        color: rgb(16, 16, 16);
+    }
+
+.xbdh-theme-light input:disabled::-ms-check, 
+.xbdh-theme-light input:disabled:active::-ms-check {
+    color: rgb(94, 94, 94);
+}
+
+.xbdh-theme-light input[type='checkbox'] {
+    border-color: rgb(51, 51, 51);
+}
+
+.xbdh-theme-light .xbdh-window.xbdh-active input[type='checkbox'] {
+    border-color: rgb(16, 16, 16);
+}
+
+.xbdh-theme-light input[type='checkbox'][disabled] + label {
+    color: rgb(194, 194, 194);
+}
+    .xbdh-theme-light .xbdh-list > button,
+    .xbdh-theme-light .xbdh-list > .win-focusable {
+        color: rgb(32, 32, 32);
+    }
+
+        /* Color for active elements when the context menu is open next to them */
+        .xbdh-theme-light .xbdh-list button:focus,
+        .xbdh-theme-light .xbdh-list > .win-focusable:focus,
+        .xbdh-theme-light .xbdh-list button.xbdh-active,
+        .xbdh-theme-light .xbdh-list > .win-focusable.xbdh-active,
+        .xbdh-theme-light .xbdh-list > .xbdh-active,
+        .xbdh-theme-light .xbdh-window-title.xbdh-active {
+            color: rgb(16, 16, 16);
+            background-color: rgb(194, 194, 194);
+        }
+
+.xbdh-theme-light .xbdh-indeterminateprogressoverlay {
+    background-color: rgba(235, 235, 235, 0.3);
+}
+
+.xbdh-theme-light .xbdh-warning {
+    color: rgb(255, 216, 0);
+}
+
+/* Dark theme */
+body.xbdh-theme-dark {
+    background-color: rgb(31, 31, 31);
+    color: var(--gray);
+}
+
+.xbdh-theme-dark .xbdh-menu {
+    background-color: rgba(16, 16, 16, 0.8);
+}
+
+.xbdh-theme-dark .xbdh-menu-options-0 {
+    background-color: rgb(35, 35, 35);
+}
+
+.xbdh-theme-dark .xbdh-menu-options-1 {
+    background-color: rgb(32, 32, 32);
+}
+
+.xbdh-theme-dark .xbdh-menu-option.xbdh-selected {
+    background-color: rgb(58, 58, 58);
+}
+
+.xbdh-theme-dark .xbdh-menu .xbdh-window {
+    background-color: rgb(34, 34, 34);
+}
+
+.xbdh-theme-dark .xbdh-overlay,
+.xbdh-theme-dark .xbdh-contextmenu,
+.xbdh-theme-dark .xbdh-menu-overlay {
+    background-color: rgb(38, 38, 38);
+}
+
+.xbdh-theme-dark .xbdh-combobox-overlay {
+    background-color: rgb(16, 16, 16);
+}
+
+.xbdh-theme-dark .xbdh-window {
+    background-color: rgba(25, 25, 25, 0.85);
+    border: solid 3px transparent;
+}
+
+.xbdh-theme-dark .xbdh-window > .xbdh-window-title {
+    color: var(--light-gray);
+}
+
+.xbdh-theme-dark .xbdh-window.xbdh-active {
+    background-color: rgb(25, 25, 25);
+    box-shadow: var(--xbox-green) 0px 0px 12px;
+    border: solid 3px rgb(16,124,16);
+}
+
+.xbdh-theme-dark .xbdh-window .xbdh-content {
+    color: rgb(180, 180, 180);
+}
+
+.xbdh-theme-dark .xbdh-window.xbdh-active .xbdh-toggle-handle,
+.xbdh-theme-dark .xbdh-window.xbdh-active .xbdh-content {
+    color: var(--light-gray);
+}
+
+.xbdh-theme-dark .xbdh-window .xbdh-toggle-handle {
+    background-color: rgb(35, 35, 35);
+    color: rgb(180, 180, 180);
+}
+
+.xbdh-theme-dark .xbdh-window .xbdh-toggle-handle:disabled {
+    color: rgb(60, 60, 60);
+}
+
+.xbdh-theme-dark .xbdh-window.xbdh-active .xbdh-toggle-handle:disabled {
+    color: rgb(85, 85, 85);
+}
+
+.xbdh-theme-dark button,
+.xbdh-theme-dark input[type=button],
+.xbdh-theme-dark input[type=reset],
+.xbdh-theme-dark input[type=submit],
+.xbdh-theme-dark button[type=submit] {
+    border: 1px solid var(--white);
+    color: var(--white);
+}
+
+
+.xbdh-theme-dark .xbdh-shell-header button:focus,
+.xbdh-theme-dark .xbdh-overlay button:focus,
+.xbdh-theme-dark .xbdh-window.xbdh-active button:focus,
+.xbdh-theme-dark .xbdh-window.xbdh-active input[type=button]:focus,
+.xbdh-theme-dark .xbdh-window.xbdh-active input[type=reset]:focus,
+.xbdh-theme-dark .xbdh-window.xbdh-active input[type=submit]:focus,
+.xbdh-theme-dark .xbdh-window.xbdh-active button[type=submit]:focus {
+    border-color: var(--light-gray);
+    color: var(--light-gray);
+}
+
+.xbdh-theme-dark button[disabled],
+.xbdh-theme-dark input[type=button][disabled],
+.xbdh-theme-dark input[type=reset][disabled],
+.xbdh-theme-dark input[type=submit][disabled],
+.xbdh-theme-dark button[type=submit][disabled],
+.xbdh-theme-dark .xbdh-window.xbdh-active input[type=button][disabled],
+.xbdh-theme-dark .xbdh-window.xbdh-active input[type=reset][disabled],
+.xbdh-theme-dark .xbdh-window.xbdh-active input[type=submit][disabled],
+.xbdh-theme-dark .xbdh-window.xbdh-active button[type=submit][disabled] {
+    border-color: rgb(51, 51, 51);
+    color: rgb(60, 60, 60);
+}
+
+.xbdh-theme-dark .xbdh-window.xbdh-active button[disabled] {
+    border-color: rgb(75, 75, 75);
+    color: rgb(85, 85, 85);
+}
+
+.xbdh-theme-dark button:focus,
+.xbdh-theme-dark input[type=button]:focus,
+.xbdh-theme-dark input[type=reset]:focus,
+.xbdh-theme-dark input[type=submit]:focus,
+.xbdh-theme-dark button[type=submit]:focus {
+    border-color: transparent;
+}
+
+.xbdh-theme-dark .xbdh-window.xbdh-active button:focus,
+.xbdh-theme-dark .xbdh-window.xbdh-active input[type=button]:focus,
+.xbdh-theme-dark .xbdh-window.xbdh-active input[type=reset]:focus,
+.xbdh-theme-dark .xbdh-window.xbdh-active input[type=submit]:focus,
+.xbdh-theme-dark .xbdh-window.xbdh-active button[type=submit]:focus {
+    border-color: transparent;
+    font-weight: 600;
+    color: var(--white);
+}
+
+.xbdh-theme-dark button.xbdh-pressed,
+.xbdh-theme-dark input[type='button']:active,
+.xbdh-theme-dark input[type='button'].win-tile-underline:active {
+    box-shadow: inset 0 0 0 4px rgb(16, 16, 16);
+}
+
+.xbdh-theme-dark a {
+    color: var(--light-gray);
+}
+
+.xbdh-theme-dark input[type='text'],
+.xbdh-theme-dark input[type='password'],
+.xbdh-theme-dark input[type='email'],
+.xbdh-theme-dark input[type='number'],
+.xbdh-theme-dark input[type='tel'],
+.xbdh-theme-dark input[type='url'],
+.xbdh-theme-dark input[type='search'],
+.xbdh-theme-dark textarea {
+    border-color: var(--white);
+    color: var(--gray);
+}
+
+.xbdh-theme-dark .xbdh-window.xbdh-active input[type='text'],
+.xbdh-theme-dark .xbdh-window.xbdh-active input[type='password'],
+.xbdh-theme-dark .xbdh-window.xbdh-active input[type='email'],
+.xbdh-theme-dark .xbdh-window.xbdh-active input[type='number'],
+.xbdh-theme-dark .xbdh-window.xbdh-active input[type='tel'],
+.xbdh-theme-dark .xbdh-window.xbdh-active input[type='url'],
+.xbdh-theme-dark .xbdh-window.xbdh-active input[type='search'],
+.xbdh-theme-dark .xbdh-window.xbdh-active textarea {
+    border-color: var(--white);
+}
+
+    .xbdh-theme-dark input[type='text']:focus,
+    .xbdh-theme-dark input[type='password']:focus,
+    .xbdh-theme-dark input[type='email']:focus,
+    .xbdh-theme-dark input[type='number']:focus,
+    .xbdh-theme-dark input[type='tel']:focus,
+    .xbdh-theme-dark input[type='url']:focus,
+    .xbdh-theme-dark input[type='search']:focus,
+    .xbdh-theme-dark textarea:focus {
+        border-color: transparent;
+        color: rgb(16, 16, 16);
+    } 
+
+    .xbdh-theme-dark select,
+    .xbdh-theme-dark .xbdh-combobox {
+        border: 1px solid var(--white);
+        color: var(--gray);
+    }
+
+    .xbdh-theme-dark .xbdh-combobox.xbdh-combobox-first {
+        margin-top: 4px;
+    }
+
+    .xbdh-theme-dark .xbdh-window.xbdh-active select,
+    .xbdh-theme-dark .xbdh-window.xbdh-active .xbdh-combobox {
+        border-color: var(--white);
+        color: var(--gray);
+    }
+
+    .xbdh-theme-dark select:focus,
+    .xbdh-theme-dark .xbdh-combobox:focus {
+        border-color: transparent;
+    }
+
+    .xbdh-theme-dark .xbdh-window.xbdh-active select:focus,
+    .xbdh-theme-dark .xbdh-window.xbdh-active .xbdh-combobox:focus {
+        border-color: transparent;
+        font-weight: 600;
+        color: var(--white);
+    }
+
+    .xbdh-theme-dark select::-ms-expand {
+        color: rgb(180, 180, 180);
+    }
+
+    .xbdh-theme-dark select:focus::-ms-value {
+        color: rgb(180, 180, 180);
+    }
+
+    .xbdh-theme-dark option:checked {
+        color: rgb(16, 16, 16);
+        background-color: rgb(180, 180, 180);
+    }
+
+    .xbdh-theme-dark option:not(:checked) {
+        color: rgb(180, 180, 180);
+    }
+
+    .xbdh-theme-dark select:focus,
+    .xbdh-theme-dark select:active,
+    .xbdh-theme-dark .xbdh-combobox:focus,
+    .xbdh-theme-dark .xbdh-combobox:active {
+        border: solid 1px var(--light-gray);
+        color: var(--light-gray);
+    }
+
+.xbdh-theme-dark select:disabled,
+.xbdh-theme-dark select[disabled],
+.xbdh-theme-dark .xbdh-combobox.xbdh-disabled,
+.xbdh-theme-dark .xbdh-radio.xbdh-disabled,
+.xbdh-theme-dark select:disabled::-ms-expand,
+.xbdh-theme-dark select[disabled]::-ms-expand,
+.xbdh-theme-dark .xbdh-window.xbdh-active select:disabled,
+.xbdh-theme-dark .xbdh-window.xbdh-active select[disabled],
+.xbdh-theme-dark .xbdh-window.xbdh-active .xbdh-combobox.xbdh-disabled,
+.xbdh-theme-dark .xbdh-window.xbdh-active select:disabled::-ms-expand,
+.xbdh-theme-dark .xbdh-window.xbdh-active select[disabled]::-ms-expand {
+    border-color: rgb(51, 51, 51);
+    color: rgb(60, 60, 60);
+}
+
+    .xbdh-theme-dark input::-ms-check {
+        color: rgb(194, 194, 194);
+    }
+
+    .xbdh-theme-dark .xbdh-window.xbdh-active input::-ms-check {
+        color: rgb(180, 180, 180);
+    }
+
+    .xbdh-theme-dark .xbdh-window.xbdh-active input:focus::-ms-check {
+        color: rgb(180, 180, 180);
+    }
+
+.xbdh-theme-dark input:disabled::-ms-check, 
+.xbdh-theme-dark input:disabled:active::-ms-check {
+    color: rgb(60, 60, 60);
+}
+
+.xbdh-theme-dark input[type='checkbox'] {
+    outline-color: var(--gray);
+}
+
+.xbdh-theme-dark .xbdh-window.xbdh-active input[type='checkbox'] {
+    outline-color: var(--gray);
+}
+
+.xbdh-theme-dark .xbdh-window.xbdh-active input[type='checkbox']:focus {
+    outline-color: var(--light-gray);
+}
+
+.xbdh-theme-dark input[type='checkbox'][disabled] + label {
+    color: rgb(60, 60, 60);
+}
+    .xbdh-theme-dark .xbdh-list > button,
+    .xbdh-theme-dark .xbdh-list > .win-focusable {
+        color: var(--gray);
+    }
+
+        /* Color for active elements when the context menu is open next to them */
+        .xbdh-theme-dark .xbdh-list button:focus,
+        .xbdh-theme-dark .xbdh-list > .win-focusable:focus,
+        .xbdh-theme-dark .xbdh-list button.xbdh-active,
+        .xbdh-theme-dark .xbdh-list > .win-focusable.xbdh-active,
+        .xbdh-theme-dark .xbdh-list > .xbdh-active,
+        .xbdh-theme-dark .xbdh-window-title.xbdh-active {
+            color: var(--light-gray);
+            background-color: rgb(94, 94, 94);
+        }
+
+.xbdh-theme-dark .xbdh-indeterminateprogressoverlay {
+    background-color: rgba(16, 16, 16, 0.3);
+}
+
+.xbdh-theme-dark .xbdh-warning {
+    color: rgb(255, 216, 0);
+}
+
+/* Accent colors */
+
+/* Xbox Green */
+.xbdh-theme-accentcolor-xboxgreen .xbdh-window-title:focus,
+.xbdh-theme-accentcolor-xboxgreen .xbdh-button:focus,
+.xbdh-theme-accentcolor-xboxgreen button:focus,
+.xbdh-theme-accentcolor-xboxgreen input[type=button]:focus,
+.xbdh-theme-accentcolor-xboxgreen input[type=reset]:focus,
+.xbdh-theme-accentcolor-xboxgreen input[type=submit]:focus,
+.xbdh-theme-accentcolor-xboxgreen button[type=submit]:focus,
+.xbdh-theme-accentcolor-xboxgreen .xbdh-radio:focus,
+.xbdh-theme-accentcolor-xboxgreen select:focus,
+.xbdh-theme-accentcolor-xboxgreen select:active,
+.xbdh-theme-accentcolor-xboxgreen .xbdh-combobox:focus,
+.xbdh-theme-accentcolor-xboxgreen .xbdh-combobox:active,
+.xbdh-theme-accentcolor-xboxgreen input[type='radio']:focus,
+.xbdh-theme-accentcolor-xboxgreen .xbdh-list button:focus,
+.xbdh-theme-accentcolor-xboxgreen .xbdh-list > .win-focusable:focus,
+.xbdh-theme-accentcolor-xboxgreen .xbdh-form .win-focusable:focus,
+.xbdh-theme-accentcolor-xboxgreen .xbdh-menu-option:focus,
+.xbdh-theme-accentcolor-xboxgreen .xbdh-combobox-option:focus > div,
+.xbdh-theme-accentcolor-xboxgreen .xbdh-combobox-option-selected:focus > div,
+.xbdh-theme-accentcolor-xboxgreen .xbdh-accentcolor-background,
+.xbdh-theme-accentcolor-xboxgreen .xbdh-accentcolor-background-focus:focus {
+    background-color: var(--xbox-green);
+}
+
+.xbdh-theme-accentcolor-xboxgreen .xbdh-combobox-option:focus,
+.xbdh-theme-accentcolor-xboxgreen .xbdh-combobox-option-selected:focus {
+    border: solid 2px var(--xbox-green);
+}
+
+.xbdh-theme-accentcolor-xboxgreen .xbdh-checkbox:focus,
+.xbdh-theme-accentcolor-xboxgreen input[type='checkbox']:focus {
+    background-color: var(--xbox-green);
+    color: var(--white);
+}
+
+.xbdh-theme-accentcolor-xboxgreen .xbdh-window.xbdh-active {
+    box-shadow: var(--xbox-green) 0px 0px 12px;
+    border: solid 3px var(--xbox-green);
+}
+
+.xbdh-theme-accentcolor-xboxgreen .xbdh-accentcolor-border:focus,
+.xbdh-theme-accentcolor-xboxgreen .xbdh-shell-workspaceoption:focus .xbdh-accentcolor-border,
+.xbdh-theme-accentcolor-xboxgreen a:focus,
+.xbdh-theme-accentcolor-xboxgreen.xbdh-customizing .xbdh-window.xbdh-active,
+.xbdh-theme-accentcolor-xboxgreen .xbdh-checkbox.xbdh-checked:not(:focus) input[type='checkbox'] {
+    border-color: var(--xbox-green);
+}
+
+.xbdh-theme-accentcolor-xboxgreen progress,
+.xbdh-theme-accentcolor-xboxgreen a,
+.xbdh-theme-accentcolor-xboxgreen a:focus,
+.xbdh-theme-accentcolor-xboxgreen .xbdh-accentcolor-color {
+    color: var(--xbox-green);
+}
+
+.xbdh-theme-accentcolor-xboxgreen .xbdh-radio.xbdh-checked:not(:focus) input[type='radio'],
+.xbdh-theme-accentcolor-xboxgreen .xbdh-radio.xbdh-checked:not(:focus) input[type='radio']::-ms-check,
+.xbdh-theme-accentcolor-xboxgreen .xbdh-checkbox.xbdh-checked:not(:focus) input[type='checkbox'],
+.xbdh-theme-accentcolor-xboxgreen .xbdh-checkbox.xbdh-checked:not(:focus) input[type='checkbox']::-ms-check {
+    background-color: var(--xbox-green);
+    color: var(--white);
+}
+
+.xbdh-theme-accentcolor-xboxgreen .xbdh-shell-workspaceoption.xbdh-active:focus {
+    box-shadow: var(--xbox-green) 0px 0px 12px;
+    border: 3px solid var(--xbox-green);
+    border-radius: 10px;
+}
+
+/* Sports Green */
+.xbdh-theme-accentcolor-sportgreen .xbdh-window-title:focus,
+.xbdh-theme-accentcolor-sportgreen .xbdh-button:focus,
+.xbdh-theme-accentcolor-sportgreen button:focus,
+.xbdh-theme-accentcolor-sportgreen input[type=button]:focus,
+.xbdh-theme-accentcolor-sportgreen input[type=reset]:focus,
+.xbdh-theme-accentcolor-sportgreen input[type=submit]:focus,
+.xbdh-theme-accentcolor-sportgreen button[type=submit]:focus,
+.xbdh-theme-accentcolor-sportgreen .xbdh-radio:focus,
+.xbdh-theme-accentcolor-sportgreen select:focus,
+.xbdh-theme-accentcolor-sportgreen select:active,
+.xbdh-theme-accentcolor-sportgreen .xbdh-combobox:focus,
+.xbdh-theme-accentcolor-sportgreen .xbdh-combobox:active,
+.xbdh-theme-accentcolor-sportgreen .xbdh-list button:focus,
+.xbdh-theme-accentcolor-sportgreen .xbdh-list > .win-focusable:focus,
+.xbdh-theme-accentcolor-sportgreen .xbdh-form .win-focusable:focus,
+.xbdh-theme-accentcolor-sportgreen .xbdh-menu-option:focus,
+.xbdh-theme-accentcolor-sportgreen .xbdh-combobox-option:focus > div,
+.xbdh-theme-accentcolor-sportgreen .xbdh-combobox-option-selected:focus > div,
+.xbdh-theme-accentcolor-sportgreen .xbdh-accentcolor-background,
+.xbdh-theme-accentcolor-sportgreen .xbdh-accentcolor-background-focus:focus {
+    background-color: var(--sports-green);
+}
+
+.xbdh-theme-accentcolor-sportgreen .xbdh-combobox-option:focus,
+.xbdh-theme-accentcolor-sportgreen .xbdh-combobox-option-selected:focus {
+    border: solid 2px var(--sports-green);
+}
+
+.xbdh-theme-accentcolor-sportgreen .xbdh-checkbox:focus,
+.xbdh-theme-accentcolor-sportgreen input[type='checkbox']:focus {
+    background-color: var(--sports-green);
+    color: var(--white);
+}
+
+.xbdh-theme-accentcolor-sportgreen .xbdh-window.xbdh-active {
+    box-shadow: var(--sports-green) 0px 0px 12px;
+    border: solid 3px var(--sports-green);
+}
+
+.xbdh-theme-accentcolor-sportgreen .xbdh-accentcolor-border:focus,
+.xbdh-theme-accentcolor-sportgreen .xbdh-shell-workspaceoption:focus .xbdh-accentcolor-border,
+.xbdh-theme-accentcolor-sportgreen a:focus,
+.xbdh-theme-accentcolor-sportgreen.xbdh-customizing .xbdh-window.xbdh-active,
+.xbdh-theme-accentcolor-sportgreen .xbdh-checkbox.xbdh-checked:not(:focus) input[type='checkbox'] {
+    border-color: var(--sports-green);
+}
+
+.xbdh-theme-accentcolor-sportgreen progress,
+.xbdh-theme-accentcolor-sportgreen a,
+.xbdh-theme-accentcolor-sportgreen a:focus,
+.xbdh-theme-accentcolor-sportgreen .xbdh-accentcolor-color,
+.xbdh-theme-accentcolor-sportgreen .xbdh-menu-overlay h1 {
+    color: var(--sports-green);
+}
+
+.xbdh-theme-accentcolor-sportgreen .xbdh-radio.xbdh-checked:not(:focus) input[type='radio'],
+.xbdh-theme-accentcolor-sportgreen .xbdh-radio.xbdh-checked:not(:focus) input[type='radio']::-ms-check,
+.xbdh-theme-accentcolor-sportgreen .xbdh-checkbox.xbdh-checked:not(:focus) input[type='checkbox'],
+.xbdh-theme-accentcolor-sportgreen .xbdh-checkbox.xbdh-checked:not(:focus) input[type='checkbox']::-ms-check {
+    background-color: var(--sports-green);
+    color: var(--white);
+}
+
+.xbdh-theme-accentcolor-sportgreen .xbdh-shell-workspaceoption.xbdh-active:focus {
+    box-shadow: var(--sports-green) 0px 0px 12px;
+    border: 3px solid var(--sports-green);
+    border-radius: 10px;
+}
+
+/* Grass Green */
+.xbdh-theme-accentcolor-grassgreen .xbdh-window-title:focus,
+.xbdh-theme-accentcolor-grassgreen .xbdh-button:focus,
+.xbdh-theme-accentcolor-grassgreen button:focus,
+.xbdh-theme-accentcolor-grassgreen input[type=button]:focus,
+.xbdh-theme-accentcolor-grassgreen input[type=reset]:focus,
+.xbdh-theme-accentcolor-grassgreen input[type=submit]:focus,
+.xbdh-theme-accentcolor-grassgreen button[type=submit]:focus,
+.xbdh-theme-accentcolor-grassgreen .xbdh-radio:focus,
+.xbdh-theme-accentcolor-grassgreen select:focus,
+.xbdh-theme-accentcolor-grassgreen select:active,
+.xbdh-theme-accentcolor-grassgreen .xbdh-combobox:focus,
+.xbdh-theme-accentcolor-grassgreen .xbdh-combobox:active,
+.xbdh-theme-accentcolor-grassgreen .xbdh-list button:focus,
+.xbdh-theme-accentcolor-grassgreen .xbdh-list > .win-focusable:focus,
+.xbdh-theme-accentcolor-grassgreen .xbdh-form .win-focusable:focus,
+.xbdh-theme-accentcolor-grassgreen .xbdh-menu-option:focus,
+.xbdh-theme-accentcolor-grassgreen .xbdh-combobox-option:focus > div,
+.xbdh-theme-accentcolor-grassgreen .xbdh-combobox-option-selected:focus > div,
+.xbdh-theme-accentcolor-grassgreen .xbdh-accentcolor-background,
+.xbdh-theme-accentcolor-grassgreen .xbdh-accentcolor-background-focus:focus {
+    background-color: var(--grass-green);
+}
+
+.xbdh-theme-accentcolor-grassgreen .xbdh-combobox-option:focus,
+.xbdh-theme-accentcolor-grassgreen .xbdh-combobox-option-selected:focus {
+    border: solid 2px var(--grass-green);
+}
+
+.xbdh-theme-accentcolor-grassgreen .xbdh-checkbox:focus,
+.xbdh-theme-accentcolor-grassgreen input[type='checkbox']:focus {
+    background-color: var(--grass-green);
+    color: var(--white);
+}
+
+.xbdh-theme-accentcolor-grassgreen .xbdh-window.xbdh-active {
+    box-shadow: var(--grass-green) 0px 0px 12px;
+    border: solid 3px var(--grass-green);
+}
+
+.xbdh-theme-accentcolor-grassgreen .xbdh-accentcolor-border:focus,
+.xbdh-theme-accentcolor-grassgreen .xbdh-shell-workspaceoption:focus .xbdh-accentcolor-border,
+.xbdh-theme-accentcolor-grassgreen a:focus,
+.xbdh-theme-accentcolor-grassgreen.xbdh-customizing .xbdh-window.xbdh-active,
+.xbdh-theme-accentcolor-grassgreen .xbdh-checkbox.xbdh-checked:not(:focus) input[type='checkbox'] {
+    border-color: var(--grass-green);
+}
+
+.xbdh-theme-accentcolor-grassgreen progress,
+.xbdh-theme-accentcolor-grassgreen a,
+.xbdh-theme-accentcolor-grassgreen a:focus,
+.xbdh-theme-accentcolor-grassgreen .xbdh-accentcolor-color,
+.xbdh-theme-accentcolor-grassgreen .xbdh-menu-overlay h1 {
+    color: var(--grass-green);
+}
+
+.xbdh-theme-accentcolor-grassgreen .xbdh-radio.xbdh-checked:not(:focus) input[type='radio'],
+.xbdh-theme-accentcolor-grassgreen .xbdh-radio.xbdh-checked:not(:focus) input[type='radio']::-ms-check,
+.xbdh-theme-accentcolor-grassgreen .xbdh-checkbox.xbdh-checked:not(:focus) input[type='checkbox'],
+.xbdh-theme-accentcolor-grassgreen .xbdh-checkbox.xbdh-checked:not(:focus) input[type='checkbox']::-ms-check {
+    background-color: var(--grass-green);
+    color: var(--white);
+}
+
+.xbdh-theme-accentcolor-grassgreen .xbdh-shell-workspaceoption.xbdh-active:focus {
+    box-shadow: var(--grass-green) 0px 0px 12px;
+    border: 3px solid var(--grass-green);
+    border-radius: 10px;
+}
+
+/* Lime */
+.xbdh-theme-accentcolor-lime .xbdh-window-title:focus,
+.xbdh-theme-accentcolor-lime .xbdh-button:focus,
+.xbdh-theme-accentcolor-lime button:focus,
+.xbdh-theme-accentcolor-lime input[type=button]:focus,
+.xbdh-theme-accentcolor-lime input[type=reset]:focus,
+.xbdh-theme-accentcolor-lime input[type=submit]:focus,
+.xbdh-theme-accentcolor-lime button[type=submit]:focus,
+.xbdh-theme-accentcolor-lime .xbdh-radio:focus,
+.xbdh-theme-accentcolor-lime select:focus,
+.xbdh-theme-accentcolor-lime select:active,
+.xbdh-theme-accentcolor-lime .xbdh-combobox:focus,
+.xbdh-theme-accentcolor-lime .xbdh-combobox:active,
+.xbdh-theme-accentcolor-lime .xbdh-list button:focus,
+.xbdh-theme-accentcolor-lime .xbdh-list > .win-focusable:focus,
+.xbdh-theme-accentcolor-lime .xbdh-form .win-focusable:focus,
+.xbdh-theme-accentcolor-lime .xbdh-menu-option:focus,
+.xbdh-theme-accentcolor-lime .xbdh-combobox-option:focus > div,
+.xbdh-theme-accentcolor-lime .xbdh-combobox-option-selected:focus > div,
+.xbdh-theme-accentcolor-lime .xbdh-accentcolor-background,
+.xbdh-theme-accentcolor-lime .xbdh-accentcolor-background-focus:focus {
+    background-color: var(--lime);
+}
+
+.xbdh-theme-accentcolor-lime .xbdh-combobox-option:focus,
+.xbdh-theme-accentcolor-lime .xbdh-combobox-option-selected:focus {
+    border: solid 2px var(--lime);
+}
+
+.xbdh-theme-accentcolor-lime .xbdh-checkbox:focus,
+.xbdh-theme-accentcolor-lime input[type='checkbox']:focus {
+    background-color: var(--lime);
+    color: var(--white);
+}
+
+.xbdh-theme-accentcolor-lime .xbdh-window.xbdh-active {
+    box-shadow: var(--lime) 0px 0px 12px;
+    border: solid 3px var(--lime);
+}
+
+.xbdh-theme-accentcolor-lime .xbdh-accentcolor-border:focus,
+.xbdh-theme-accentcolor-lime .xbdh-shell-workspaceoption:focus .xbdh-accentcolor-border,
+.xbdh-theme-accentcolor-lime a:focus,
+.xbdh-theme-accentcolor-lime.xbdh-customizing .xbdh-window.xbdh-active,
+.xbdh-theme-accentcolor-lime .xbdh-checkbox.xbdh-checked:not(:focus) input[type='checkbox'] {
+    border-color: var(--lime);
+}
+
+.xbdh-theme-accentcolor-lime progress,
+.xbdh-theme-accentcolor-lime a,
+.xbdh-theme-accentcolor-lime a:focus,
+.xbdh-theme-accentcolor-lime .xbdh-accentcolor-color,
+.xbdh-theme-accentcolor-lime .xbdh-menu-overlay h1 {
+    color: var(--lime);
+}
+
+.xbdh-theme-accentcolor-lime .xbdh-radio.xbdh-checked:not(:focus) input[type='radio'],
+.xbdh-theme-accentcolor-lime .xbdh-radio.xbdh-checked:not(:focus) input[type='radio']::-ms-check,
+.xbdh-theme-accentcolor-lime .xbdh-checkbox.xbdh-checked:not(:focus) input[type='checkbox'],
+.xbdh-theme-accentcolor-lime .xbdh-checkbox.xbdh-checked:not(:focus) input[type='checkbox']::-ms-check {
+    background-color: var(--lime);
+    color: var(--white);
+}
+
+.xbdh-theme-accentcolor-lime .xbdh-shell-workspaceoption.xbdh-active:focus {
+    box-shadow: var(--lime) 0px 0px 12px;
+    border: 3px solid var(--lime);
+    border-radius: 10px;
+}
+
+/* X Turf Green */
+.xbdh-theme-accentcolor-xturfgreen .xbdh-window-title:focus,
+.xbdh-theme-accentcolor-xturfgreen .xbdh-button:focus,
+.xbdh-theme-accentcolor-xturfgreen button:focus,
+.xbdh-theme-accentcolor-xturfgreen input[type=button]:focus,
+.xbdh-theme-accentcolor-xturfgreen input[type=reset]:focus,
+.xbdh-theme-accentcolor-xturfgreen input[type=submit]:focus,
+.xbdh-theme-accentcolor-xturfgreen button[type=submit]:focus,
+.xbdh-theme-accentcolor-xturfgreen .xbdh-radio:focus,
+.xbdh-theme-accentcolor-xturfgreen select:focus,
+.xbdh-theme-accentcolor-xturfgreen select:active,
+.xbdh-theme-accentcolor-xturfgreen .xbdh-combobox:focus,
+.xbdh-theme-accentcolor-xturfgreen .xbdh-combobox:active,
+.xbdh-theme-accentcolor-xturfgreen .xbdh-list button:focus,
+.xbdh-theme-accentcolor-xturfgreen .xbdh-list > .win-focusable:focus,
+.xbdh-theme-accentcolor-xturfgreen .xbdh-form .win-focusable:focus,
+.xbdh-theme-accentcolor-xturfgreen .xbdh-menu-option:focus,
+.xbdh-theme-accentcolor-xturfgreen .xbdh-combobox-option:focus > div,
+.xbdh-theme-accentcolor-xturfgreen .xbdh-combobox-option-selected:focus > div,
+.xbdh-theme-accentcolor-xturfgreen .xbdh-accentcolor-background,
+.xbdh-theme-accentcolor-xturfgreen .xbdh-accentcolor-background-focus:focus {
+    background-color: var(--turf-green);
+}
+
+.xbdh-theme-accentcolor-xturfgreen .xbdh-combobox-option:focus,
+.xbdh-theme-accentcolor-xturfgreen .xbdh-combobox-option-selected:focus {
+    border: solid 2px var(--turf-green);
+}
+
+.xbdh-theme-accentcolor-xturfgreen .xbdh-checkbox:focus,
+.xbdh-theme-accentcolor-xturfgreen input[type='checkbox']:focus {
+    background-color: var(--turf-green);
+    color: var(--white);
+}
+
+.xbdh-theme-accentcolor-xturfgreen .xbdh-window.xbdh-active {
+    box-shadow: var(--turf-green) 0px 0px 12px;
+    border: solid 3px var(--turf-green);
+}
+
+.xbdh-theme-accentcolor-xturfgreen .xbdh-accentcolor-border:focus,
+.xbdh-theme-accentcolor-xturfgreen .xbdh-shell-workspaceoption:focus .xbdh-accentcolor-border,
+.xbdh-theme-accentcolor-xturfgreen a:focus,
+.xbdh-theme-accentcolor-xturfgreen.xbdh-customizing .xbdh-window.xbdh-active,
+.xbdh-theme-accentcolor-xturfgreen .xbdh-checkbox.xbdh-checked:not(:focus) input[type='checkbox'] {
+    border-color: var(--turf-green);
+}
+
+.xbdh-theme-accentcolor-xturfgreen progress,
+.xbdh-theme-accentcolor-xturfgreen a,
+.xbdh-theme-accentcolor-xturfgreen a:focus,
+.xbdh-theme-accentcolor-xturfgreen .xbdh-accentcolor-color,
+.xbdh-theme-accentcolor-xturfgreen .xbdh-menu-overlay h1 {
+    color: var(--turf-green);
+}
+
+.xbdh-theme-accentcolor-xturfgreen .xbdh-radio.xbdh-checked:not(:focus) input[type='radio'],
+.xbdh-theme-accentcolor-xturfgreen .xbdh-radio.xbdh-checked:not(:focus) input[type='radio']::-ms-check,
+.xbdh-theme-accentcolor-xturfgreen .xbdh-checkbox.xbdh-checked:not(:focus) input[type='checkbox'],
+.xbdh-theme-accentcolor-xturfgreen .xbdh-checkbox.xbdh-checked:not(:focus) input[type='checkbox']::-ms-check {
+    background-color: var(--turf-green);
+    color: var(--white);
+}
+
+.xbdh-theme-accentcolor-xturfgreen .xbdh-shell-workspaceoption.xbdh-active:focus {
+    box-shadow: var(--turf-green) 0px 0px 12px;
+    border: 3px solid var(--turf-green);
+    border-radius: 10px;
+}
+
+/* Navy Blue */
+.xbdh-theme-accentcolor-navyblue .xbdh-window-title:focus,
+.xbdh-theme-accentcolor-navyblue .xbdh-button:focus,
+.xbdh-theme-accentcolor-navyblue button:focus,
+.xbdh-theme-accentcolor-navyblue input[type=button]:focus,
+.xbdh-theme-accentcolor-navyblue input[type=reset]:focus,
+.xbdh-theme-accentcolor-navyblue input[type=submit]:focus,
+.xbdh-theme-accentcolor-navyblue button[type=submit]:focus,
+.xbdh-theme-accentcolor-navyblue .xbdh-radio:focus,
+.xbdh-theme-accentcolor-navyblue select:focus,
+.xbdh-theme-accentcolor-navyblue select:active,
+.xbdh-theme-accentcolor-navyblue .xbdh-combobox:focus,
+.xbdh-theme-accentcolor-navyblue .xbdh-combobox:active,
+.xbdh-theme-accentcolor-navyblue .xbdh-list button:focus,
+.xbdh-theme-accentcolor-navyblue .xbdh-list > .win-focusable:focus,
+.xbdh-theme-accentcolor-navyblue .xbdh-form .win-focusable:focus,
+.xbdh-theme-accentcolor-navyblue .xbdh-menu-option:focus,
+.xbdh-theme-accentcolor-navyblue .xbdh-combobox-option:focus > div,
+.xbdh-theme-accentcolor-navyblue .xbdh-combobox-option-selected:focus > div,
+.xbdh-theme-accentcolor-navyblue .xbdh-accentcolor-background,
+.xbdh-theme-accentcolor-navyblue .xbdh-accentcolor-background-focus:focus {
+    background-color: var(--navy-blue);
+}
+
+.xbdh-theme-accentcolor-navyblue .xbdh-combobox-option:focus,
+.xbdh-theme-accentcolor-navyblue .xbdh-combobox-option-selected:focus {
+    border: solid 2px var(--navy-blue);
+}
+
+.xbdh-theme-accentcolor-navyblue .xbdh-checkbox:focus,
+.xbdh-theme-accentcolor-navyblue input[type='checkbox']:focus {
+    background-color: var(--navy-blue);
+    color: var(--white);
+}
+
+.xbdh-theme-accentcolor-navyblue .xbdh-window.xbdh-active {
+    box-shadow: var(--navy-blue) 0px 0px 12px;
+    border: solid 3px var(--navy-blue);
+}
+
+.xbdh-theme-accentcolor-navyblue .xbdh-accentcolor-border:focus,
+.xbdh-theme-accentcolor-navyblue .xbdh-shell-workspaceoption:focus .xbdh-accentcolor-border,
+.xbdh-theme-accentcolor-navyblue a:focus,
+.xbdh-theme-accentcolor-navyblue.xbdh-customizing .xbdh-window.xbdh-active,
+.xbdh-theme-accentcolor-navyblue .xbdh-checkbox.xbdh-checked:not(:focus) input[type='checkbox'] {
+    border-color: var(--navy-blue);
+}
+
+.xbdh-theme-accentcolor-navyblue progress,
+.xbdh-theme-accentcolor-navyblue a,
+.xbdh-theme-accentcolor-navyblue a:focus,
+.xbdh-theme-accentcolor-navyblue .xbdh-accentcolor-color,
+.xbdh-theme-accentcolor-navyblue .xbdh-menu-overlay h1 {
+    color: var(--navy-blue);
+}
+
+.xbdh-theme-accentcolor-navyblue .xbdh-radio.xbdh-checked:not(:focus) input[type='radio'],
+.xbdh-theme-accentcolor-navyblue .xbdh-radio.xbdh-checked:not(:focus) input[type='radio']::-ms-check,
+.xbdh-theme-accentcolor-navyblue .xbdh-checkbox.xbdh-checked:not(:focus) input[type='checkbox'],
+.xbdh-theme-accentcolor-navyblue .xbdh-checkbox.xbdh-checked:not(:focus) input[type='checkbox']::-ms-check {
+    background-color: var(--navy-blue);
+    color: var(--white);
+}
+
+.xbdh-theme-accentcolor-navyblue .xbdh-shell-workspaceoption.xbdh-active:focus {
+    box-shadow: var(--navy-blue) 0px 0px 12px;
+    border: 3px solid var(--navy-blue);
+    border-radius: 10px;
+}
+
+/* Default Blue */
+.xbdh-theme-accentcolor-defaultblue .xbdh-window-title:focus,
+.xbdh-theme-accentcolor-defaultblue .xbdh-button:focus,
+.xbdh-theme-accentcolor-defaultblue button:focus,
+.xbdh-theme-accentcolor-defaultblue input[type=button]:focus,
+.xbdh-theme-accentcolor-defaultblue input[type=reset]:focus,
+.xbdh-theme-accentcolor-defaultblue input[type=submit]:focus,
+.xbdh-theme-accentcolor-defaultblue button[type=submit]:focus,
+.xbdh-theme-accentcolor-defaultblue .xbdh-radio:focus,
+.xbdh-theme-accentcolor-defaultblue select:focus,
+.xbdh-theme-accentcolor-defaultblue select:active,
+.xbdh-theme-accentcolor-defaultblue .xbdh-combobox:focus,
+.xbdh-theme-accentcolor-defaultblue .xbdh-combobox:active,
+.xbdh-theme-accentcolor-defaultblue .xbdh-list button:focus,
+.xbdh-theme-accentcolor-defaultblue .xbdh-list > .win-focusable:focus,
+.xbdh-theme-accentcolor-defaultblue .xbdh-form .win-focusable:focus,
+.xbdh-theme-accentcolor-defaultblue .xbdh-menu-option:focus,
+.xbdh-theme-accentcolor-defaultblue .xbdh-combobox-option:focus > div,
+.xbdh-theme-accentcolor-defaultblue .xbdh-combobox-option-selected:focus > div,
+.xbdh-theme-accentcolor-defaultblue .xbdh-accentcolor-background,
+.xbdh-theme-accentcolor-defaultblue .xbdh-accentcolor-background-focus:focus {
+    background-color: var(--default-blue);
+}
+
+.xbdh-theme-accentcolor-defaultblue .xbdh-combobox-option:focus,
+.xbdh-theme-accentcolor-defaultblue .xbdh-combobox-option-selected:focus {
+    border: solid 2px var(--default-blue);
+}
+
+.xbdh-theme-accentcolor-defaultblue .xbdh-checkbox:focus,
+.xbdh-theme-accentcolor-defaultblue input[type='checkbox']:focus {
+    background-color: var(--default-blue);
+    color: var(--white);
+}
+
+.xbdh-theme-accentcolor-defaultblue .xbdh-window.xbdh-active {
+    box-shadow: var(--default-blue) 0px 0px 12px;
+    border: solid 3px var(--default-blue);
+}
+
+.xbdh-theme-accentcolor-defaultblue .xbdh-accentcolor-border:focus,
+.xbdh-theme-accentcolor-defaultblue .xbdh-shell-workspaceoption:focus .xbdh-accentcolor-border,
+.xbdh-theme-accentcolor-defaultblue a:focus,
+.xbdh-theme-accentcolor-defaultblue.xbdh-customizing .xbdh-window.xbdh-active,
+.xbdh-theme-accentcolor-defaultblue .xbdh-checkbox.xbdh-checked:not(:focus) input[type='checkbox'] {
+    border-color: var(--default-blue);
+}
+
+.xbdh-theme-accentcolor-defaultblue progress,
+.xbdh-theme-accentcolor-defaultblue a,
+.xbdh-theme-accentcolor-defaultblue a:focus,
+.xbdh-theme-accentcolor-defaultblue .xbdh-accentcolor-color,
+.xbdh-theme-accentcolor-defaultblue .xbdh-menu-overlay h1 {
+    color: var(--default-blue);
+}
+
+.xbdh-theme-accentcolor-defaultblue .xbdh-radio.xbdh-checked:not(:focus) input[type='radio'],
+.xbdh-theme-accentcolor-defaultblue .xbdh-radio.xbdh-checked:not(:focus) input[type='radio']::-ms-check,
+.xbdh-theme-accentcolor-defaultblue .xbdh-checkbox.xbdh-checked:not(:focus) input[type='checkbox'],
+.xbdh-theme-accentcolor-defaultblue .xbdh-checkbox.xbdh-checked:not(:focus) input[type='checkbox']::-ms-check {
+    background-color: var(--default-blue);
+    color: var(--white);
+}
+
+.xbdh-theme-accentcolor-defaultblue .xbdh-shell-workspaceoption.xbdh-active:focus {
+    box-shadow: var(--default-blue) 0px 0px 12px;
+    border: 3px solid var(--default-blue);
+    border-radius: 10px;
+}
+
+/* Cyan */
+.xbdh-theme-accentcolor-cyan .xbdh-window-title:focus,
+.xbdh-theme-accentcolor-cyan .xbdh-button:focus,
+.xbdh-theme-accentcolor-cyan button:focus,
+.xbdh-theme-accentcolor-cyan input[type=button]:focus,
+.xbdh-theme-accentcolor-cyan input[type=reset]:focus,
+.xbdh-theme-accentcolor-cyan input[type=submit]:focus,
+.xbdh-theme-accentcolor-cyan button[type=submit]:focus,
+.xbdh-theme-accentcolor-cyan .xbdh-radio:focus,
+.xbdh-theme-accentcolor-cyan select:focus,
+.xbdh-theme-accentcolor-cyan select:active,
+.xbdh-theme-accentcolor-cyan .xbdh-combobox:focus,
+.xbdh-theme-accentcolor-cyan .xbdh-combobox:active,
+.xbdh-theme-accentcolor-cyan .xbdh-list button:focus,
+.xbdh-theme-accentcolor-cyan .xbdh-list > .win-focusable:focus,
+.xbdh-theme-accentcolor-cyan .xbdh-form .win-focusable:focus,
+.xbdh-theme-accentcolor-cyan .xbdh-menu-option:focus,
+.xbdh-theme-accentcolor-cyan .xbdh-combobox-option:focus > div,
+.xbdh-theme-accentcolor-cyan .xbdh-combobox-option-selected:focus > div,
+.xbdh-theme-accentcolor-cyan .xbdh-accentcolor-background,
+.xbdh-theme-accentcolor-cyan .xbdh-accentcolor-background-focus:focus {
+    background-color: var(--cyan);
+}
+
+.xbdh-theme-accentcolor-cyan .xbdh-combobox-option:focus,
+.xbdh-theme-accentcolor-cyan .xbdh-combobox-option-selected:focus {
+    border: solid 2px var(--cyan);
+}
+
+.xbdh-theme-accentcolor-cyan .xbdh-checkbox:focus,
+.xbdh-theme-accentcolor-cyan input[type='checkbox']:focus {
+    background-color: var(--cyan);
+    color: var(--white);
+}
+
+.xbdh-theme-accentcolor-cyan .xbdh-window.xbdh-active {
+    box-shadow: var(--cyan) 0px 0px 12px;
+    border: solid 3px var(--cyan);
+}
+
+.xbdh-theme-accentcolor-cyan .xbdh-accentcolor-border:focus,
+.xbdh-theme-accentcolor-cyan .xbdh-shell-workspaceoption:focus .xbdh-accentcolor-border,
+.xbdh-theme-accentcolor-cyan a:focus,
+.xbdh-theme-accentcolor-cyan.xbdh-customizing .xbdh-window.xbdh-active,
+.xbdh-theme-accentcolor-cyan .xbdh-checkbox.xbdh-checked:not(:focus) input[type='checkbox'] {
+    border-color: var(--cyan);
+}
+
+.xbdh-theme-accentcolor-cyan progress,
+.xbdh-theme-accentcolor-cyan a,
+.xbdh-theme-accentcolor-cyan a:focus,
+.xbdh-theme-accentcolor-cyan .xbdh-accentcolor-color,
+.xbdh-theme-accentcolor-cyan .xbdh-menu-overlay h1 {
+    color: var(--cyan);
+}
+
+.xbdh-theme-accentcolor-cyan .xbdh-radio.xbdh-checked:not(:focus) input[type='radio'],
+.xbdh-theme-accentcolor-cyan .xbdh-radio.xbdh-checked:not(:focus) input[type='radio']::-ms-check,
+.xbdh-theme-accentcolor-cyan .xbdh-checkbox.xbdh-checked:not(:focus) input[type='checkbox'],
+.xbdh-theme-accentcolor-cyan .xbdh-checkbox.xbdh-checked:not(:focus) input[type='checkbox']::-ms-check {
+    background-color: var(--cyan);
+    color: var(--white);
+}
+
+.xbdh-theme-accentcolor-cyan .xbdh-shell-workspaceoption.xbdh-active:focus {
+    box-shadow: var(--cyan) 0px 0px 12px;
+    border: 3px solid var(--cyan);
+    border-radius: 10px;
+}
+
+/* Sea Foam Teal */
+.xbdh-theme-accentcolor-seafoamteal .xbdh-window-title:focus,
+.xbdh-theme-accentcolor-seafoamteal .xbdh-button:focus,
+.xbdh-theme-accentcolor-seafoamteal button:focus,
+.xbdh-theme-accentcolor-seafoamteal input[type=button]:focus,
+.xbdh-theme-accentcolor-seafoamteal input[type=reset]:focus,
+.xbdh-theme-accentcolor-seafoamteal input[type=submit]:focus,
+.xbdh-theme-accentcolor-seafoamteal button[type=submit]:focus,
+.xbdh-theme-accentcolor-seafoamteal .xbdh-radio:focus,
+.xbdh-theme-accentcolor-seafoamteal select:focus,
+.xbdh-theme-accentcolor-seafoamteal select:active,
+.xbdh-theme-accentcolor-seafoamteal .xbdh-combobox:focus,
+.xbdh-theme-accentcolor-seafoamteal .xbdh-combobox:active,
+.xbdh-theme-accentcolor-seafoamteal .xbdh-list button:focus,
+.xbdh-theme-accentcolor-seafoamteal .xbdh-list > .win-focusable:focus,
+.xbdh-theme-accentcolor-seafoamteal .xbdh-form .win-focusable:focus,
+.xbdh-theme-accentcolor-seafoamteal .xbdh-menu-option:focus,
+.xbdh-theme-accentcolor-seafoamteal .xbdh-combobox-option:focus > div,
+.xbdh-theme-accentcolor-seafoamteal .xbdh-combobox-option-selected:focus > div,
+.xbdh-theme-accentcolor-seafoamteal .xbdh-accentcolor-background,
+.xbdh-theme-accentcolor-seafoamteal .xbdh-accentcolor-background-focus:focus {
+    background-color: var(--sea-foam-teal);
+}
+
+.xbdh-theme-accentcolor-seafoamteal .xbdh-combobox-option:focus,
+.xbdh-theme-accentcolor-seafoamteal .xbdh-combobox-option-selected:focus {
+    border: solid 2px var(--sea-foam-teal);
+}
+
+.xbdh-theme-accentcolor-seafoamteal .xbdh-checkbox:focus,
+.xbdh-theme-accentcolor-seafoamteal input[type='checkbox']:focus {
+    background-color: var(--sea-foam-teal);
+    color: var(--white);
+}
+
+.xbdh-theme-accentcolor-seafoamteal .xbdh-window.xbdh-active {
+    box-shadow: var(--sea-foam-teal) 0px 0px 12px;
+    border: solid 3px var(--sea-foam-teal);
+}
+
+.xbdh-theme-accentcolor-seafoamteal .xbdh-accentcolor-border:focus,
+.xbdh-theme-accentcolor-seafoamteal .xbdh-shell-workspaceoption:focus .xbdh-accentcolor-border,
+.xbdh-theme-accentcolor-seafoamteal a:focus,
+.xbdh-theme-accentcolor-seafoamteal.xbdh-customizing .xbdh-window.xbdh-active,
+.xbdh-theme-accentcolor-seafoamteal .xbdh-checkbox.xbdh-checked:not(:focus) input[type='checkbox'] {
+    border-color: var(--sea-foam-teal);
+}
+
+.xbdh-theme-accentcolor-seafoamteal progress,
+.xbdh-theme-accentcolor-seafoamteal a,
+.xbdh-theme-accentcolor-seafoamteal a:focus,
+.xbdh-theme-accentcolor-seafoamteal .xbdh-accentcolor-color,
+.xbdh-theme-accentcolor-seafoamteal .xbdh-menu-overlay h1 {
+    color: var(--sea-foam-teal);
+}
+
+.xbdh-theme-accentcolor-seafoamteal .xbdh-radio.xbdh-checked:not(:focus) input[type='radio'],
+.xbdh-theme-accentcolor-seafoamteal .xbdh-radio.xbdh-checked:not(:focus) input[type='radio']::-ms-check,
+.xbdh-theme-accentcolor-seafoamteal .xbdh-checkbox.xbdh-checked:not(:focus) input[type='checkbox'],
+.xbdh-theme-accentcolor-seafoamteal .xbdh-checkbox.xbdh-checked:not(:focus) input[type='checkbox']::-ms-check {
+    background-color: var(--sea-foam-teal);
+    color: var(--white);
+}
+
+.xbdh-theme-accentcolor-seafoamteal .xbdh-shell-workspaceoption.xbdh-active:focus {
+    box-shadow: var(--sea-foam-teal) 0px 0px 12px;
+    border: 3px solid var(--sea-foam-teal);
+    border-radius: 10px;
+}
+
+/* Stealth gray */
+.xbdh-theme-accentcolor-stealthgray .xbdh-window-title:focus,
+.xbdh-theme-accentcolor-stealthgray .xbdh-button:focus,
+.xbdh-theme-accentcolor-stealthgray button:focus,
+.xbdh-theme-accentcolor-stealthgray input[type=button]:focus,
+.xbdh-theme-accentcolor-stealthgray input[type=reset]:focus,
+.xbdh-theme-accentcolor-stealthgray input[type=submit]:focus,
+.xbdh-theme-accentcolor-stealthgray button[type=submit]:focus,
+.xbdh-theme-accentcolor-stealthgray .xbdh-radio:focus,
+.xbdh-theme-accentcolor-stealthgray select:focus,
+.xbdh-theme-accentcolor-stealthgray select:active,
+.xbdh-theme-accentcolor-stealthgray .xbdh-combobox:focus,
+.xbdh-theme-accentcolor-stealthgray .xbdh-combobox:active,
+.xbdh-theme-accentcolor-stealthgray .xbdh-list button:focus,
+.xbdh-theme-accentcolor-stealthgray .xbdh-list > .win-focusable:focus,
+.xbdh-theme-accentcolor-stealthgray .xbdh-form .win-focusable:focus,
+.xbdh-theme-accentcolor-stealthgray .xbdh-menu-option:focus,
+.xbdh-theme-accentcolor-stealthgray .xbdh-combobox-option:focus > div,
+.xbdh-theme-accentcolor-stealthgray .xbdh-combobox-option-selected:focus > div,
+.xbdh-theme-accentcolor-stealthgray .xbdh-accentcolor-background,
+.xbdh-theme-accentcolor-stealthgray .xbdh-accentcolor-background-focus:focus {
+    background-color: var(--stealth-gray);
+}
+
+.xbdh-theme-accentcolor-stealthgray .xbdh-combobox-option:focus,
+.xbdh-theme-accentcolor-stealthgray .xbdh-combobox-option-selected:focus {
+    border: solid 2px var(--stealth-gray);
+}
+
+.xbdh-theme-accentcolor-stealthgray .xbdh-checkbox:focus,
+.xbdh-theme-accentcolor-stealthgray input[type='checkbox']:focus {
+    background-color: var(--stealth-gray);
+    color: var(--white);
+}
+
+.xbdh-theme-accentcolor-stealthgray .xbdh-window.xbdh-active {
+    box-shadow: var(--stealth-gray) 0px 0px 12px;
+    border: solid 3px var(--stealth-gray);
+}
+
+.xbdh-theme-accentcolor-stealthgray .xbdh-accentcolor-border:focus,
+.xbdh-theme-accentcolor-stealthgray .xbdh-shell-workspaceoption:focus .xbdh-accentcolor-border,
+.xbdh-theme-accentcolor-stealthgray a:focus,
+.xbdh-theme-accentcolor-stealthgray.xbdh-customizing .xbdh-window.xbdh-active,
+.xbdh-theme-accentcolor-stealthgray .xbdh-checkbox.xbdh-checked:not(:focus) input[type='checkbox'] {
+    border-color: var(--stealth-gray);
+}
+
+.xbdh-theme-accentcolor-stealthgray progress,
+.xbdh-theme-accentcolor-stealthgray a,
+.xbdh-theme-accentcolor-stealthgray a:focus,
+.xbdh-theme-accentcolor-stealthgray .xbdh-accentcolor-color,
+.xbdh-theme-accentcolor-stealthgray .xbdh-menu-overlay h1 {
+    color: var(--stealth-gray);
+}
+
+.xbdh-theme-accentcolor-stealthgray .xbdh-radio.xbdh-checked:not(:focus) input[type='radio'],
+.xbdh-theme-accentcolor-stealthgray .xbdh-radio.xbdh-checked:not(:focus) input[type='radio']::-ms-check,
+.xbdh-theme-accentcolor-stealthgray .xbdh-checkbox.xbdh-checked:not(:focus) input[type='checkbox'],
+.xbdh-theme-accentcolor-stealthgray .xbdh-checkbox.xbdh-checked:not(:focus) input[type='checkbox']::-ms-check {
+    background-color: var(--stealth-gray);
+    color: var(--white);
+}
+
+.xbdh-theme-accentcolor-stealthgray .xbdh-shell-workspaceoption.xbdh-active:focus {
+    box-shadow: var(--stealth-gray) 0px 0px 12px;
+    border: 3px solid var(--stealth-gray);
+    border-radius: 10px;
+}
+
+/* Crimson */
+.xbdh-theme-accentcolor-crimson .xbdh-window-title:focus,
+.xbdh-theme-accentcolor-crimson .xbdh-button:focus,
+.xbdh-theme-accentcolor-crimson button:focus,
+.xbdh-theme-accentcolor-crimson input[type=button]:focus,
+.xbdh-theme-accentcolor-crimson input[type=reset]:focus,
+.xbdh-theme-accentcolor-crimson input[type=submit]:focus,
+.xbdh-theme-accentcolor-crimson button[type=submit]:focus,
+.xbdh-theme-accentcolor-crimson .xbdh-radio:focus,
+.xbdh-theme-accentcolor-crimson select:focus,
+.xbdh-theme-accentcolor-crimson select:active,
+.xbdh-theme-accentcolor-crimson .xbdh-combobox:focus,
+.xbdh-theme-accentcolor-crimson .xbdh-combobox:active,
+.xbdh-theme-accentcolor-crimson .xbdh-list button:focus,
+.xbdh-theme-accentcolor-crimson .xbdh-list > .win-focusable:focus,
+.xbdh-theme-accentcolor-crimson .xbdh-form .win-focusable:focus,
+.xbdh-theme-accentcolor-crimson .xbdh-menu-option:focus,
+.xbdh-theme-accentcolor-crimson .xbdh-combobox-option:focus > div,
+.xbdh-theme-accentcolor-crimson .xbdh-combobox-option-selected:focus > div,
+.xbdh-theme-accentcolor-crimson .xbdh-accentcolor-background,
+.xbdh-theme-accentcolor-crimson .xbdh-accentcolor-background-focus:focus {
+    background-color: var(--crimson);
+}
+
+.xbdh-theme-accentcolor-crimson .xbdh-combobox-option:focus,
+.xbdh-theme-accentcolor-crimson .xbdh-combobox-option-selected:focus {
+    border: solid 2px var(--crimson);
+}
+
+.xbdh-theme-accentcolor-crimson .xbdh-checkbox:focus,
+.xbdh-theme-accentcolor-crimson input[type='checkbox']:focus {
+    background-color: var(--crimson);
+    color: var(--white);
+}
+
+.xbdh-theme-accentcolor-crimson .xbdh-window.xbdh-active {
+    box-shadow: var(--crimson) 0px 0px 12px;
+    border: solid 3px var(--crimson);
+}
+
+.xbdh-theme-accentcolor-crimson .xbdh-accentcolor-border:focus,
+.xbdh-theme-accentcolor-crimson .xbdh-shell-workspaceoption:focus .xbdh-accentcolor-border,
+.xbdh-theme-accentcolor-crimson a:focus,
+.xbdh-theme-accentcolor-crimson.xbdh-customizing .xbdh-window.xbdh-active,
+.xbdh-theme-accentcolor-crimson .xbdh-checkbox.xbdh-checked:not(:focus) input[type='checkbox'] {
+    border-color: var(--crimson);
+}
+
+.xbdh-theme-accentcolor-crimson progress,
+.xbdh-theme-accentcolor-crimson a,
+.xbdh-theme-accentcolor-crimson a:focus,
+.xbdh-theme-accentcolor-crimson .xbdh-accentcolor-color,
+.xbdh-theme-accentcolor-crimson .xbdh-menu-overlay h1 {
+    color: var(--crimson);
+}
+
+.xbdh-theme-accentcolor-crimson .xbdh-radio.xbdh-checked:not(:focus) input[type='radio'],
+.xbdh-theme-accentcolor-crimson .xbdh-radio.xbdh-checked:not(:focus) input[type='radio']::-ms-check,
+.xbdh-theme-accentcolor-crimson .xbdh-checkbox.xbdh-checked:not(:focus) input[type='checkbox'],
+.xbdh-theme-accentcolor-crimson .xbdh-checkbox.xbdh-checked:not(:focus) input[type='checkbox']::-ms-check {
+    background-color: var(--crimson);
+    color: var(--white);
+}
+
+.xbdh-theme-accentcolor-crimson .xbdh-shell-workspaceoption.xbdh-active:focus {
+    box-shadow: var(--crimson) 0px 0px 12px;
+    border: 3px solid var(--crimson);
+    border-radius: 10px;
+}
+
+/* Mod Red */
+.xbdh-theme-accentcolor-modred .xbdh-window-title:focus,
+.xbdh-theme-accentcolor-modred .xbdh-button:focus,
+.xbdh-theme-accentcolor-modred button:focus,
+.xbdh-theme-accentcolor-modred input[type=button]:focus,
+.xbdh-theme-accentcolor-modred input[type=reset]:focus,
+.xbdh-theme-accentcolor-modred input[type=submit]:focus,
+.xbdh-theme-accentcolor-modred button[type=submit]:focus,
+.xbdh-theme-accentcolor-modred .xbdh-radio:focus,
+.xbdh-theme-accentcolor-modred select:focus,
+.xbdh-theme-accentcolor-modred select:active,
+.xbdh-theme-accentcolor-modred .xbdh-combobox:focus,
+.xbdh-theme-accentcolor-modred .xbdh-combobox:active,
+.xbdh-theme-accentcolor-modred .xbdh-list button:focus,
+.xbdh-theme-accentcolor-modred .xbdh-list > .win-focusable:focus,
+.xbdh-theme-accentcolor-modred .xbdh-form .win-focusable:focus,
+.xbdh-theme-accentcolor-modred .xbdh-menu-option:focus,
+.xbdh-theme-accentcolor-modred .xbdh-combobox-option:focus > div,
+.xbdh-theme-accentcolor-modred .xbdh-combobox-option-selected:focus > div,
+.xbdh-theme-accentcolor-modred .xbdh-accentcolor-background,
+.xbdh-theme-accentcolor-modred .xbdh-accentcolor-background-focus:focus {
+    background-color: var(--mod-red);
+}
+
+.xbdh-theme-accentcolor-modred .xbdh-combobox-option:focus,
+.xbdh-theme-accentcolor-modred .xbdh-combobox-option-selected:focus {
+    border: solid 2px var(--mod-red);
+}
+
+.xbdh-theme-accentcolor-modred .xbdh-checkbox:focus,
+.xbdh-theme-accentcolor-modred input[type='checkbox']:focus {
+    background-color: var(--mod-red);
+    color: var(--white);
+}
+
+.xbdh-theme-accentcolor-modred .xbdh-window.xbdh-active {
+    box-shadow: var(--mod-red) 0px 0px 12px;
+    border: solid 3px var(--mod-red);
+}
+
+.xbdh-theme-accentcolor-modred .xbdh-accentcolor-border:focus,
+.xbdh-theme-accentcolor-modred .xbdh-shell-workspaceoption:focus .xbdh-accentcolor-border,
+.xbdh-theme-accentcolor-modred a:focus,
+.xbdh-theme-accentcolor-modred.xbdh-customizing .xbdh-window.xbdh-active,
+.xbdh-theme-accentcolor-modred .xbdh-checkbox.xbdh-checked:not(:focus) input[type='checkbox'] {
+    border-color: var(--mod-red);
+}
+
+.xbdh-theme-accentcolor-modred progress,
+.xbdh-theme-accentcolor-modred a,
+.xbdh-theme-accentcolor-modred a:focus,
+.xbdh-theme-accentcolor-modred .xbdh-accentcolor-color,
+.xbdh-theme-accentcolor-modred .xbdh-menu-overlay h1 {
+    color: var(--mod-red);
+}
+
+.xbdh-theme-accentcolor-modred .xbdh-radio.xbdh-checked:not(:focus) input[type='radio'],
+.xbdh-theme-accentcolor-modred .xbdh-radio.xbdh-checked:not(:focus) input[type='radio']::-ms-check,
+.xbdh-theme-accentcolor-modred .xbdh-checkbox.xbdh-checked:not(:focus) input[type='checkbox'],
+.xbdh-theme-accentcolor-modred .xbdh-checkbox.xbdh-checked:not(:focus) input[type='checkbox']::-ms-check {
+    background-color: var(--mod-red);
+    color: var(--white);
+}
+
+.xbdh-theme-accentcolor-modred .xbdh-shell-workspaceoption.xbdh-active:focus {
+    box-shadow: var(--mod-red) 0px 0px 12px;
+    border: 3px solid var(--mod-red);
+    border-radius: 10px;
+}
+
+/* Pale Red */
+.xbdh-theme-accentcolor-palered .xbdh-window-title:focus,
+.xbdh-theme-accentcolor-palered .xbdh-button:focus,
+.xbdh-theme-accentcolor-palered button:focus,
+.xbdh-theme-accentcolor-palered input[type=button]:focus,
+.xbdh-theme-accentcolor-palered input[type=reset]:focus,
+.xbdh-theme-accentcolor-palered input[type=submit]:focus,
+.xbdh-theme-accentcolor-palered button[type=submit]:focus,
+.xbdh-theme-accentcolor-palered .xbdh-radio:focus,
+.xbdh-theme-accentcolor-palered select:focus,
+.xbdh-theme-accentcolor-palered select:active,
+.xbdh-theme-accentcolor-palered .xbdh-combobox:focus,
+.xbdh-theme-accentcolor-palered .xbdh-combobox:active,
+.xbdh-theme-accentcolor-palered .xbdh-list button:focus,
+.xbdh-theme-accentcolor-palered .xbdh-list > .win-focusable:focus,
+.xbdh-theme-accentcolor-palered .xbdh-form .win-focusable:focus,
+.xbdh-theme-accentcolor-palered .xbdh-menu-option:focus,
+.xbdh-theme-accentcolor-palered .xbdh-combobox-option:focus > div,
+.xbdh-theme-accentcolor-palered .xbdh-combobox-option-selected:focus > div,
+.xbdh-theme-accentcolor-palered .xbdh-accentcolor-background,
+.xbdh-theme-accentcolor-palered .xbdh-accentcolor-background-focus:focus {
+    background-color: var(--pale-red);
+}
+
+.xbdh-theme-accentcolor-palered .xbdh-combobox-option:focus,
+.xbdh-theme-accentcolor-palered .xbdh-combobox-option-selected:focus {
+    border: solid 2px var(--pale-red);
+}
+
+.xbdh-theme-accentcolor-palered .xbdh-checkbox:focus,
+.xbdh-theme-accentcolor-palered input[type='checkbox']:focus {
+    background-color: var(--pale-red);
+    color: var(--white);
+}
+
+.xbdh-theme-accentcolor-palered .xbdh-window.xbdh-active {
+    box-shadow: var(--pale-red) 0px 0px 12px;
+    border: solid 3px var(--pale-red);
+}
+
+.xbdh-theme-accentcolor-palered .xbdh-accentcolor-border:focus,
+.xbdh-theme-accentcolor-palered .xbdh-shell-workspaceoption:focus .xbdh-accentcolor-border,
+.xbdh-theme-accentcolor-palered a:focus,
+.xbdh-theme-accentcolor-palered.xbdh-customizing .xbdh-window.xbdh-active,
+.xbdh-theme-accentcolor-palered .xbdh-checkbox.xbdh-checked:not(:focus) input[type='checkbox'] {
+    border-color: var(--pale-red);
+}
+
+.xbdh-theme-accentcolor-palered progress,
+.xbdh-theme-accentcolor-palered a,
+.xbdh-theme-accentcolor-palered a:focus,
+.xbdh-theme-accentcolor-palered .xbdh-accentcolor-color,
+.xbdh-theme-accentcolor-palered .xbdh-menu-overlay h1 {
+    color: var(--pale-red);
+}
+
+.xbdh-theme-accentcolor-palered .xbdh-radio.xbdh-checked:not(:focus) input[type='radio'],
+.xbdh-theme-accentcolor-palered .xbdh-radio.xbdh-checked:not(:focus) input[type='radio']::-ms-check,
+.xbdh-theme-accentcolor-palered .xbdh-checkbox.xbdh-checked:not(:focus) input[type='checkbox'],
+.xbdh-theme-accentcolor-palered .xbdh-checkbox.xbdh-checked:not(:focus) input[type='checkbox']::-ms-check {
+    background-color: var(--pale-red);
+    color: var(--white);
+}
+
+.xbdh-theme-accentcolor-palered .xbdh-shell-workspaceoption.xbdh-active:focus {
+    box-shadow: var(--pale-red) 0px 0px 12px;
+    border: 3px solid var(--pale-red);
+    border-radius: 10px;
+}
+
+/* Rosa Rita */
+.xbdh-theme-accentcolor-rosarita .xbdh-window-title:focus,
+.xbdh-theme-accentcolor-rosarita .xbdh-button:focus,
+.xbdh-theme-accentcolor-rosarita button:focus,
+.xbdh-theme-accentcolor-rosarita input[type=button]:focus,
+.xbdh-theme-accentcolor-rosarita input[type=reset]:focus,
+.xbdh-theme-accentcolor-rosarita input[type=submit]:focus,
+.xbdh-theme-accentcolor-rosarita button[type=submit]:focus,
+.xbdh-theme-accentcolor-rosarita .xbdh-radio:focus,
+.xbdh-theme-accentcolor-rosarita select:focus,
+.xbdh-theme-accentcolor-rosarita select:active,
+.xbdh-theme-accentcolor-rosarita .xbdh-combobox:focus,
+.xbdh-theme-accentcolor-rosarita .xbdh-combobox:active,
+.xbdh-theme-accentcolor-rosarita .xbdh-list button:focus,
+.xbdh-theme-accentcolor-rosarita .xbdh-list > .win-focusable:focus,
+.xbdh-theme-accentcolor-rosarita .xbdh-form .win-focusable:focus,
+.xbdh-theme-accentcolor-rosarita .xbdh-menu-option:focus,
+.xbdh-theme-accentcolor-rosarita .xbdh-combobox-option:focus > div,
+.xbdh-theme-accentcolor-rosarita .xbdh-combobox-option-selected:focus > div,
+.xbdh-theme-accentcolor-rosarita .xbdh-accentcolor-background,
+.xbdh-theme-accentcolor-rosarita .xbdh-accentcolor-background-focus:focus {
+    background-color: var(--rosa-rita);
+}
+
+.xbdh-theme-accentcolor-rosarita .xbdh-combobox-option:focus,
+.xbdh-theme-accentcolor-rosarita .xbdh-combobox-option-selected:focus {
+    border: solid 2px var(--rosa-rita);
+}
+
+.xbdh-theme-accentcolor-rosarita .xbdh-checkbox:focus,
+.xbdh-theme-accentcolor-rosarita input[type='checkbox']:focus {
+    background-color: var(--rosa-rita);
+    color: var(--white);
+}
+
+.xbdh-theme-accentcolor-rosarita .xbdh-window.xbdh-active {
+    box-shadow: var(--rosa-rita) 0px 0px 12px;
+    border: solid 3px var(--rosa-rita);
+}
+
+.xbdh-theme-accentcolor-rosarita .xbdh-accentcolor-border:focus,
+.xbdh-theme-accentcolor-rosarita .xbdh-shell-workspaceoption:focus .xbdh-accentcolor-border,
+.xbdh-theme-accentcolor-rosarita a:focus,
+.xbdh-theme-accentcolor-rosarita.xbdh-customizing .xbdh-window.xbdh-active,
+.xbdh-theme-accentcolor-rosarita .xbdh-checkbox.xbdh-checked:not(:focus) input[type='checkbox'] {
+    border-color: var(--rosa-rita);
+}
+
+.xbdh-theme-accentcolor-rosarita progress,
+.xbdh-theme-accentcolor-rosarita a,
+.xbdh-theme-accentcolor-rosarita a:focus,
+.xbdh-theme-accentcolor-rosarita .xbdh-accentcolor-color,
+.xbdh-theme-accentcolor-rosarita .xbdh-menu-overlay h1 {
+    color: var(--rosa-rita);
+}
+
+.xbdh-theme-accentcolor-rosarita .xbdh-radio.xbdh-checked:not(:focus) input[type='radio'],
+.xbdh-theme-accentcolor-rosarita .xbdh-radio.xbdh-checked:not(:focus) input[type='radio']::-ms-check, 
+.xbdh-theme-accentcolor-rosarita .xbdh-checkbox.xbdh-checked:not(:focus) input[type='checkbox'],
+.xbdh-theme-accentcolor-rosarita .xbdh-checkbox.xbdh-checked:not(:focus) input[type='checkbox']::-ms-check {
+    background-color: var(--rosa-rita);
+    color: var(--white);
+}
+
+.xbdh-theme-accentcolor-rosarita .xbdh-shell-workspaceoption.xbdh-active:focus {
+    box-shadow: var(--rosa-rita) 0px 0px 12px;
+    border: 3px solid var(--rosa-rita);
+    border-radius: 10px;
+}
+
+/* Orange */
+.xbdh-theme-accentcolor-orange .xbdh-window-title:focus,
+.xbdh-theme-accentcolor-orange .xbdh-button:focus,
+.xbdh-theme-accentcolor-orange button:focus,
+.xbdh-theme-accentcolor-orange input[type=button]:focus,
+.xbdh-theme-accentcolor-orange input[type=reset]:focus,
+.xbdh-theme-accentcolor-orange input[type=submit]:focus,
+.xbdh-theme-accentcolor-orange button[type=submit]:focus,
+.xbdh-theme-accentcolor-orange .xbdh-radio:focus,
+.xbdh-theme-accentcolor-orange select:focus,
+.xbdh-theme-accentcolor-orange select:active,
+.xbdh-theme-accentcolor-orange .xbdh-combobox:focus,
+.xbdh-theme-accentcolor-orange .xbdh-combobox:active,
+.xbdh-theme-accentcolor-orange .xbdh-list button:focus,
+.xbdh-theme-accentcolor-orange .xbdh-list > .win-focusable:focus,
+.xbdh-theme-accentcolor-orange .xbdh-form .win-focusable:focus,
+.xbdh-theme-accentcolor-orange .xbdh-menu-option:focus,
+.xbdh-theme-accentcolor-orange .xbdh-combobox-option:focus > div,
+.xbdh-theme-accentcolor-orange .xbdh-combobox-option-selected:focus > div,
+.xbdh-theme-accentcolor-orange .xbdh-accentcolor-background,
+.xbdh-theme-accentcolor-orange .xbdh-accentcolor-background-focus:focus {
+    background-color: var(--orange);
+}
+
+.xbdh-theme-accentcolor-orange .xbdh-combobox-option:focus,
+.xbdh-theme-accentcolor-orange .xbdh-combobox-option-selected:focus {
+    border: solid 2px var(--orange);
+}
+
+.xbdh-theme-accentcolor-orange .xbdh-checkbox:focus,
+.xbdh-theme-accentcolor-orange input[type='checkbox']:focus {
+    background-color: var(--orange);
+    color: var(--white);
+}
+
+.xbdh-theme-accentcolor-orange .xbdh-window.xbdh-active {
+    box-shadow: var(--orange) 0px 0px 12px;
+    border: solid 3px var(--orange);
+}
+
+.xbdh-theme-accentcolor-orange .xbdh-accentcolor-border:focus,
+.xbdh-theme-accentcolor-orange .xbdh-shell-workspaceoption:focus .xbdh-accentcolor-border,
+.xbdh-theme-accentcolor-orange a:focus,
+.xbdh-theme-accentcolor-orange.xbdh-customizing .xbdh-window.xbdh-active,
+.xbdh-theme-accentcolor-orange .xbdh-checkbox.xbdh-checked:not(:focus) input[type='checkbox'],
+.xbdh-theme-accentcolor-orange .xbdh-radio.xbdh-checked:not(:focus) input[type='radio'] {
+    border-color: var(--orange);
+}
+
+.xbdh-theme-accentcolor-orange progress,
+.xbdh-theme-accentcolor-orange a,
+.xbdh-theme-accentcolor-orange a:focus,
+.xbdh-theme-accentcolor-orange .xbdh-accentcolor-color,
+.xbdh-theme-accentcolor-orange .xbdh-menu-overlay h1 {
+    color: var(--orange);
+}
+
+.xbdh-theme-accentcolor-orange .xbdh-radio.xbdh-checked:not(:focus) input[type='radio'],
+.xbdh-theme-accentcolor-orange .xbdh-radio.xbdh-checked:not(:focus) input[type='radio']::-ms-check,
+.xbdh-theme-accentcolor-orange .xbdh-checkbox.xbdh-checked:not(:focus) input[type='checkbox'],
+.xbdh-theme-accentcolor-orange .xbdh-checkbox.xbdh-checked:not(:focus) input[type='checkbox']::-ms-check {
+    background-color: var(--orange);
+    color: var(--white);
+}
+
+.xbdh-theme-accentcolor-orange .xbdh-shell-workspaceoption.xbdh-active:focus {
+    box-shadow: var(--orange) 0px 0px 12px;
+    border: 3px solid var(--orange);
+    border-radius: 10px;
+}
+
+/* Gold */
+.xbdh-theme-accentcolor-gold .xbdh-window-title:focus,
+.xbdh-theme-accentcolor-gold .xbdh-button:focus,
+.xbdh-theme-accentcolor-gold button:focus,
+.xbdh-theme-accentcolor-gold input[type=button]:focus,
+.xbdh-theme-accentcolor-gold input[type=reset]:focus,
+.xbdh-theme-accentcolor-gold input[type=submit]:focus,
+.xbdh-theme-accentcolor-gold button[type=submit]:focus,
+.xbdh-theme-accentcolor-gold .xbdh-radio:focus,
+.xbdh-theme-accentcolor-gold select:focus,
+.xbdh-theme-accentcolor-gold select:active,
+.xbdh-theme-accentcolor-gold .xbdh-combobox:focus,
+.xbdh-theme-accentcolor-gold .xbdh-combobox:active,
+.xbdh-theme-accentcolor-gold .xbdh-list button:focus,
+.xbdh-theme-accentcolor-gold .xbdh-list > .win-focusable:focus,
+.xbdh-theme-accentcolor-gold .xbdh-form .win-focusable:focus,
+.xbdh-theme-accentcolor-gold .xbdh-menu-option:focus,
+.xbdh-theme-accentcolor-gold .xbdh-combobox-option:focus > div,
+.xbdh-theme-accentcolor-gold .xbdh-combobox-option-selected:focus > div,
+.xbdh-theme-accentcolor-gold .xbdh-accentcolor-background,
+.xbdh-theme-accentcolor-gold .xbdh-accentcolor-background-focus:focus {
+    background-color: var(--gold);
+}
+
+.xbdh-theme-accentcolor-gold .xbdh-combobox-option:focus,
+.xbdh-theme-accentcolor-gold .xbdh-combobox-option-selected:focus {
+    border: solid 2px var(--gold);
+}
+
+.xbdh-theme-accentcolor-gold .xbdh-checkbox:focus,
+.xbdh-theme-accentcolor-gold input[type='checkbox']:focus {
+    background-color: var(--gold);
+    color: var(--white);
+}
+
+.xbdh-theme-accentcolor-gold .xbdh-window.xbdh-active {
+    box-shadow: var(--gold) 0px 0px 12px;
+    border: solid 3px var(--gold);
+}
+
+.xbdh-theme-accentcolor-gold .xbdh-accentcolor-border:focus,
+.xbdh-theme-accentcolor-gold .xbdh-shell-workspaceoption:focus .xbdh-accentcolor-border,
+.xbdh-theme-accentcolor-gold a:focus,
+.xbdh-theme-accentcolor-gold.xbdh-customizing .xbdh-window.xbdh-active,
+.xbdh-theme-accentcolor-gold .xbdh-checkbox.xbdh-checked:not(:focus) input[type='checkbox'] {
+    border-color: var(--gold);
+}
+
+.xbdh-theme-accentcolor-gold progress,
+.xbdh-theme-accentcolor-gold a,
+.xbdh-theme-accentcolor-gold a:focus,
+.xbdh-theme-accentcolor-gold .xbdh-accentcolor-color,
+.xbdh-theme-accentcolor-gold .xbdh-menu-overlay h1 {
+    color: var(--gold);
+}
+
+.xbdh-theme-accentcolor-gold .xbdh-radio.xbdh-checked:not(:focus) input[type='radio'],
+.xbdh-theme-accentcolor-gold .xbdh-radio.xbdh-checked:not(:focus) input[type='radio']::-ms-check,
+.xbdh-theme-accentcolor-gold .xbdh-checkbox.xbdh-checked:not(:focus) input[type='checkbox'],
+.xbdh-theme-accentcolor-gold .xbdh-checkbox.xbdh-checked:not(:focus) input[type='checkbox']::-ms-check {
+    background-color: var(--gold);
+    color: var(--white);
+}
+
+.xbdh-theme-accentcolor-gold .xbdh-shell-workspaceoption.xbdh-active:focus {
+    box-shadow: var(--gold) 0px 0px 12px;
+    border: 3px solid var(--gold);
+    border-radius: 10px;
+}
+
+/* Styles for snap */
+@media (max-width: 480px) {
+    .xbdh-shell-time {
+        margin-top: -4px; 
+        margin-right: -40px;
+        font-size: 18px;
+        line-height: 18px;
+    }
+
+    .xbdh-shell-header-left {
+        left: 32px;
+        font-size: 15px;
+        line-height: 15px;
+    }
+
+    .xbdh-shell-date {
+        display: none;
+    }
+    
+    .xbdh-shell-switchworkspace {
+        display: none;
+    }
+
+    .xbdh-overlay {
+        width: 344px; /* 480 (screen width) - 64px * 2 (padding left and right) */
+        padding: 54px;
+    }
+
+    .xbdh-workspace {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .xbdh-window {
+        width: 100vw;
+        padding: 0;
+        min-width: 480px;
+    }
+}
+
+/* "UWP mode" styles */
+.xbdh-uwp .xbdh-shell-time,
+.xbdh-uwp .xbdh-shell-date {
+    -ms-grid-column-span: 2;
+}

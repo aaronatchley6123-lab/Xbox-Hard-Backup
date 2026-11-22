@@ -1,0 +1,84 @@
+﻿/*Apply to Dark Theme*/
+@media screen and (-ms-high-contrast: white-on-black) {
+
+    .xbdh-window-title {
+        font-size: 22px;
+        border-color: transparent;
+        border-width: 5px;
+        border-style: solid;
+    }
+
+    .xbdh-window-title:focus,
+    .xbdh-button:focus,
+    button:focus,
+    input[type=button]:focus,
+    input[type=reset]:focus,
+    input[type=submit]:focus,
+    input[type=text]:focus,
+    input[type=email]:focus,
+    textarea:focus,
+    button[type=submit]:focus,
+    .xbdh-checkbox:focus,
+    .xbdh-radio:focus,
+    select:focus,
+    select:active,
+    .xbdh-combobox:focus,
+    .xbdh-combobox:active,
+    input[type='checkbox']:focus,
+    input[type='radio']:focus,
+    .xbdh-list button:focus,
+    .xbdh-list > .win-focusable:focus,
+    .xbdh-form .win-focusable:focus,
+    .xbdh-menu-option:focus,
+    .xbdh-accentcolor-background,
+    .xbdh-accentcolor-background-focus:focus {
+        border-color: rgb(27, 207, 255);
+        border-width: 5px;
+        border-style: solid;
+    }
+
+    .xbdh-combobox-option:focus {
+        border-color: rgb(27, 207, 255) !important;
+        border-width: 5px !important;
+        border-style: solid !important;
+    }
+
+    .xbdh-combobox-option {
+        border-color: rgb(0, 0, 0) !important;
+    }
+
+    .xbdh-combobox-option-selected {
+        border-color: rgb(255, 255, 255) !important;
+        border-width: 1px !important;
+    }
+
+    select:focus,
+    select:active,
+    .xbdh-combobox:focus,
+    .xbdh-combobox:active {
+        border: solid 5px rgb(27, 207, 255) !important;
+    }
+
+    input[type='checkbox']:focus {
+        outline-color: rgb(27, 207, 255);
+        outline-width: 3px;
+    }
+
+    .xbdh-shell-workspaceoption.xbdh-active .xbdh-shell-workspaceoption-label {
+        color: rgb(27, 207, 255);
+    }
+
+    .xbdh-shell-workspaceoption.xbdh-active:focus {
+        box-shadow: rgb(27, 207, 255) 0px 0px 15px;
+        border: 3px solid rgb(27, 207, 255);
+    }
+
+    .xbdh-combobox-overlay {
+        border: solid 1px rgb(255, 255, 255);
+    }
+
+    .xbdh-viewicon {
+        filter: invert(1);
+    }
+
+}

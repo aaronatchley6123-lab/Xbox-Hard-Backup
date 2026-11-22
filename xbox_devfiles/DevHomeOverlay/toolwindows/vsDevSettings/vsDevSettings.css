@@ -1,0 +1,13 @@
+﻿/* Copyright (c) Microsoft Corporation. All rights reserved. */
+.xbdh-consolesettings-restartdialog p {
+    margin-bottom: 160px;
+}
+
+.xbdh-vsdevsettings-vspinpairing-pin {
+    font-size: 96px;
+    font-weight: 400;
+    margin-left: 48px;
+    margin-right: 48px;
+    margin-top: 64px;
+    margin-bottom: 64px;
+}

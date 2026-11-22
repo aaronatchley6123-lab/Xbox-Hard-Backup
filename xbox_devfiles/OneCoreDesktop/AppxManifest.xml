@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Package xmlns="http://schemas.microsoft.com/appx/manifest/foundation/windows10"
+         xmlns:uap="http://schemas.microsoft.com/appx/manifest/uap/windows10"
+         xmlns:mp="http://schemas.microsoft.com/appx/2014/phone/manifest"
+         xmlns:desktop="http://schemas.microsoft.com/appx/manifest/desktop/windows10"
+         xmlns:rescap="http://schemas.microsoft.com/appx/manifest/foundation/windows10/restrictedcapabilities"
+         IgnorableNamespaces="uap mp desktop rescap">
+
+  <Identity Name="OneCore.Windows.Desktop"
+            Publisher="CN=TheArchitect"
+            Version="1.0.0.0"
+            ProcessorArchitecture="x64"/>
+
+  <Properties>
+    <DisplayName>OneCore Windows Desktop Environment</DisplayName>
+    <PublisherDisplayName>The Architect</PublisherDisplayName>
+    <Logo>Assets/StoreLogo.png</Logo>
+  </Properties>
+
+  <Dependencies>
+    <TargetDeviceFamily Name="Windows.Universal" MinVersion="10.0.19041.0" MaxVersionTested="10.0.26100.0"/>
+    <TargetDeviceFamily Name="Windows.Desktop" MinVersion="10.0.19041.0" MaxVersionTested="10.0.26100.0"/>
+    <TargetDeviceFamily Name="Windows.Xbox" MinVersion="10.0.19041.0" MaxVersionTested="10.0.26100.0"/>
+  </Dependencies>
+
+  <Resources>
+    <Resource Language="x-generate"/>
+  </Resources>
+
+  <Applications>
+    <Application Id="App"
+                 Executable="DesktopLauncher.exe"
+                 EntryPoint="Windows.FullTrustApplication">
+      <uap:VisualElements DisplayName="OneCore Desktop"
+                          Description="Full Trust Windows Desktop &amp; Terminal Environment for OneCore and PC"
+                          BackgroundColor="#0d1117"
+                          Square150x150Logo="Assets/Square150x150Logo.scale-200.png"
+                          Square44x44Logo="Assets/Square44x44Logo.scale-200.png">
+        <uap:SplashScreen Image="Assets/SplashScreen.scale-200.png" BackgroundColor="#0d1117"/>
+      </uap:VisualElements>
+    </Application>
+  </Applications>
+
+  <Capabilities>
+    <Capability Name="internetClient" />
+    <Capability Name="internetClientServer" />
+    <Capability Name="privateNetworkClientServer" />
+    <desktop:Capability Name="runFullTrust" />
+    <rescap:Capability Name="runFullTrust" />
+    <rescap:Capability Name="expandedResources" />
+  </Capabilities>
+</Package>

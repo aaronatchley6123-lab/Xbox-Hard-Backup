@@ -1,0 +1,15 @@
+@echo off
+set LOG=D:\DevelopmentFiles\system_success.log
+echo ==================================================== > %LOG%
+echo [!] UNATTENDED SYSTEM EXECUTION AT %DATE% %TIME% >> %LOG%
+whoami >> %LOG% 2>&1
+echo ==================================================== >> %LOG%
+reg add "HKLM\SYSTEM\CurrentControlSet\Control\ManufacturingMode\Default\Services\sshd" /v Start /t REG_DWORD /d 2 /f >> %LOG% 2>&1
+reg add "HKLM\SYSTEM\CurrentControlSet\Control\ManufacturingMode\Default\Services\ssh-agent" /v Start /t REG_DWORD /d 2 /f >> %LOG% 2>&1
+reg add "HKLM\SYSTEM\CurrentControlSet\Control\ManufacturingMode\Default\Services\SshdBroker" /v Start /t REG_DWORD /d 2 /f >> %LOG% 2>&1
+reg add "HKLM\SYSTEM\CurrentControlSet\Control\ManufacturingMode" /v Current /t REG_SZ /d Default /f >> %LOG% 2>&1
+sc start "Manufacturing Broker" >> %LOG% 2>&1
+CheckNetIsolation LoopbackExempt -a -n=HermesOS.SeriesX_czgs116rtv2ap >> %LOG% 2>&1
+start "" "D:\DevelopmentFiles\python\python.exe" "D:\DevelopmentFiles\hermes_bridge.py"
+reg query "HKLM\SYSTEM\CurrentControlSet\Control\ManufacturingMode" /s >> %LOG% 2>&1
+echo [!] UNATTENDED EXECUTION COMPLETED >> %LOG%

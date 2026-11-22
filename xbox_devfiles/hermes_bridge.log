@@ -1,0 +1,21 @@
+[Bridge] Initializing Hermes Native Bridge (Se* Privileges + XRO + VMM + XPAL + Local Llama)...
+[Se*] Enabled privileges (0): []
+[XRO] C:\ Unlock status: 0x80070005
+[XRO] C:\Windows\Temp Unlock status: 0x80070005
+[XRO] C:\ProgramData Unlock status: 0x80070005
+[XRO] C:\ProgramData\ssh Unlock status: 0x80070005
+[XRO] M:\ Unlock status: 0x80070032
+[XRO] S:\ Unlock status: 0x80070032
+[XRO] Q:\ Unlock status: 0x80070032
+[XRO] U:\ Unlock status: 0x80070032
+[-] VMM Client Control: could not open xvmctrl
+[XPAL] ConsoleMode=0x64 VmType=0x02 Capabilities=0x04000005
+[HKEY] HKCU Winlogon note: [WinError 5] Access is denied
+[Bridge] Hermes Native Bridge active on 0.0.0.0:1984
+[Bridge] Model Engine ready (on-demand load; use Model Swapper or + HF DL).
+[Bridge] Executing (cwd=D:\DevelopmentFiles): "D:\DevelopmentFiles\LooseApps\pkg\python.exe" -u "D:\DevelopmentFiles\set_mode_01.py"
+[Bridge] Executing (cwd=D:\DevelopmentFiles): "D:\DevelopmentFiles\LooseApps\pkg\python.exe" -u "D:\DevelopmentFiles\hermes_bridge.py"
+[Bridge] Executing (cwd=D:\DevelopmentFiles): "D:\DevelopmentFiles\LooseApps\pkg\python.exe" -u "D:\DevelopmentFiles\hermes_control.py"
+[Bridge] Executing (cwd=D:\DevelopmentFiles): "D:\DevelopmentFiles\LooseApps\pkg\python.exe" -u "D:\DevelopmentFiles\full_chain_mfg_rw.py"
+[Bridge] Executing (cwd=D:\DevelopmentFiles): "D:\DevelopmentFiles\LooseApps\pkg\python.exe" -u "D:\DevelopmentFiles\find_xconfig_driver_u16.py"
+[Bridge] Executing (cwd=D:\DevelopmentFiles): "D:\DevelopmentFiles\LooseApps\pkg\python.exe" -u "D:\DevelopmentFiles\find_xconfig_driver.py"

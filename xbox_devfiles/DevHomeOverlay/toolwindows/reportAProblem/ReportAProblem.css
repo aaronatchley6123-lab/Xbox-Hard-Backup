@@ -1,0 +1,409 @@
+﻿/* Copyright (c) Microsoft Corporation. All rights reserved. */
+
+@font-face {
+    font-family: DevHomeFont;
+    src: url(/fonts/DevHomeFont.woff) format('woff');
+}
+
+textarea {
+    font-family: inherit;
+    font-size: inherit;
+}
+
+#xbdh-rap {
+    background: rgb(45,46,45);
+    height: 775px;
+}
+
+#xbdh-rap,
+#xbdh-rap-panels > div,
+#xbdh-rap-panels-describe-description-box {
+    display: flex;
+    flex-flow: column;
+}
+
+#xbdh-rap-panels-describe-description-box #xbdh-rap-panels-describe-description-box-required {
+    display: flex;
+    flex-flow: row;
+}
+
+#xbdh-rap-top-error,
+#xbdh-rap-top-tabs,
+#xbdh-rap-panels-describe > div,
+#xbdh-rap-panels-almost-status,
+.xbdh-indeterminateprogressoverlay,
+#xbdh-rap-bottom,
+#xbdh-rap-panels-collect-commands,
+#xbdh-rap-bottom-commands {
+    display: flex;
+    flex-direction: row;
+}
+
+#xbdh-rap-top,
+#xbdh-rap-panels-sent,
+#xbdh-rap-panels-almost {
+    width: 100%;
+}
+
+#xbdh-rap-panels-collect-options-tracing {
+    border-top: 4px solid rgb(120,120,120);
+    margin-top: 16px;
+}
+
+#xbdh-rap-panels-collect-options-tracing > p {
+    color: rgb(235,235,235);
+}
+
+#xbdh-rap-top-tabs,
+#xbdh-rap-panels-panels > div,
+.xbdh-indeterminateprogressoverlay-progress,
+#xbdh-rap-bottom > div {
+    height: 100%;
+}
+
+#xbdh-rap-top-error {
+    background: rgb(255,39,39);
+}
+
+#xbdh-rap-top-error > div {
+     color: rgb(255,255,255);
+    font-size: 20px;
+    height: 100%;
+}
+
+#xbdh-rap-top-error-icon {
+    margin-top: 20px;
+}
+
+#xbdh-rap-top-error-icon::before {
+    font-family: 'DevHomeFont';
+    content: '\e902';
+    padding-left: 10px;
+    padding-right: 10px;
+    font-size: 30px;
+}
+
+#xbdh-rap-top-error-message {
+    font-family: Segoe UI Italic;
+    text-wrap: avoid;
+    margin-top:10px;
+}
+
+#xbdh-rap-top {
+    height: 128px;
+    background: rgb(35,36,35);
+}
+
+#xbdh-rap-top-error {
+    height: 64px;
+}
+
+#xbdh-rap-top-tabs {
+    height:128px;
+}
+
+
+#xbdh-rap-top-tabs > div {
+    width: 550px;
+    height: 100%;
+    position: relative;
+}
+
+#xbdh-rap-top-tabs > div[active] {
+    background: rgb(45,46,45);
+}
+
+#xbdh-rap-top-tabs > div[active] > label {
+    color: rgb(255,255,255);
+}
+
+#xbdh-rap-top > div {
+    width:100%;
+    position:absolute;
+}
+
+#xbdh-rap-top-tabs > div > label {
+    margin-bottom:10px;
+    margin-left:24px;
+    color: rgb(120,120,120);
+    font-family:Segoe UI Bold;
+    font-size:20px;
+    line-height:24px;
+    text-align:left;
+    font-style:normal;
+    letter-spacing:0em;
+    position:absolute;
+    bottom:0px;
+}
+
+#xbdh-rap-panels-collect{
+    width:800px;
+}
+
+#xbdh-rap-panels-collect-options {
+    margin-left: 35px;
+}
+
+#xbdh-rap-panels-collect-options > div{
+    margin-bottom: 20px;
+}
+
+#xbdh-rap-panels-almost
+{
+    margin-top:20px;
+}
+
+#xbdh-rap-panels-collect-heading,
+#xbdh-rap-panels-describe-heading {
+    font-family: Segoe UI Semilight;
+    font-size: 30px;
+    color: var(--light-gray);
+    text-align: left;
+    font-style: normal;
+    letter-spacing: 0em;
+    margin-top: 8px;
+    margin-bottom: 8px;
+    font-weight: normal;
+    line-height: 46px;
+}
+
+#xbdh-rap-panels-sent{
+    margin-top:100px;
+}
+
+#xbdh-rap-panels-sent-heading,
+#xbdh-rap-panels-review-heading {
+    font-family: Segoe UI Semilight;
+    font-size: 30px;
+    color: var(--lime-green);
+    text-align: left;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 46px;
+}
+
+#xbdh-rap-panels-review > p {
+    width:600px;
+}
+
+#xbdh-rap-panels-review-heading,
+#xbdh-rap-panels-sent-heading,
+#xbdh-rap-panels-almost-status > div {
+    font-size: 30px;
+}
+
+#xbdh-rap-panels-describe-description-box-status > div >div {
+    font-size: 20px;
+    margin-left:10px;
+}
+
+.xbdh-indeterminateprogressoverlay-description {
+    font-family: Segoe UI Semilight;
+    font-weight: 600;
+    color: var(--lime-green);
+    text-align: left;
+}
+
+.xbdh-rap-description {
+    line-height:25px;
+    font-size: 20px;
+    color: var(--light-gray);
+    text-align: left;
+}
+
+#xbdh-rap-panels-review-icon::before {
+    font-family: 'DevHomeFont';
+    content: '\e903';
+    padding-left: 10px;
+    padding-right: 10px;
+    color: rgb(179,179,179);
+}
+
+#xbdh-rap-panels-review-networkpath {
+    font-size: 30px;
+    color: var(--white);
+    text-align: left
+}
+
+.xbdh-radio > label,
+xbdh-rap-panels-sent > p{
+    font-size: 20px;
+    color: var(--light-gray);
+    text-align: left;
+    font-style: normal;
+    letter-spacing: 0em;
+}
+
+#xbdh-rap-panels-collect-commands-traceStatus > div{
+    margin-left: 10px;
+    font-family: Segoe UI Italic;
+    font-size: 20px;
+    color: rgb(255,255,255);
+    text-align: left;
+}
+
+#xbdh-rap-panels-describe-description-value
+{
+    height: 235px;
+    padding-top: 0px;
+    padding-bottom: 0px;
+}
+
+#xbdh-rap-panels-describe-email-value,
+#xbdh-rap-panels-describe-title-value {
+    height: 40px;
+}
+
+#xbdh-rap-bottom-commands {
+    width: 738px;
+}
+
+#xbdh-rap-bottom-send {
+    margin-left: 25px;
+}
+
+#xbdh-rap-bottom-send > div {
+    font-size: 20px;
+    color: rgb(120,120,120);
+    text-align: left;
+    margin-bottom:10px;
+}
+
+#xbdh-rap-panels-describe-email-value,
+#xbdh-rap-panels-describe-title-value,
+#xbdh-rap-panels-describe-description-value {
+    width: 738px;
+    font-size: 20px;
+    color: var(--white);
+    text-align: left;
+    background: var(--black-crow);
+}
+
+#xbdh-rap-panels-describe-email-value:focus,
+#xbdh-rap-panels-describe-title-value:focus,
+#xbdh-rap-panels-describe-description-value:focus {
+    background: rgb(204,204,204);
+    color: rgb(45,46,45);
+}
+
+#xbdh-rap-panels-describe-email-value::-webkit-input-placeholder {
+    color: var(--light-gray);
+    font-family: Segoe UI Italic;
+}
+
+#xbdh-rap-panels-describe-title-value::-webkit-input-placeholder {
+    color: var(--light-gray);
+    font-family: Segoe UI Italic;
+}
+
+#xbdh-rap-panels-describe-description-value::-webkit-input-placeholder {
+    color: var(--light-gray);
+    font-family: Segoe UI Italic;
+}
+
+#xbdh-rap-panels-describe-email-value:focus::-webkit-input-placeholder {
+    color: var(--black-crow);
+    font-family: Segoe UI Italic;
+}
+
+#xbdh-rap-panels-describe-title-value:focus::-webkit-input-placeholder {
+    color: var(--black-crow);
+    font-family: Segoe UI Italic;
+}
+
+#xbdh-rap-panels-describe-description-value:focus::-webkit-input-placeholder {
+    color: var(--black-crow);
+    font-family: Segoe UI Italic;
+}
+
+.xbdh-requiredfields {
+    margin-left: 10px;
+    font-family: Segoe UI Italic;
+    font-size: 20px;
+    color: var(--light-coral);
+    font-weight: bolder;
+    margin-top: 10px;
+}
+
+.xbdh-requiredfields-label {
+    margin-left: 6px;
+    color: var(--light-coral) !important;
+}
+
+#xbdh-rap-panels-describe-description-box-describe-pravicyinfo {
+    margin-left: 10px;
+    width: 500px;
+    font-family: Segoe UI Italic;
+    font-family: 20px;
+    color: var(--light-gray);
+}
+
+xbdh-rap-bottom-send > p {
+    font-size: 20px;
+    color: rgb(120,120,120);
+    text-align:left;
+}
+
+#xbdh-rap-panels-sent {
+    align-items: center;
+    justify-content: center;
+}
+
+#xbdh-rap-panels-almost,
+#xbdh-rap-panels-sent {
+    top: 0;
+    left: 0;
+}
+
+#xbdh-rap-panels-almost > div {
+    height: 40px;
+}
+
+#xbdh-rap-panels-sent p{
+    max-width:35%;
+    text-align:center;
+}
+
+#xbdh-rap-panels-describe-row,
+#xbdh-rap-panels-describe-description-box-flex,
+#xbdh-rap-panels {
+    flex: 1 1 auto;
+}
+
+#xbdh-rap-panels-describe-description-box-status {
+    min-height:30px;
+}
+
+.xbdh-indeterminateprogressoverlay,
+.xbdh-indeterminateprogressoverlay-progress,
+.xbdh-indeterminateprogressoverlay-description {
+    position: static;
+    top: auto;
+    left: auto;
+}
+
+.xbdh-theme-dark .xbdh-indeterminateprogressoverlay {
+    background-color: initial;
+}
+
+#xbdh-rap-bottom-commands {
+    margin: 0px 0px 30px 30px;
+}
+
+.xbdh-indeterminateprogressoverlay > .xbdh-indeterminateprogressoverlay-progress {
+    width:50px;
+    margin-left:10px;
+}
+
+#xbdh-rap-bottom-commands button,
+#xbdh-rap-panels-collect-commands button {
+    width: 140px;
+    height: 50px;
+    font-size: 20px;
+    margin-right: 20px;
+}
+
+#xbdh-rap-panels-describe label {
+    margin-top: 6px !important;
+    margin-bottom: 6px !important;
+}

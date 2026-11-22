@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<BlockMap HashMethod="http://www.w3.org/2001/04/xmlenc#sha256" xmlns="http://schemas.microsoft.com/appx/2010/blockmap">
+  <File Name="AppxManifest.xml" Size="2338" LfhSize="46">
+    <Block Hash="tsDyRBiTGfElS76710xFPjSaIfJGok+jszkBDhgfBBw="/>
+  </File>
+  <File Name="DesktopLauncher.exe" Size="278005" LfhSize="49">
+    <Block Hash="AXLc1Gu9Jn6ZXo9Hpq3OVFMJ4xheU5EYu5LfKkQk2IY="/>
+    <Block Hash="gjd1+I8Nmhu8s1xuxjLyh1damJDc2Wa1y+xwXegnyyc="/>
+    <Block Hash="QY45R59ZJiLpwgCgWVCqYI3AfkWo0+FgfK96YALU39s="/>
+    <Block Hash="YsCCWifof0RbvXS91v11T6y7Naj4xzPPrqDjKf+Emuk="/>
+    <Block Hash="mKJJQUk+xxWi+iFWNNke+h3picQDV/mGJmTGYskTiq4="/>
+  </File>
+  <File Name="xbox_desktop_server.py" Size="17513" LfhSize="52">
+    <Block Hash="b7A/4tTR+GVQsiQJ8XEx3VN9ET0YS6y+H790N3ybMGc="/>
+  </File>
+  <File Name="tools\crash_test.exe" Size="270352" LfhSize="50">
+    <Block Hash="2eR/qqomMP6l4tY2mhpMD7HKDE3QrxacFSQcINPBlN8="/>
+    <Block Hash="7++FD/GJWy2+SqAxzM1e86kMdQ+20Oy2xPZEh7xQ7tE="/>
+    <Block Hash="au7W8YRlenExrQvxjbXEDvalNDHH3LtKeXwc5sDFbIU="/>
+    <Block Hash="XxznNLLnJBd8/DwvmlvtOPKhCpgRyW7FItSxirKNU+0="/>
+    <Block Hash="kl6ldj2RIkFgfX52R0AmevLwyy1pBJVBSa713blGjpc="/>
+  </File>
+  <File Name="tools\find_localfolder.py" Size="519" LfhSize="55">
+    <Block Hash="qM8spQMD0pbiupDEOfMa6BydnTOUDb6smXUCHoKxQ58="/>
+  </File>
+  <File Name="tools\inspect_drivers.py" Size="1037" LfhSize="54">
+    <Block Hash="BzJ7hEoUpztTrTKmuxaPEXXry/UE7sixlBt2ZiMfMq0="/>
+  </File>
+  <File Name="tools\probe_internals.py" Size="1478" LfhSize="54">
+    <Block Hash="jGva3G77z+MyRts6eJEznINY7vqyHoBTElikoKVEquI="/>
+  </File>
+  <File Name="tools\test_alloc.exe" Size="267283" LfhSize="50">
+    <Block Hash="+ObSy5v2Ge13Oo1pRBe+ID/I4ngMgqDD73PCMK24cB0="/>
+    <Block Hash="+DGIE30dvJ936/ICysJ+CIyl57mC/E7yQnlZWSpieiQ="/>
+    <Block Hash="DSxuXCQWCnsfgdzstBjgVam+a2eXAQWnaVVLbkLNSAg="/>
+    <Block Hash="AxQNmAM/60/Te6axy+bPpHlbyU2c57/6YfkZRgiawvc="/>
+    <Block Hash="3PKzBODC6JTNT9c/lIZ5Qfmsxo6bc10+k0YA5LQSVHw="/>
+  </File>
+  <File Name="tools\test_load_llama.exe" Size="267698" LfhSize="55">
+    <Block Hash="I6lM2gZbO3toZyh8L4lyJUkrjuvdTqk7spHNU7kp8G4="/>
+    <Block Hash="LQ2jIcV5DQQAfipnaASXWpCyo8hxFuMtXGgqPe6JiEU="/>
+    <Block Hash="ug6KGoLCqIBdaI7kr0CQTC64l+PibgORSwgZ4BqJ6TI="/>
+    <Block Hash="j2lhlVAkxcaPIDDepJJgqpFVlq/32ray3nri4hmoqdg="/>
+    <Block Hash="vQTND8unyqKMPdMjZ1h+/HLwrTijnPi8bKaD4apthQ0="/>
+  </File>
+  <File Name="tools\xbox_desktop_server.py" Size="17513" LfhSize="58">
+    <Block Hash="b7A/4tTR+GVQsiQJ8XEx3VN9ET0YS6y+H790N3ybMGc="/>
+  </File>
+  <File Name="tools\xbox_llama.exe" Size="268829" LfhSize="50">
+    <Block Hash="eZsqkRiSVrNQYKcN0WdQLiBwBO0iphziU+Ztm1EzjH4="/>
+    <Block Hash="mYh55wEeFT0ckdZE7eN0xPxDbSAimyzdkReaOwyxSAw="/>
+    <Block Hash="FgmG1M8PVqf00kQo3SzSBehih6rMLtZQmPYTTYlqV3s="/>
+    <Block Hash="bsnYKQqMWXcykWLid941pf6pKNFKiiJbGm5bW9NrkVM="/>
+    <Block Hash="Iw+3r1suSd9zuLMtxUGg+nG0aXOup1U5jw6YEU7Yrp4="/>
+  </File>
+  <File Name="tools\xbox_ssh.py" Size="2195" LfhSize="47">
+    <Block Hash="CwHUcp0sSeaHjbGFLUMxBAtCM6dny/A+VFvE9hux0yg="/>
+  </File>
+  <File Name="shims\crash_test.c" Size="2129" LfhSize="48">
+    <Block Hash="3EIdYRdgh4knKkLeUEBYzBgPzDkXAfjfBjLU/iWaJn4="/>
+  </File>
+  <File Name="shims\psapi.dll" Size="12288" LfhSize="45">
+    <Block Hash="QNKh8abZNiBb1ZuLFRbKXW+qC84X4WS1WuaLK5xyX9U="/>
+  </File>
+  <File Name="shims\psapi_shim.c" Size="1209" LfhSize="48">
+    <Block Hash="mmZtjdykIYuKDWo+NmNidypQabN4kjPeAZqKaY3s+OY="/>
+  </File>
+  <File Name="shims\shell32.dll" Size="12288" LfhSize="47">
+    <Block Hash="zUnMpciu69Omr0gV5l3l+KOuNmOsKwMewt10yL4204A="/>
+  </File>
+  <File Name="shims\shell32_shim.c" Size="509" LfhSize="50">
+    <Block Hash="ngwdoS7R1QB+hXOeKErXoIuvszxZiPo/tMP06WwNhBU="/>
+  </File>
+  <File Name="shims\test_alloc.c" Size="590" LfhSize="48">
+    <Block Hash="GoMS48lrXroe5M36k1t7JNbxThWxPQvgQhc78OmrZWY="/>
+  </File>
+  <File Name="shims\test_load_llama.c" Size="989" LfhSize="53">
+    <Block Hash="I3a6MxYVqyiRruhtAbCEngX7B7qpCLgI9feL6GwOWdI="/>
+  </File>
+  <File Name="shims\xbox_llama.c" Size="2441" LfhSize="48">
+    <Block Hash="onG09oOcU2RnYKsVRj+ZdfqTRc+xg5b9udaBFkxLgEM="/>
+  </File>
+  <File Name="Assets\LockScreenLogo.scale-200.png" Size="6016" LfhSize="65">
+    <Block Hash="7oqBv5rKc/nPz1qqxTs2EaxLMHpMQxI0alC35Cz38xM="/>
+  </File>
+  <File Name="Assets\SplashScreen.scale-200.png" Size="207" LfhSize="63">
+    <Block Hash="0M5CSXYSuSOZ8l+fGIK9WvjEZ6ZHv+/mnlFacmcr6f0="/>
+  </File>
+  <File Name="Assets\Square150x150Logo.scale-200.png" Size="6343" LfhSize="68">
+    <Block Hash="jXwkFZz33M+1pYap1S8wa/GYq4shGsd/mtU101yRqeY="/>
+  </File>
+  <File Name="Assets\Square44x44Logo.scale-200.png" Size="5514" LfhSize="66">
+    <Block Hash="EEkctKvKDnk+PUg0kXHJwdi5FZ+0SCUHMhP+K7psPis="/>
+  </File>
+  <File Name="Assets\Square44x44Logo.targetsize-24_altform-unplated.png" Size="5545" LfhSize="87">
+    <Block Hash="4D4gNYioYLFPZOmlBQ9mfJoE5NwuYfvIp3B/thyV064="/>
+  </File>
+  <File Name="Assets\StoreLogo.png" Size="5481" LfhSize="50">
+    <Block Hash="A6D05N4xKpv4CHr/cee9d1MXFo22aHQmzFuzl84MEU4="/>
+  </File>
+  <File Name="Assets\Wide310x150Logo.scale-200.png" Size="225" LfhSize="66">
+    <Block Hash="mMBtF9inr78l2jLUT745pq3l4q4fwOXmjxm/q6E3nys="/>
+  </File>
+</BlockMap>

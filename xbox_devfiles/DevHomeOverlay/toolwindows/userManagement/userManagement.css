@@ -1,0 +1,100 @@
+﻿/* Copyright (c) Microsoft Corporation. All rights reserved. */
+
+.xbdh-usermanagement-users {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.xbdh-usermanagement-user:focus input {
+    border: solid 2px rgb(235, 235, 235);
+}
+
+.xbdh-usermanagement-details {
+    display: -ms-grid;
+    -ms-grid-columns: auto 1020px;
+    -ms-grid-rows: auto 748px auto;
+}
+
+.xbdh-usermanagement-adduserbuttons {
+    display: flex;
+    flex-direction: row;
+    width: calc(100% - 64px);
+    margin: 16px 32px;
+    overflow: hidden;
+}
+
+#xbdh-usermanagement-addguest {
+    margin-left: 10px;
+}
+
+/* Add user overlay */
+.xbdh-usermanagement-adduser-form {
+    width: 680px;
+}
+
+    .xbdh-usermanagement-adduser-form input {
+        margin: 8px 0 16px 0;
+    }
+
+/* Basic Info */
+.usermanagement-basicinfo {
+    -ms-grid-column: 1;
+    -ms-grid-row: 2;
+}
+
+.usermanagement-heading {
+    -ms-grid-column: 1;
+    -ms-grid-row: 1;
+    -ms-grid-column-span: 2;
+}
+
+.usermanagement-details-field {
+    display: -ms-grid;
+    -ms-grid-columns: 204px 1fr;
+    -ms-grid-rows: 1;
+    height: 68px;
+    line-height: 68px;
+    width: 544px;
+}
+
+.usermanagement-details-label {
+    -ms-grid-column: 1;
+    -ms-grid-row-align: center;
+}
+
+.usermanagement-details-value {
+    -ms-grid-column: 2;
+    -ms-grid-row-align: center;
+}
+
+.usermanagement-privileges-heading {
+    -ms-grid-column: 2;
+    -ms-grid-row: 2;
+    -ms-grid-column-span: 1;
+}
+
+.usermanagement-privileges {
+    -ms-grid-column: 2;
+    -ms-grid-row: 2;
+    margin-left: 64px;
+}
+
+.usermanagement-privileges-list {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    height: 90%;
+}
+
+.usermanagement-details-actionbuttons {
+    -ms-grid-column: 1;
+    -ms-grid-row: 4;
+    -ms-grid-column-span: 2;
+    margin-top: -68px;
+}
+
+.usermanagement-agegroup {
+    margin-left: 80px;
+    margin-top: -20px;
+}

@@ -1,0 +1,20 @@
+{
+  "activeIdentity": "Administrator",
+  "activeTab": 9,
+  "aiApiKey": "",
+  "aiBaseUrl": "http://127.0.0.1:8080/v1/chat/completions",
+  "aiModel": "local-llm",
+  "identities": [
+    {
+      "password": "<REDACTED_PASSWORD>",
+      "role": "Xbox Dev Home / WDP Primary",
+      "source": "On-Device+Registry",
+      "username": "DevToolsUser"
+    }
+  ],
+  "mouseSpeed": 1.0,
+  "wdpHost": "127.0.0.1",
+  "wdpPass": "",
+  "wdpPort": 11443,
+  "wdpUser": "Administrator"
+}

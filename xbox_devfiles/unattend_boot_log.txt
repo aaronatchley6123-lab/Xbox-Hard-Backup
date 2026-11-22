@@ -1,0 +1,52 @@
+[Sun 11/08/2026 11:07:51.31] Cold-Boot Unattended Sequence Initiated 
+[Sun 11/08/2026 20:19:35.68] Cold-Boot Unattended Sequence Initiated 
+OK.
+[Sun 11/08/2026 22:19:15.73] Cold-Boot Unattended Sequence Initiated 
+OK.
+[Mon 11/09/2026  3:10:20.97] Cold-Boot Unattended Sequence Initiated 
+OK.
+[Mon 11/09/2026  5:02:10.81] Cold-Boot Unattended Sequence Initiated 
+OK.
+[Tue 11/10/2026 13:04:56.77] Cold-Boot Unattended Sequence Initiated 
+OK.
+[Tue 11/10/2026 13:05:10.94] Cold-Boot Unattended Sequence Initiated 
+OK.
+[Tue 11/10/2026 13:16:02.56] Cold-Boot Unattended Sequence Initiated 
+OK.
+[Tue 11/10/2026 13:16:11.14] Cold-Boot Unattended Sequence Initiated 
+OK.
+[Tue 11/10/2026 13:49:59.54] Cold-Boot Unattended Sequence Initiated 
+OK.
+[Tue 11/10/2026 14:25:03.72] Cold-Boot Unattended Sequence Initiated 
+'CheckNetIsolation' is not recognized as an internal or external command,
+operable program or batch file.
+[Tue 11/10/2026 14:52:46.44] Unattended boot sequence triggered 
+'CheckNetIsolation' is not recognized as an internal or external command,
+operable program or batch file.
+[Tue 11/10/2026 16:14:13.77] Cold-Boot Unattended Sequence Initiated 
+OK.
+Failed with 0x80070003.
+Application launched successfully.
+Failed with 0x80070003.
+Failed with 0x80040905 
+IDispatch error #1797
+[Sat 11/14/2026 10:23:03.30] Unattended boot triggered 
+[Thu 12/12/2019 18:43:10.95] Cold-Boot Unattended Sequence Initiated 
+OK.
+Failed with 0x80070003.
+[Thu 12/12/2019 18:43:11.45] Cold-Boot Unattended Sequence Staged 
+[Thu 12/12/2019 18:43:11.46] Launched successfully on attempt 1  
+[Thu 12/12/2019 18:50:38.51] Cold-Boot Unattended Sequence Initiated 
+OK.
+Failed with 0x80070003.
+[Thu 12/12/2019 18:50:38.64] Cold-Boot Unattended Sequence Staged 
+[Thu 12/12/2019 18:50:38.65] Launched successfully on attempt 1  
+[Thu 12/12/2019 18:33:39.89] Unattended boot triggered 
+[Thu 12/12/2019 18:33:54.64] Cold-Boot Unattended Sequence Initiated 
+[Thu 12/12/2019 20:45:11.32] Cold-Boot Unattended Sequence Initiated 
+OK.
+[Thu 12/12/2019 23:04:22.15] Cold-Boot Unattended Sequence Initiated 
+OK.
+Failed with 0x80070003.
+SRACMD: cmd ran successfully.
+[Thu 12/12/2019 23:04:22.46] Cold-Boot Unattended Sequence Completed 

@@ -1,0 +1,64 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <!-- Disable telephone formatting to ensure IP addresses are displayed correctly in Korean -->
+    <meta name="format-detection" content="telephone=no">
+    <title>DevHome</title>
+
+    <!-- Css -->
+    <link href="../css/framework.css" rel="stylesheet" />
+    <link href="../css/scrollviewer-1.0.0.0.css" rel="stylesheet" />
+    <link href="../css/accessibilityDark.css" rel="stylesheet" />
+    <link href="../css/accessibilityLight.css" rel="stylesheet" />
+</head>
+<body>
+    <!-- Extended Splash Screen -->
+    <div id="extendedsplashscreen" class="xbdh-hidden">
+        <img id="extendedsplashscreenimage" src="/framework/media/splashscreen-620x300.png" alt="Splash screen image" />
+        <progress id="extendedsplashscreenprogress" class="xbdh-indeterminateprogressoverlay-2"></progress>
+    </div>
+
+    <div id="xbdh-shell-header" class="xbdh-shell-header">
+        <div class="xbdh-shell-header-left">
+            <div id="xbdh-shell-title-metadata-consoleip" class="xbdh-shell-title-metadata">
+                <div id="xbdh-shell-title-metadata-consoleip-value" class="xbdh-shell-title-metadata-value"></div>
+                <div id="xbdh-shell-title-metadata-consoleip-label" class="xbdh-shell-title-metadata-label"></div>
+            </div>
+            <div class="xbdh-shell-title-metadata">
+                <div id="xbdh-shell-title-metadata-hostname-value" class="xbdh-shell-title-metadata-value"></div>
+                <div id="xbdh-shell-title-metadata-hostname-label" class="xbdh-shell-title-metadata-label"></div>
+            </div>
+            <div class="xbdh-shell-title-metadata">
+                <div id="xbdh-shell-title-metadata-sandboxid-value" class="xbdh-shell-title-metadata-value"></div>
+                <div id="xbdh-shell-title-metadata-sandboxid-label" class="xbdh-shell-title-metadata-label"></div>
+            </div>
+            <div class="xbdh-shell-title-metadata">
+                <div id="xbdh-shell-title-metadata-osversion-value" class="xbdh-shell-title-metadata-value"></div>
+                <div id="xbdh-shell-title-metadata-osversion-label" class="xbdh-shell-title-metadata-label"></div>
+            </div>
+
+            <div class="xbdh-shell-title-metadata xbdh-hidden" id="xbdh-shell-webproxy-isenabled-warning">
+                <p data-win-res='{ "textContent": "defaultWebProxy" }'></p>
+            </div>
+        </div>
+
+        <div class="xbdh-shell-header-right">
+            <button id="xbdh-shell-compatMode" class="xbdh-shell-compatMode" hidden>
+                <p id="xbdh-shell-compatMode-label"></p>
+                <p id="xbdh-shell-compatMode-extraMemory"></p>
+            </button>
+            <div id="xbdh-shell-time" class="xbdh-shell-time xbdh-fontweight-light"></div>
+        </div>
+    </div>
+    <div id="xbdh-shell-content" class="xbdh-shell-content">
+        <div role="menu" id="xbdh-shell-switchworkspace" class="xbdh-shell-switchworkspace"></div>
+    </div>
+    <div id="xbdh-fader" class="xbdh-fader xbdh-hidden"></div>
+
+    <!-- Scripts -->
+    <script src="../js/base.js" defer="defer"></script>
+    <script src="../js/framework.js" defer="defer"></script>
+    <script src="../js/scrollviewer-1.0.0.0.js" defer="defer"></script>
+</body>
+</html>

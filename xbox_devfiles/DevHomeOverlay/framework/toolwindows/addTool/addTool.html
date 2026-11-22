@@ -1,0 +1,34 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <link href="addTool.css" rel="stylesheet" />
+    <script src="addTool.js"></script>
+</head>
+<body>
+    <div id="addtool-existingtools">
+        <h1 data-win-res='{ "textContent": "addToolTitle" }'></h1>
+        <p data-win-res='{ "textContent": "addToolDescription" }'></p>
+        <div id="addtool-availabletools" class="xbdh-div-list"></div>
+        <div class="xbdh-form-buttons">
+            <button id="addtool-existingtools-addcommand" data-win-res='{ "textContent": "commandAdd" }' type="button"></button>
+<!--            <button id="addtool-existingtools-newcommand" data-win-res='{ "textContent": "commandNew" }' type="button"></button>-->
+        </div>
+    </div>
+    <div id="addtool-newtool" class="xbdh-hidden">
+        <h1 data-win-res='{ "textContent": "newToolTitle" }'></h1>
+        <p data-win-res='{ "textContent": "newToolDescription" }'></p>
+        <h2 data-win-res='{ "textContent": "addToolRemoteHostedToolNameLabel" }'></h2>
+        <p data-win-res='{ "textContent": "addToolRemoteHostedToolNameDescription" }'></p>
+        <input id="addtool-newtool-name" type="text" data-win-res='{ "placeholder": "addToolRemoteHostedToolNamePrompt" }' tabindex="0" />
+        <h2 data-win-res='{ "textContent": "addToolRemoteHostedToolUrlLabel" }'></h2>
+        <p data-win-res='{ "textContent": "addToolRemoteHostedToolUrlDescription" }'></p>
+        <input id="addtool-newtool-url" type="text" data-win-res='{ "placeholder": "addToolRemoteHostedToolUrlPrompt" }' tabindex="1" />
+        <div class="xbdh-form-buttons">
+            <button id="addtool-newtool-add" data-win-res='{ "textContent": "commandAdd" }' type="button" tabindex="2"></button>
+            <button id="addtool-newtool-cancel" data-win-res='{ "textContent": "commandCancel" }' type="button" tabindex="3"></button>
+        </div>
+    </div>
+</body>
+</html>

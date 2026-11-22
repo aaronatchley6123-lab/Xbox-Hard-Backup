@@ -1,0 +1,30 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <link href="DebugNic.css" rel="stylesheet" />
+    <script src="DebugNic.js"></script>
+</head>
+<body>
+    <div class="xbdh-form">
+        <div id="xbdh-debugnic-enabled" class="xbdh-list-item xbdh-checkbox win-focusable" tabindex="0">
+            <input type="checkbox" id="xbdh-debugnic-enabled-input" /><label for="xbdh-debugnic-enabled-input" id="xbdh-debugnic-enabled-label" data-win-res='{ "textContent": "debugNicEnableIPRoutingLabel" }'></label>
+        </div>
+        <div class="xbdh-debugnic-field">
+            <label class="xbdh-label" data-win-res='{ "textContent": "debugNicConnectedStatusLabel" }'></label>
+            <p id="xbdh-debugnic-connectedstatus" class="xbdh-value"></p>
+        </div>
+        <div class="xbdh-debugnic-addresses-container">
+            <div id="xbdh-debugnic-address" class="xbdh-debugnic-field" style="display:none;">
+                <label class="xbdh-label" data-win-res='{ "textContent": "debugNicIpAddressLabel" }'></label>
+                <p id="xbdh-debugnic-address-value" class="xbdh-value"></p>
+            </div>
+            <div id="xbdh-systemnic-address" class="xbdh-debugnic-field" style="display:none;">
+                <label class="xbdh-label" data-win-res='{ "textContent": "debugNicSystemIpAddressLabel" }'></label>
+                <p id="xbdh-systemnic-address-value" class="xbdh-value"></p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

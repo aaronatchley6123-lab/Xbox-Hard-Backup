@@ -1,0 +1,220 @@
+====================================================
+[*] COUTURE OS: Direct3D Native Hardware Boot Selector
+[*] Project Anaconda (Series X) - 30-Second Controller Timeout
+====================================================
+[+] Direct3D Hardware Swapchain Active on HDMI Scanout!
+[*] 30-Second Countdown Active (D-PAD = Select, (A) = Launch Immediately)
+[*] Boot Selection Timeout: 29 seconds remaining (Current Target: 1)
+[*] Boot Selection Timeout: 28 seconds remaining (Current Target: 1)
+[*] Boot Selection Timeout: 27 seconds remaining (Current Target: 1)
+[*] Boot Selection Timeout: 26 seconds remaining (Current Target: 1)
+[*] Boot Selection Timeout: 25 seconds remaining (Current Target: 1)
+[*] Boot Selection Timeout: 24 seconds remaining (Current Target: 1)
+[*] Boot Selection Timeout: 23 seconds remaining (Current Target: 1)
+[*] Boot Selection Timeout: 22 seconds remaining (Current Target: 1)
+[*] Boot Selection Timeout: 21 seconds remaining (Current Target: 1)
+[*] Boot Selection Timeout: 20 seconds remaining (Current Target: 1)
+[*] Boot Selection Timeout: 19 seconds remaining (Current Target: 1)
+[*] Boot Selection Timeout: 18 seconds remaining (Current Target: 1)
+[*] Boot Selection Timeout: 17 seconds remaining (Current Target: 1)
+[*] Boot Selection Timeout: 16 seconds remaining (Current Target: 1)
+[*] Boot Selection Timeout: 15 seconds remaining (Current Target: 1)
+[*] Boot Selection Timeout: 14 seconds remaining (Current Target: 1)
+[*] Boot Selection Timeout: 13 seconds remaining (Current Target: 1)
+[*] Boot Selection Timeout: 12 seconds remaining (Current Target: 1)
+[*] Boot Selection Timeout: 11 seconds remaining (Current Target: 1)
+[*] Boot Selection Timeout: 10 seconds remaining (Current Target: 1)
+[*] Boot Selection Timeout: 9 seconds remaining (Current Target: 1)
+[*] Boot Selection Timeout: 8 seconds remaining (Current Target: 1)
+[*] Boot Selection Timeout: 7 seconds remaining (Current Target: 1)
+[*] Boot Selection Timeout: 6 seconds remaining (Current Target: 1)
+[*] Boot Selection Timeout: 5 seconds remaining (Current Target: 1)
+[*] Boot Selection Timeout: 4 seconds remaining (Current Target: 1)
+[*] Boot Selection Timeout: 3 seconds remaining (Current Target: 1)
+[*] Boot Selection Timeout: 2 seconds remaining (Current Target: 1)
+[*] Boot Selection Timeout: 1 seconds remaining (Current Target: 1)
+[*] Boot Selection Timeout: 0 seconds remaining (Current Target: 1)
+
+====================================================
+[+] BOOT SELECTION CONFIRMED: Target 1
+[*] Launching CoutureOS Core Direct3D Shell Engine...
+====================================================
+====================================================
+[*] COUTURE OS: Direct3D Native Hardware Boot Selector
+[*] Project Anaconda (Series X) - 30-Second Controller Timeout
+====================================================
+[+] Direct3D Hardware Swapchain Active on HDMI Scanout!
+[*] 30-Second Countdown Active (D-PAD = Select, (A) = Launch Immediately)
+[*] Boot Selection Timeout: 29 seconds remaining (Current Target: 1)
+[*] Boot Selection Timeout: 28 seconds remaining (Current Target: 1)
+[*] Boot Selection Timeout: 27 seconds remaining (Current Target: 1)
+[*] Boot Selection Timeout: 26 seconds remaining (Current Target: 1)
+[*] Boot Selection Timeout: 25 seconds remaining (Current Target: 1)
+[*] Boot Selection Timeout: 24 seconds remaining (Current Target: 1)
+[*] Boot Selection Timeout: 23 seconds remaining (Current Target: 1)
+[*] Boot Selection Timeout: 22 seconds remaining (Current Target: 1)
+[*] Boot Selection Timeout: 21 seconds remaining (Current Target: 1)
+[*] Boot Selection Timeout: 20 seconds remaining (Current Target: 1)
+[*] Boot Selection Timeout: 19 seconds remaining (Current Target: 1)
+[*] Boot Selection Timeout: 18 seconds remaining (Current Target: 1)
+[*] Boot Selection Timeout: 17 seconds remaining (Current Target: 1)
+[*] Boot Selection Timeout: 16 seconds remaining (Current Target: 1)
+[*] Boot Selection Timeout: 15 seconds remaining (Current Target: 1)
+[*] Boot Selection Timeout: 14 seconds remaining (Current Target: 1)
+[*] Boot Selection Timeout: 13 seconds remaining (Current Target: 1)
+[*] Boot Selection Timeout: 12 seconds remaining (Current Target: 1)
+[*] Boot Selection Timeout: 11 seconds remaining (Current Target: 1)
+[*] Boot Selection Timeout: 10 seconds remaining (Current Target: 1)
+[*] Boot Selection Timeout: 9 seconds remaining (Current Target: 1)
+[*] Boot Selection Timeout: 8 seconds remaining (Current Target: 1)
+[*] Boot Selection Timeout: 7 seconds remaining (Current Target: 1)
+[*] Boot Selection Timeout: 6 seconds remaining (Current Target: 1)
+[*] Boot Selection Timeout: 5 seconds remaining (Current Target: 1)
+[*] Boot Selection Timeout: 4 seconds remaining (Current Target: 1)
+[*] Boot Selection Timeout: 3 seconds remaining (Current Target: 1)
+[*] Boot Selection Timeout: 2 seconds remaining (Current Target: 1)
+[*] Boot Selection Timeout: 1 seconds remaining (Current Target: 1)
+[*] Boot Selection Timeout: 0 seconds remaining (Current Target: 1)
+
+====================================================
+[+] BOOT SELECTION CONFIRMED: Target 1
+[*] Launching CoutureOS Core Direct3D Shell Engine...
+====================================================
+====================================================
+[*] COUTURE OS: Native Direct3D Interactive Shell
+[*] Project Anaconda / Series X - Bare Metal Engine
+====================================================
+[+] Direct3D 11 Loader: 00007ffdf2d341a0
+[+] XInput Controller Loader: 00007ffdf21016a0
+[+] D3D11 Hardware Initialized on AMD RDNA 2 GPU.
+[+] CoutureOS SwapChain allocated successfully.
+[+] Direct3D Render Target View ready.
+[*] Starting CoutureOS Presentation & Telemetry Loop...
+[+] Render loop completed successfully (120 frames rendered to scanout).
+====================================================
+[🎉 SUCCESS] CoutureOS Engine Active & Verified!
+====================================================
+====================================================
+[*] COUTURE OS: Native Direct3D Interactive Shell
+[*] Project Anaconda / Series X - Bare Metal Engine
+====================================================
+[+] Direct3D 11 Loader: 00007ffdf2d341a0
+[+] XInput Controller Loader: 00007ffdf21016a0
+[+] D3D11 Hardware Initialized on AMD RDNA 2 GPU.
+[+] CoutureOS SwapChain allocated successfully.
+[+] Direct3D Render Target View ready.
+[*] Starting CoutureOS Presentation & Telemetry Loop...
+[+] Render loop completed successfully (120 frames rendered to scanout).
+====================================================
+[🎉 SUCCESS] CoutureOS Engine Active & Verified!
+====================================================
+====================================================
+[*] COUTURE OS: Direct3D Native Hardware Boot Selector
+[*] Project Anaconda (Series X) - 30-Second Controller Timeout
+====================================================
+[+] Direct3D Hardware Swapchain Active on HDMI Scanout!
+[*] 30-Second Countdown Active (D-PAD = Select, (A) = Launch Immediately)
+[*] Boot Selection Timeout: 29 seconds remaining (Current Target: 1)
+[*] Boot Selection Timeout: 28 seconds remaining (Current Target: 1)
+[*] Boot Selection Timeout: 27 seconds remaining (Current Target: 1)
+[*] Boot Selection Timeout: 26 seconds remaining (Current Target: 1)
+[*] Boot Selection Timeout: 25 seconds remaining (Current Target: 1)
+[*] Boot Selection Timeout: 24 seconds remaining (Current Target: 1)
+[*] Boot Selection Timeout: 23 seconds remaining (Current Target: 1)
+[*] Boot Selection Timeout: 22 seconds remaining (Current Target: 1)
+[*] Boot Selection Timeout: 21 seconds remaining (Current Target: 1)
+[*] Boot Selection Timeout: 20 seconds remaining (Current Target: 1)
+[*] Boot Selection Timeout: 19 seconds remaining (Current Target: 1)
+[*] Boot Selection Timeout: 18 seconds remaining (Current Target: 1)
+[*] Boot Selection Timeout: 17 seconds remaining (Current Target: 1)
+[*] Boot Selection Timeout: 16 seconds remaining (Current Target: 1)
+[*] Boot Selection Timeout: 15 seconds remaining (Current Target: 1)
+[*] Boot Selection Timeout: 14 seconds remaining (Current Target: 1)
+[*] Boot Selection Timeout: 13 seconds remaining (Current Target: 1)
+[*] Boot Selection Timeout: 12 seconds remaining (Current Target: 1)
+[*] Boot Selection Timeout: 11 seconds remaining (Current Target: 1)
+[*] Boot Selection Timeout: 10 seconds remaining (Current Target: 1)
+[*] Boot Selection Timeout: 9 seconds remaining (Current Target: 1)
+[*] Boot Selection Timeout: 8 seconds remaining (Current Target: 1)
+[*] Boot Selection Timeout: 7 seconds remaining (Current Target: 1)
+[*] Boot Selection Timeout: 6 seconds remaining (Current Target: 1)
+[*] Boot Selection Timeout: 5 seconds remaining (Current Target: 1)
+[*] Boot Selection Timeout: 4 seconds remaining (Current Target: 1)
+[*] Boot Selection Timeout: 3 seconds remaining (Current Target: 1)
+[*] Boot Selection Timeout: 2 seconds remaining (Current Target: 1)
+[*] Boot Selection Timeout: 1 seconds remaining (Current Target: 1)
+[*] Boot Selection Timeout: 0 seconds remaining (Current Target: 1)
+
+====================================================
+[+] BOOT SELECTION CONFIRMED: Target 1
+[*] Launching CoutureOS Core Direct3D Shell Engine...
+====================================================
+====================================================
+[*] COUTURE OS: Native Direct3D Interactive Shell
+[*] Project Anaconda / Series X - Bare Metal Engine
+====================================================
+[+] Direct3D 11 Loader: 00007ffdf2d341a0
+[+] XInput Controller Loader: 00007ffdf21016a0
+[+] D3D11 Hardware Initialized on AMD RDNA 2 GPU.
+[+] CoutureOS SwapChain allocated successfully.
+[+] Direct3D Render Target View ready.
+[*] Starting CoutureOS Presentation & Telemetry Loop...
+[+] Render loop completed successfully (120 frames rendered to scanout).
+====================================================
+[🎉 SUCCESS] CoutureOS Engine Active & Verified!
+====================================================
+====================================================
+[*] COUTURE OS: Direct3D Native Hardware Boot Selector
+[*] Project Anaconda (Series X) - 30-Second Controller Timeout
+====================================================
+[+] Direct3D Hardware Swapchain Active on HDMI Scanout!
+[*] 30-Second Countdown Active (D-PAD = Select, (A) = Launch Immediately)
+[*] Boot Selection Timeout: 29 seconds remaining (Current Target: 1)
+[*] Boot Selection Timeout: 28 seconds remaining (Current Target: 1)
+[*] Boot Selection Timeout: 27 seconds remaining (Current Target: 1)
+[*] Boot Selection Timeout: 26 seconds remaining (Current Target: 1)
+[*] Boot Selection Timeout: 25 seconds remaining (Current Target: 1)
+[*] Boot Selection Timeout: 24 seconds remaining (Current Target: 1)
+[*] Boot Selection Timeout: 23 seconds remaining (Current Target: 1)
+[*] Boot Selection Timeout: 22 seconds remaining (Current Target: 1)
+[*] Boot Selection Timeout: 21 seconds remaining (Current Target: 1)
+[*] Boot Selection Timeout: 20 seconds remaining (Current Target: 1)
+[*] Boot Selection Timeout: 19 seconds remaining (Current Target: 1)
+[*] Boot Selection Timeout: 18 seconds remaining (Current Target: 1)
+[*] Boot Selection Timeout: 17 seconds remaining (Current Target: 1)
+[*] Boot Selection Timeout: 16 seconds remaining (Current Target: 1)
+[*] Boot Selection Timeout: 15 seconds remaining (Current Target: 1)
+[*] Boot Selection Timeout: 14 seconds remaining (Current Target: 1)
+[*] Boot Selection Timeout: 13 seconds remaining (Current Target: 1)
+[*] Boot Selection Timeout: 12 seconds remaining (Current Target: 1)
+[*] Boot Selection Timeout: 11 seconds remaining (Current Target: 1)
+[*] Boot Selection Timeout: 10 seconds remaining (Current Target: 1)
+[*] Boot Selection Timeout: 9 seconds remaining (Current Target: 1)
+[*] Boot Selection Timeout: 8 seconds remaining (Current Target: 1)
+[*] Boot Selection Timeout: 7 seconds remaining (Current Target: 1)
+[*] Boot Selection Timeout: 6 seconds remaining (Current Target: 1)
+[*] Boot Selection Timeout: 5 seconds remaining (Current Target: 1)
+[*] Boot Selection Timeout: 4 seconds remaining (Current Target: 1)
+[*] Boot Selection Timeout: 3 seconds remaining (Current Target: 1)
+[*] Boot Selection Timeout: 2 seconds remaining (Current Target: 1)
+[*] Boot Selection Timeout: 1 seconds remaining (Current Target: 1)
+[*] Boot Selection Timeout: 0 seconds remaining (Current Target: 1)
+
+====================================================
+[+] BOOT SELECTION CONFIRMED: Target 1
+[*] Launching CoutureOS Core Direct3D Shell Engine...
+====================================================
+====================================================
+[*] COUTURE OS: Native Direct3D Interactive Shell
+[*] Project Anaconda / Series X - Bare Metal Engine
+====================================================
+[+] Direct3D 11 Loader: 00007ffbd1ff41a0
+[+] XInput Controller Loader: 00007ffbc64d16a0
+[+] D3D11 Hardware Initialized on AMD RDNA 2 GPU.
+[+] CoutureOS SwapChain allocated successfully.
+[+] Direct3D Render Target View ready.
+[*] Starting CoutureOS Presentation & Telemetry Loop...
+[+] Render loop completed successfully (120 frames rendered to scanout).
+====================================================
+[🎉 SUCCESS] CoutureOS Engine Active & Verified!
+====================================================

@@ -1,0 +1,9 @@
+﻿/* Copyright (c) Microsoft Corporation. All rights reserved. */
+
+@media screen and (-ms-high-contrast: active) {
+
+    #xbdh-defaultappsettings-defaultapp-label {
+        margin-top: 5px;
+    }
+
+}

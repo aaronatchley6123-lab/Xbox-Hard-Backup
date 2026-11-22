@@ -1,0 +1,127 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <link href="reportAProblemUwp.css" rel="stylesheet" />
+    <script src="reportAProblemUwp.js"></script>
+</head>
+<body>
+    <div id="xbdh-rap">
+        <div id="xbdh-rap-top">
+            <div id="xbdh-rap-top-tabs">
+                <div activeStates="collect" active>
+                    <label data-win-res='{ "textContent": "ReportAProblemCollectTitle" }'>Testing</label>
+                </div>
+                <div activeStates="send sent">
+                    <label activeStates="send sent" data-win-res='{ "textContent": "ReportAProblemSendTitleUwp" }'></label>
+                </div>
+            </div>
+            <div id="xbdh-rap-top-error" class="xbdh-hidden">
+                <div aria-hidden="true" id="xbdh-rap-top-error-icon"></div>
+                <div id="xbdh-rap-top-error-message"></div>
+            </div>
+        </div>
+        <div id="xbdh-rap-panels">
+            <div id="xbdh-rap-panels-sent" visibleStates="sent" class="xbdh-hidden xbdh-form">
+                <h3 id="xbdh-rap-panels-sent-heading" data-win-res='{ "textContent": "ReportAProblemReportSentTitle" }'></h3>
+                <p data-win-res='{ "textContent": "ReportAProblemReportSentDescription1" }'></p>
+                <p>
+                    <span data-win-res='{ "textContent": "ReportAProblemReportSentDescription2" }'></span><strong data-win-res='{ "textContent": "ReportAProblemReportSentDescriptionService" }'></strong>
+                </p>
+                <p data-win-res='{ "textContent": "ReportAProblemReportSentDescription3" }'></p>
+                <p id="xbdh-rap-panels-sent-crashdata" data-win-res='{ "textContent": "ReportAProblemReportSentCrashDumpPending" }' class="xbdh-hidden"></p>
+                <p id="xbdh-rap-panels-sent-displayName"></p>
+            </div>
+            <div id="xbdh-rap-panels-almost" class="xbdh-hidden xbdh-form">
+                <div id="xbdh-rap-panels-almost-status">
+                    <progress class="xbdh-indeterminateprogressoverlay-progress"></progress>
+                    <div class="xbdh-indeterminateprogressoverlay-description" data-win-res='{ "textContent": "ReportAProblemReviewStillGathering" }'></div>
+                </div>
+            </div>
+            <div id="xbdh-rap-panels-collect" visibleStates="collect" class="xbdh-form">
+                <h3 id="xbdh-rap-panels-collect-heading" data-win-res='{ "textContent": "ReportAProblemDiagnosticTypeUWP" }'></h3>
+                <div id="xbdh-rap-panels-collect-options"  role="radiogroup" aria-labelledby="xbdh-rap-panels-collect-heading">
+                    <div id="xbdh-rap-panels-collect-options-recent" class="xbdh-radio xbdh-list-item win-focusable" tabindex="0">
+                        <input type="radio" aria-hidden="true" tabindex="-1" id="xbdh-rap-panels-collect-options-recent-input" name="collectChoice" checked />
+                        <label aria-hidden="true" for="xbdh-rap-panels-collect-options-recent-input" id="xbdh-rap-panels-collect-options-recent-label" data-win-res='{ "textContent": "ReportAPRoblemRecentLogsDiagnostic" }'></label>
+                    </div>
+                    <div id="xbdh-rap-panels-collect-options-media" class="xbdh-radio xbdh-list-item win-focusable" tabindex="1">
+                        <input type="radio" aria-hidden="true" tabindex="-1" id="xbdh-rap-panels-collect-options-media-input" name="collectChoice" />
+                        <label aria-hidden="true" for="xbdh-rap-panels-collect-options-media-input" id="xbdh-rap-panels-collect-options-media-label" data-win-res='{ "textContent": "ReportAProblemMediaLogsDiagnostic" }'></label>
+                    </div>
+                    <div id="xbdh-rap-panels-collect-options-trace" class="xbdh-radio xbdh-list-item win-focusable" tabindex="2">
+                        <input type="radio" aria-hidden="true" tabindex="-1" id="xbdh-rap-panels-collect-options-trace-input" name="collectChoice" />
+                        <label aria-hidden="true" for="xbdh-rap-panels-collect-options-trace-input" id="xbdh-rap-panels-collect-options-trace-label" data-win-res='{ "textContent": "ReportAProblemCaptureTrace" }'></label>
+                    </div>
+                    <div id="xbdh-rap-panels-collect-options-tracing" class="xbdh-hidden xbdh-form">
+                        <p data-win-res='{ "textContent": "ReportAProblemStartTrace1" }'></p>
+                        <p data-win-res='{ "textContent": "ReportAProblemStartTrace2" }'></p>
+                        <p data-win-res='{ "textContent": "ReportAProblemStartTrace3" }'></p>
+                        <p data-win-res='{ "textContent": "ReportAProblemStartTrace4" }'></p>
+                    </div>
+                </div>
+                <div id="xbdh-rap-panels-collect-commands" class="xbdh-hidden xbdh-form">
+                    <button id="xbdh-rap-panels-collect-commands-toggleTrace" data-win-res='{ "textContent": "ReportAProblemStartTrace" }'></button>
+                    <p id="xbdh-rap-panels-collect-commands-traceStatus"></p>
+                </div>
+            </div>
+            <div id="xbdh-rap-panels-send" visibleStates="send" class="xbdh-hidden xbdh-form">
+                <h3 id="xbdh-rap-panels-send-heading" class="xbdh-rap-panels-send-heading" data-win-res='{ "textContent": "ReportAProblemDetailsLabel" }'></h3>
+                <div>
+                    <label for="xbdh-rap-panels-send-email-value" data-win-res='{ "textContent": "ReportAProblemEmailLabel" }'></label>
+                </div>
+                <div>
+                    <input id="xbdh-rap-panels-send-email-value" aria-required="true" tabindex="0" class="xbdh-value" type="email" />
+                    <p aria-hidden="true" class="xbdh-requiredfields">*</p>
+                    <label class="xbdh-requiredfields xbdh-requiredfields-label" id="xbdh-rap-panels-send-email-invalid-label" style="display:none;" data-win-res='{ "textContent": "ReportAProblemEmailInvalid" }'></label>
+                    <label class="xbdh-requiredfields xbdh-requiredfields-label" id="xbdh-rap-panels-send-email-required-label" style="display:none;" data-win-res='{ "textContent": "ReportAProblemEmailRequired" }'></label>
+                </div>
+                <div>
+                    <label for="xbdh-rap-panels-send-title-value" data-win-res='{ "textContent": "ReportAProblemSubjectLabel" }'></label>
+                </div>
+                <div>
+                    <input id="xbdh-rap-panels-send-title-value" aria-required="true" tabindex="1" class="xbdh-value" type="text" />
+                    <p aria-hidden="true" class="xbdh-requiredfields">*</p>
+                    <label class="xbdh-requiredfields xbdh-requiredfields-label" id="xbdh-rap-panels-send-title-required-label" style="display:none;" data-win-res='{ "textContent": "ReportAProblemTitleRequired" }'></label>
+                </div>
+                <div>
+                    <label for="xbdh-rap-panels-send-description-value" data-win-res='{ "textContent": "ReportAProblemDescriptionLabel" }'></label>
+                </div>
+                <div>
+                    <textarea id="xbdh-rap-panels-send-description-value" aria-required="true" tabindex="2" class="xbdh-value" type="text"></textarea>
+                    <div id="xbdh-rap-panels-send-description-box">
+
+                        <div id="xbdh-rap-panels-send-description-box-required">
+                            <p aria-hidden="true" class="xbdh-requiredfields">*</p>
+                            <label class="xbdh-requiredfields xbdh-requiredfields-label" id="xbdh-rap-panels-send-description-required-label" style="display:none;" data-win-res='{ "textContent": "ReportAProblemDescriptionRequired" }'></label>
+                        </div>
+                        <div id="xbdh-rap-panels-send-description-box-flex">
+                        </div>
+                        <div id="xbdh-rap-panels-send-description-box-describe">
+                            <p class="xbdh-requiredfields" data-win-res='{ "textContent": "ReportAProblemRequiredFields" }'></p>
+                            <p id="xbdh-rap-panels-send-description-box-describe-pravicyinfo" visibleStates="send" data-win-res='{ "textContent": "ReportAProblemPrivacyInfo" }'></p>
+                        </div>
+                        <div id="xbdh-rap-panels-send-description-box-status">
+                        </div>
+
+                    </div>
+                </div>
+                <p id="xbdh-rap-panels-send-crashdump" class="xbdh-hidden">
+                    <input id="xbdh-rap-panels-send-crashdump-checkbox" type="checkbox" tabindex="3" /><label id="xbdh-rap-panels-send-crashdump-label" for="xbdh-rap-panels-send-crashdump-checkbox" data-win-res='{ "textContent": "ReportAProblemGatherCrashDumps" }'></label>
+                </p>
+            </div>
+        </div>
+        <div id="xbdh-rap-bottom">
+            <div id="xbdh-rap-bottom-commands">
+                <button id="xbdh-rap-bottom-commands-next" tabindex="3" data-win-res='{ "textContent": "commandNext" }'></button>
+                <button id="xbdh-rap-bottom-commands-cancel" tabindex="4" class="xbdh-hidden" data-win-res='{ "textContent": "commandCancel" }'></button>
+            </div>
+            <div id="xbdh-rap-bottom-sent" visibleStates="sent" class="xbdh-hidden xbdh-form">
+                <div id="xbdh-rap-bottom-send-files"></div>
+                <div id="xbdh-rap-bottom-send-size"></div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

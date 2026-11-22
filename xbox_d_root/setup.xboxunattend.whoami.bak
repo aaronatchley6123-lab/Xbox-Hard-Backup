@@ -1,0 +1,6 @@
+@echo off
+set LOG=D:\DevelopmentFiles\e2e_identity.log
+whoami /user >> %LOG% 2>&1
+whoami >> %LOG% 2>&1
+whoami /groups >> %LOG% 2>&1
+whoami /priv >> %LOG% 2>&1

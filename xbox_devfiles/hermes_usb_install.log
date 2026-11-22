@@ -1,0 +1,29 @@
+==================================================== 
+[!] HERMES NATIVE USB PROVISIONER TRIGGERED 
+[*] Timestamp: Thu 12/12/2019 23:45:52.92 
+[*] USB Source Drive: E: 
+==================================================== 
+[*] Staging Hermes UWP Loose App package... 
+        1 file(s) copied.
+        1 file(s) copied.
+[*] Staging Win11 Native Desktop Runtime and Shims... 
+        1 file(s) copied.
+        1 file(s) copied.
+        1 file(s) copied.
+        1 file(s) copied.
+        1 file(s) copied.
+[*] Arming S:\HermesGuard persistent anti-wipe mirror... 
+        1 file(s) copied.
+        1 file(s) copied.
+        1 file(s) copied.
+        1 file(s) copied.
+[*] Configuring Loopback Exemption... 
+OK.
+[*] Writing Cold-Boot Persistence Hooks (D:\unattend.cmd and Q:\)... 
+        1 file(s) copied.
+[*] Registering Win11 Run key in HKCU... 
+The operation completed successfully.
+[*] Launching Hermes Native OS into foreground... 
+==================================================== 
+[!] HERMES USB PROVISIONING COMPLETED SUCCESSFULLY 
+==================================================== 
