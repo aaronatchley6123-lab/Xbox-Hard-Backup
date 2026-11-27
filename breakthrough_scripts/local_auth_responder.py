@@ -2,9 +2,10 @@ import socket
 import struct
 import threading
 import sys
+import os
 from http.server import HTTPServer, BaseHTTPRequestHandler
 
-DNS_IP = "10.42.0.215"
+DNS_IP = os.environ.get("CONSOLE_IP", "127.0.0.1")
 DNS_PORT = 53
 HTTP_PORT = 80
 
@@ -84,8 +85,8 @@ class CaptivePortalHandler(BaseHTTPRequestHandler):
     <h1>&#10004; Gateway Authorized</h1>
     <p style="color:#8b949e;font-size:1.2rem;">Status: <strong>PROCEED (Local Auth Granted)</strong></p>
     <div style="margin-top:30px;padding:20px;background:#161b22;border-radius:8px;display:inline-block;color:#c9d1d9;">
-        Host: <code>10.42.0.214 (minwinpc)</code><br>
-        SRA: <code>10.42.0.215 (XBOX)</code><br>
+        Host: <code>&lt;HOST_IP&gt; (minwinpc)</code><br>
+        SRA: <code>&lt;CONSOLE_IP&gt; (XBOX)</code><br>
         Mode: <code>Dev Mode Hybrid (0x64)</code>
     </div>
 </body>
