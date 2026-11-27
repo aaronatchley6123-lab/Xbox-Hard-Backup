@@ -116,7 +116,6 @@ With `SeBackupPrivilege` and `SeRestorePrivilege` acquired in `desktop_server.py
 │   ├── xvm.c / xvmctrl_probe.c   # Hypervisor IOCTL communication probes
 │   └── ALL_XCONFIG_SETTINGS.txt  # NVRAM slot dictionary dump
 ├── xbox_devfiles/                # 886-file hard backup of devkit scripts & tools
-├── SESSION_BREAKDOWN_FULL_7992.md# Milestone execution breakdown
 ├── START_TO_FINISH_GUIDE.md      # Step-by-step restoration guide
 └── SHA256SUMS.txt                # Full cryptographic checksum manifest
 ```
