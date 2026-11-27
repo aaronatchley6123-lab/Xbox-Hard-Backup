@@ -8,3 +8,5 @@
 MDSX.*
 Certs/
 exported_certs/
+__pycache__/
+*.pyc
