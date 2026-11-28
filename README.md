@@ -48,14 +48,22 @@ The complete execution sequence moves step-by-step from raw hypervisor IOCTL dis
                                      │
                                      ▼
 ┌────────────────────────────────────────────────────────────────────────┐
-│ Phase 4: Native Shell Display Preservation (DevHome)                   │
+│ Phase 4: Cold-Boot Unattended Automation & SYSTEM Persistence          │
+│   • XboxDevService.exe scans \*.xboxunattend via DevGetObjects()       │
+│   • Dispatches D:\setup.xboxunattend as NT AUTHORITY\SYSTEM on boot    │
+│   • WinRT UnattendedUtilities arms persistent cold-boot recovery       │
+└────────────────────────────────────┬───────────────────────────────────┘
+                                     │
+                                     ▼
+┌────────────────────────────────────────────────────────────────────────┐
+│ Phase 5: Native Shell Display Preservation (DevHome)                   │
 │   • Prevents HDMI blackouts (avoiding broken desktop explorer shell)   │
 │   • Injects WDP toolwindow overlay into native DevHome compositor      │
 └────────────────────────────────────┬───────────────────────────────────┘
                                      │
                                      ▼
 ┌────────────────────────────────────────────────────────────────────────┐
-│ Phase 5: Linux AI Studio Control Station (Port 3000)                   │
+│ Phase 6: Linux AI Studio Control Station (Port 3000)                   │
 │   • Real-time process tree monitor & remote memory peek/poke           │
 │   • Live ETW debugging, partition dumping, and raw telemetry           │
 └────────────────────────────────────────────────────────────────────────┘
@@ -92,7 +100,26 @@ The Xbox storage stack relies on `xrofilter.dll` / `XRO.SYS` (Xbox Read-Only fil
 
 ---
 
-### Phase 4: Native Shell Display Preservation
+### Phase 4: Cold-Boot Unattended Automation & SYSTEM Persistence (`*.xboxunattend`)
+To achieve true bare-metal dominance that survives power cycles without requiring interactive user login or network dependency, the boot chain utilizes the native Xbox setup automation subsystem:
+- **Discovery & Architecture:** The out-of-process system service `XboxDevService.exe` (`M:\windows\system32\XboxDevService.exe`) executes at boot time as `NT AUTHORITY\SYSTEM`. During initial hardware enumeration, it invokes `DevGetObjects(DevObjectTypeDeviceInterface)` to scan the root directory of all attached internal and external drives (`D:\`, USB mass storage `E:\`) for matching `\*.xboxunattend` files.
+- **Root Dispatch Handler (`setup.xboxunattend`):** When `XboxDevService.exe` detects `D:\setup.xboxunattend` or `E:\setup.xboxunattend`, it triggers `DoCreateProcessForUnattendedScript`, launching the batch script directly with full `SYSTEM` privileges before the shell or user session initializes.
+- **The Payload Execution Sequence:**
+  1. Installs the custom root certificate authority (`TheArchitect.cer`) into the system store.
+  2. Dispatches `vmm_full_control.py` to issue `IOCTL_XVM_HOLDING_PARTITION` (`in=0`), reclaiming quarantined physical memory.
+  3. Executes `box_xro_directories.py` to override `XRO.SYS` filesystem write filters.
+  4. Spawns the background Hermes kernel bridge (`hermes_bridge.py`) listening on `TCP 0.0.0.0:1984` with breakaway job creation flags.
+  5. Chains execution into `unattend.cmd` for loopback exemption and overlay registration.
+- **WinRT Arming Interface (`arm_oobe.py`):** The unattended search trigger is controlled via the `Microsoft.Xbox.Development.UnattendedUtilities` WinRT class (`IUnattendedUtilitiesStatics` GUID `de87ad07-75dc-4eec-9226-5628e98b9914`):
+  - `put_ShouldRunOobeScript(1)` — Enables unattended script execution on cold boot.
+  - `put_ShouldBlockUsb(0)` — Enables zero-touch auto-execution from external USB rescue flash drives (`E:\setup.xboxunattend`).
+  - `put_ShouldBlockUnattend(0)` — Clears any administrative execution blockers.
+
+*Implementation:* [`xbox_d_root/setup.xboxunattend`](file:///home/nitrokali/Xbox-Hard-Backup/xbox_d_root/setup.xboxunattend), [`breakthrough_scripts/unattend.cmd`](file:///home/nitrokali/Xbox-Hard-Backup/breakthrough_scripts/unattend.cmd), [`local_docs_and_source/arm_oobe.py`](file:///home/nitrokali/Xbox-Hard-Backup/local_docs_and_source/arm_oobe.py), [`local_docs_and_source/setup_xboxunattend_discovery_breakdown.md`](file:///home/nitrokali/Xbox-Hard-Backup/local_docs_and_source/setup_xboxunattend_discovery_breakdown.md).
+
+---
+
+### Phase 5: Native Shell Display Preservation
 Earlier attempts to force standard Windows desktop shells (`explorer.exe` / `cmd.exe` shell redirection via Winlogon) cause catastrophic display failure:
 - OneCore on Scarlett lacks standard desktop compositing libraries (DWM desktop hooks).
 - Replacing the shell breaks the hardware HDMI presentation pipeline and crashes the display driver.
@@ -102,7 +129,7 @@ Earlier attempts to force standard Windows desktop shells (`explorer.exe` / `cmd
 
 ---
 
-### Phase 5: Linux AI Studio Control Station
+### Phase 6: Linux AI Studio Control Station
 Control of the console is exercised remotely from a Linux workstation running the **AI Studio Web Controller** (`ai_studio_webui`):
 - Runs on `http://0.0.0.0:3000` via Express + Vite + React 19.
 - Connects directly to console OpenSSH (`port 22`), WDP (`port 11443`), and Hermes Hypervisor Bridge (`port 1984`).

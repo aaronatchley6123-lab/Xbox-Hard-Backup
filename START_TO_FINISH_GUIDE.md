@@ -134,44 +134,165 @@ Executes the kernel-level hypervisor release and verifies DirectStorage DMA thro
 
 ### Stage 5 — Boot-Time Unattended Persistence (`setup.xboxunattend` & `unattend.cmd`)
 
-Ensures the exploitation state and bridge daemons survive reboots:
+To achieve true bare-metal dominance that survives cold boots and power cycles without requiring interactive user login or network dependency, the boot chain utilizes the native Xbox setup automation subsystem:
 
-1. Deploy `setup.xboxunattend` to `D:\` (and copy to root of any connected USB drive `E:\` for cold-boot auto-scan):
-   ```bat
-   @echo off
-   set LOG=D:\DevelopmentFiles\system_success.log
-   echo ==================================================== > %LOG%
-   echo [!] UNATTENDED EXECUTION: XRO + ARCHITECT + VMMCALL >> %LOG%
-   "D:\DevelopmentFiles\LooseApps\pkg\python.exe" "D:\DevelopmentFiles\install_cert.py" >> %LOG% 2>&1
-   "D:\DevelopmentFiles\LooseApps\pkg\python.exe" "D:\DevelopmentFiles\add_trusted_publisher.py" >> %LOG% 2>&1
-   "D:\DevelopmentFiles\LooseApps\pkg\python.exe" "D:\DevelopmentFiles\vmm_full_control.py" >> %LOG% 2>&1
-   "D:\DevelopmentFiles\LooseApps\pkg\python.exe" "D:\DevelopmentFiles\client_control_cli.py" status >> %LOG% 2>&1
-   start /b "" "D:\DevelopmentFiles\LooseApps\pkg\python.exe" "D:\DevelopmentFiles\hermes_bridge.py"
-   echo [!] UNATTENDED EXECUTION COMPLETED >> %LOG%
-   ```
-2. Configure unattended boot statics via `IUnattendedUtilitiesStatics` (`de87ad07-75dc-4eec-9226-5628e98b9914`):
-   - `put_ShouldBlockUnattend(0)`
-   - `put_ShouldBlockUsb(0)`
-   - `put_ShouldSkipAbortToast(1)`
-   - `put_ShouldRunOobe(1)`
-3. Start the background Hermes Bridge (`hermes_bridge.py`) listening on `TCP 0.0.0.0:1984` with breakaway creation flags (`0x01000208`).
+#### 1. Architecture & Execution Mechanism
+- **System Service:** The out-of-process system service `XboxDevService.exe` (`M:\windows\system32\XboxDevService.exe`) executes at boot time as `NT AUTHORITY\SYSTEM`.
+- **Interface Enumeration:** During initial hardware enumeration, `toolsautoexec.exe` queries `Microsoft.Xbox.Development.UnattendedUtilities` and calls `DevGetObjects(DevObjectTypeDeviceInterface, ..., &cDevObjects, &pDevObjects)` to scan the root directory of all attached internal and external drives (`D:\`, USB mass storage `E:\`) for matching `\*.xboxunattend` files.
+- **SYSTEM Process Creation:** When a matching file (`\*.xboxunattend`) is located, `XboxDevService.exe` invokes `DoCreateProcessForUnattendedScript` to execute the file directly as `NT AUTHORITY\SYSTEM` before any user profile or kiosk shell initializes.
+
+#### 2. Deploying the Entry Point (`D:\setup.xboxunattend`)
+Deploy `setup.xboxunattend` to the root of `D:\`:
+```bat
+@echo off
+set LOG=D:\DevelopmentFiles\system_success.log
+echo ==================================================== > %LOG%
+echo [!] UNATTENDED COLD-BOOT EXECUTION INITIATED >> %LOG%
+echo [%date% %time%] Running as NT AUTHORITY\SYSTEM >> %LOG%
+
+:: 1. Install Root Certificate Authority & Trusted Publisher
+"D:\DevelopmentFiles\LooseApps\pkg\python.exe" "D:\DevelopmentFiles\install_cert.py" >> %LOG% 2>&1
+"D:\DevelopmentFiles\LooseApps\pkg\python.exe" "D:\DevelopmentFiles\add_trusted_publisher.py" >> %LOG% 2>&1
+
+:: 2. Release Hypervisor Holding Partition Latch (IOCTL 0x00150280 in=0)
+"D:\DevelopmentFiles\LooseApps\pkg\python.exe" "D:\DevelopmentFiles\vmm_full_control.py" >> %LOG% 2>&1
+
+:: 3. Box Protected Directories Against Storage Wiper via XRO
+"D:\DevelopmentFiles\LooseApps\pkg\python.exe" "D:\DevelopmentFiles\box_xro_directories.py" >> %LOG% 2>&1
+
+:: 4. Launch Hermes Kernel Bridge Daemon (Port 1984) with Breakaway Flags
+start /b "" "D:\DevelopmentFiles\LooseApps\pkg\python.exe" "D:\DevelopmentFiles\hermes_bridge.py"
+
+:: 5. Chain to Secondary Orchestration Script
+if exist "D:\DevelopmentFiles\unattend.cmd" (
+    call "D:\DevelopmentFiles\unattend.cmd" >> %LOG% 2>&1
+)
+
+echo [!] UNATTENDED COLD-BOOT EXECUTION COMPLETED >> %LOG%
+```
+
+#### 3. Secondary Boot Orchestrator (`D:\DevelopmentFiles\unattend.cmd`)
+Deploy `breakthrough_scripts/unattend.cmd` to `D:\DevelopmentFiles\unattend.cmd`:
+```cmd
+@echo off
+echo [%date% %time%] Clean Master Boot Sequence Initiated >> D:\DevelopmentFiles\unattend_boot_log.txt
+set PATH=C:\Windows\System32;D:\DevelopmentFiles\LooseApps\pkg;%PATH%
+
+:: 1. Box directories against wiper via XRO
+start /b "" "D:\DevelopmentFiles\LooseApps\pkg\python.exe" "D:\DevelopmentFiles\box_xro_directories.py" >> D:\DevelopmentFiles\xro_boot.log 2>&1
+
+:: 2. Launch Local DNS & Captive Auth Responder (Port 53 & 80)
+start /b "" "D:\DevelopmentFiles\LooseApps\pkg\python.exe" "D:\DevelopmentFiles\local_auth_responder.py" >> D:\DevelopmentFiles\auth_boot.log 2>&1
+
+:: 3. Persistent Loopback Exemption
+C:\Windows\System32\CheckNetIsolation.exe LoopbackExempt -a -n=HermesOS.SeriesX_czgs116rtv2ap >> D:\DevelopmentFiles\unattend_boot_log.txt 2>&1
+
+:: 4. Register Scratch Package
+"J:\tools\wdapp.exe" registerscratch "LooseApps\pkg" >> D:\DevelopmentFiles\unattend_boot_log.txt 2>&1
+
+:: 5. Overlay DevHome with Custom Toolwindows
+"J:\tools\wdapp.exe" overlayfolder Microsoft.Xbox.DevHome_1.0.2607.19001_x64__8wekyb3d8bbwe D:\DevelopmentFiles\DevHomeOverlay >> D:\DevelopmentFiles\unattend_boot_log.txt 2>&1
+
+echo [%date% %time%] Master Boot Sequence Complete >> D:\DevelopmentFiles\unattend_boot_log.txt
+```
+
+#### 4. Arming the WinRT Unattended Trigger (`arm_oobe.py`)
+To ensure `XboxDevService.exe` actively executes `*.xboxunattend` on boot, arm the NVRAM and WinRT flags using `combase.dll`:
+```python
+# Save as D:\DevelopmentFiles\arm_oobe.py and run via python.exe
+import ctypes
+
+combase = ctypes.WinDLL('combase.dll')
+combase.RoInitialize(1)
+
+class HSTRING(ctypes.c_void_p): pass
+hs = HSTRING()
+class_name = "Microsoft.Xbox.Development.UnattendedUtilities"
+combase.WindowsCreateString(class_name, len(class_name), ctypes.byref(hs))
+
+class GUID(ctypes.Structure):
+    _fields_ = [
+        ('Data1', ctypes.c_ulong),
+        ('Data2', ctypes.c_ushort),
+        ('Data3', ctypes.c_ushort),
+        ('Data4', ctypes.c_ubyte * 8)
+    ]
+
+# IID_IUnattendedUtilitiesStatics
+iid_statics = GUID(0xde87ad07, 0x75dc, 0x4eec, (ctypes.c_ubyte * 8)(0x92, 0x26, 0x56, 0x28, 0xe9, 0x8b, 0x99, 0x14))
+
+pStatics = ctypes.c_void_p()
+hr = combase.RoGetActivationFactory(hs, ctypes.byref(iid_statics), ctypes.byref(pStatics))
+if hr != 0:
+    raise RuntimeError(f"RoGetActivationFactory failed: {hex(hr & 0xFFFFFFFF)}")
+
+vtable = ctypes.cast(pStatics, ctypes.POINTER(ctypes.c_void_p)).contents.value
+FN_PUT_BOOL = ctypes.WINFUNCTYPE(ctypes.c_long, ctypes.c_void_p, ctypes.c_ubyte)
+
+# Method slot 15: put_ShouldRunOobe / put_ShouldRunOobeScript
+fn_oobe = FN_PUT_BOOL(ctypes.cast(vtable + 15 * 8, ctypes.POINTER(ctypes.c_void_p)).contents.value)
+hr_oobe = fn_oobe(pStatics, 1)
+
+# Method slot 17: put_ShouldBlockUsb
+fn_usb = FN_PUT_BOOL(ctypes.cast(vtable + 17 * 8, ctypes.POINTER(ctypes.c_void_p)).contents.value)
+hr_usb = fn_usb(pStatics, 0)
+
+# Method slot 23: put_ShouldBlockUnattend
+fn_unattend = FN_PUT_BOOL(ctypes.cast(vtable + 23 * 8, ctypes.POINTER(ctypes.c_void_p)).contents.value)
+hr_unattend = fn_unattend(pStatics, 0)
+
+print(f"[+] ShouldRunOobeScript(1) : {hex(hr_oobe & 0xFFFFFFFF)}")
+print(f"[+] ShouldBlockUsb(0)      : {hex(hr_usb & 0xFFFFFFFF)}")
+print(f"[+] ShouldBlockUnattend(0) : {hex(hr_unattend & 0xFFFFFFFF)}")
+```
+*Execute on the console:*
+```cmd
+D:\DevelopmentFiles\LooseApps\pkg\python.exe D:\DevelopmentFiles\arm_oobe.py
+```
+
+#### 5. External USB Rescue Auto-Execution (`E:\setup.xboxunattend`)
+Format any standard USB flash drive as **FAT32** and copy `setup.xboxunattend` directly to the root (`E:\setup.xboxunattend`).
+- Because `put_ShouldBlockUsb(0)` is armed, inserting this USB drive into any console USB port causes `XboxDevService.exe` to automatically detect and run the rescue payload on cold boot, even if internal drives (`D:\`) have been completely formatted or cleared.
+
+#### 6. Boot Verification & Telemetry
+After a reboot, verify that the cold-boot sequence executed with full `SYSTEM` authority by reading the generated telemetry logs:
+```cmd
+type D:\DevelopmentFiles\system_success.log
+type D:\DevelopmentFiles\unattend_boot_log.txt
+```
+*Expected Status Output:*
+```text
+====================================================
+[!] UNATTENDED COLD-BOOT EXECUTION INITIATED
+[Sat 11/28/2026 06:15:22.18] Running as NT AUTHORITY\SYSTEM
+[+] Root Certificate Installed Successfully.
+[+] Trusted Publisher Stored.
+[+] IOCTL_XVM_HOLDING_PARTITION Release (in=0) -> SUCCESS
+[+] XRO Directory Boxing Active.
+[+] Hermes Bridge Daemon Active on TCP 0.0.0.0:1984
+[!] UNATTENDED COLD-BOOT EXECUTION COMPLETED
+```
 
 ---
 
-### Stage 6 — Desktop Shell Transformation & Winlogon Hook
+### Stage 6 — Native Shell Preservation & DevHome Toolwindow Overlay
 
-Transforms the console from a locked fullscreen kiosk into an interactive OneCore desktop environment:
+Earlier attempts to redirect the Winlogon shell to standard desktop components (`switch_desktop_shell.py` / `explorer.exe`) resulted in complete video signal loss over HDMI because Windows OneCore on AMD Scarlett lacks traditional DWM desktop compositing pipelines.
 
-1. Execute `switch_desktop_shell.py`:
+To maintain 100% video output stability on HDMI while unlocking full devkit capabilities:
+
+1. **Preserve Native DevHome:** The console boots directly into the native `Microsoft.Xbox.DevHome` application on HDMI.
+2. **Inject Toolwindow Overlays:** Register the custom developer toolwindow overlay folder via `wdapp.exe`:
    ```cmd
-   D:\DevelopmentFiles\LooseApps\pkg\python.exe D:\DevelopmentFiles\switch_desktop_shell.py
+   J:\tools\wdapp.exe overlayfolder Microsoft.Xbox.DevHome_1.0.2607.19001_x64__8wekyb3d8bbwe D:\DevelopmentFiles\DevHomeOverlay
    ```
-2. Applies registry hooks to `HKCU\Software\Microsoft\Windows NT\CurrentVersion\Winlogon`:
-   - `UserMgrLaunchShell` $\rightarrow$ `1` (DWORD)
-   - `Shell` $\rightarrow$ `cmd.exe /c "start /b python D:\DevelopmentFiles\desktop_server.py"`
-3. Starts `desktop_server.py`:
-   - Acquires `SeBackupPrivilege` and elevated access rights.
-   - Spawns dynamic all-drives bar and local web administration shell.
+3. **Patch WDP HUD & Toolwindows (`patch_devhome_wdp_ui.py`):**
+   ```cmd
+   D:\DevelopmentFiles\LooseApps\pkg\python.exe D:\DevelopmentFiles\patch_devhome_wdp_ui.py
+   ```
+   - Injects the live telemetry HUD pointing to the Linux AI Studio controller (`http://<HOST_IP>:3000`).
+   - Surfaces un-gated drive shortcuts and process monitors directly within the DevHome UI.
+4. **Result:** Full bare-metal control, kernel daemon bridges, and live telemetry without breaking the HDMI display hardware.
 
 ---
 
