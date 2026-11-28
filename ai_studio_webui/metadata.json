@@ -1,0 +1,6 @@
+{
+  "name": "Xbox GDK & XDK Linux Studio",
+  "description": "Unified Linux desktop management suite for Xbox Series X|S and Xbox One DevKit consoles. Features package deployment, FTP file explorer, process monitor, live WebSocket debugger, and standalone Linux app packaging.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

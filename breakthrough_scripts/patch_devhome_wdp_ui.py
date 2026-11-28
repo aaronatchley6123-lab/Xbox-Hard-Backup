@@ -23,7 +23,7 @@ with open(r'D:\DevelopmentFiles\DevHomeOverlay\toolwindows\wdp\wdp.html', 'w', e
                 Full Xbox GDK & XDK Management Suite (Process Monitor, Package Deployer, Live ETW Debugger, All-Drive Explorer).
             </p>
             <div style="font-family: Consolas, monospace; font-size: 12px; background: #08080a; padding: 8px 12px; border-radius: 4px; color: #00ff88; border: 1px solid #333; margin-bottom: 10px;">
-                Endpoint: http://10.42.0.1:3000
+                Endpoint: http://&lt;HOST_IP&gt;:3000
             </div>
             <div style="font-size: 11px; color: #aaa; line-height: 1.4;">
                 <b>WDP AllDrives Root:</b> D:\DevelopmentFiles\AllDrives\<br/>
