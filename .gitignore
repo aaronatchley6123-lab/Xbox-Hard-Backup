@@ -10,3 +10,5 @@ Certs/
 exported_certs/
 __pycache__/
 *.pyc
+node_modules/
+ai_studio_webui/node_modules
